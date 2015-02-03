@@ -1,131 +1,40 @@
 <?php
 /**
- * miraforever functions and definitions
+ * This file represents an example of the code that themes would use to register
+ * the required plugins.
  *
- * @package miraforever
- */
-
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	//$content_width = 640; /* pixels */
-}
-
-if ( ! function_exists( 'miraforever_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
+ * It is expected that theme authors would copy and paste this code into their
+ * functions.php file, and amend to suit.
  *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
+ * @package    TGM-Plugin-Activation
+ * @subpackage Example
+ * @version    2.4.0
+ * @author     Thomas Griffin <thomasgriffinmedia.com>
+ * @author     Gary Jones <gamajo.com>
+ * @copyright  Copyright (c) 2014, Thomas Griffin
+ * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+ * @link       https://github.com/thomasgriffin/TGM-Plugin-Activation
  */
-function miraforever_setup() {
-
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on miraforever, use a find and replace
-	 * to change 'miraforever' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'miraforever', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	//add_theme_support( 'post-thumbnails' );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'miraforever' ),
-	) );
-
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'miraforever_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-}
-endif; // miraforever_setup
-add_action( 'after_setup_theme', 'miraforever_setup' );
 
 /**
- * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * Include the TGM_Plugin_Activation class.
  */
-function miraforever_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'miraforever' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'miraforever_widgets_init' );
+require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
 
-/**
- * Enqueue scripts and styles.
- */
-function miraforever_scripts() {
-	wp_enqueue_style( 'miraforever-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'miraforever-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
-	wp_enqueue_style( 'miraforever-css', get_template_directory_uri() . '/miraforever.less' );
-
-	
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"));
-	wp_enqueue_script( 'miraforever', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'miraforever-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-	wp_enqueue_script( 'miraforever-bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '', true );
-	//wp_enqueue_script( 'less', '//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.js' );
-
-}
-
-add_action( 'wp_enqueue_scripts', 'miraforever_scripts' );
-
+add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
 /**
  * Register the required plugins for this theme.
+ *
+ * In this example, we register two plugins - one included with the TGMPA library
+ * and one from the .org repo.
+ *
+ * The variable passed to tgmpa_register_plugins() should be an array of plugin
+ * arrays.
+ *
+ * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-add_action( 'tgmpa_register', 'miraforever_register_required_plugins' );
-
-function miraforever_register_required_plugins() {
+function my_theme_register_required_plugins() {
 
     /**
      * Array of plugin arrays. Required keys are name and slug.
@@ -140,20 +49,26 @@ function miraforever_register_required_plugins() {
             'source'             => get_template_directory() . '/inc/plugins/wp-less.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
-            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
             'external_url'       => '', // If set, overrides default API URL and points to an external URL.
         ),
-	 array(
-            'name'      => 'Max Mega Menu',
-            'slug'      => 'megamenu',
-            'required'  => true,
-	    'force_activation' => true,
-        ),
 	
+	  array(
+            'name'               => 'wp-lessssss', // The plugin name.
+            'slug'               => 'wp-less', // The plugin slug (typically the folder name).
+            'source'             => get_template_directory() . '/inc/plugins/wp-sssssless.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+            'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
+            'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+        ),
+
+
     );
 
-/**
+    /**
      * Array of configuration settings. Amend each line as needed.
      * If you want the default strings to be available under your own theme domain,
      * leave the strings uncommented.
@@ -193,41 +108,3 @@ function miraforever_register_required_plugins() {
     tgmpa( $plugins, $config );
 
 }
-
-
-
-
-
-
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
-
-
-//TGM ACTIVATOR
-require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
-
-//Custom Post Type
-require get_template_directory() . '/inc/custom-post-type.php';
