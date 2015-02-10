@@ -21,28 +21,30 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'miraforever' ); ?></a>
-<header id="masthead" class="site-header" role="banner">
-	<div id="menu-top-fixed" class="container-fluid">
-		<div class="row">
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Scendi', 'miraforever' ); ?></a>
+<header id="masthead" class="site-header container-fluid" role="banner">
+	<div class="row">
+		<div id="menu-top-fixed" >
 			<nav class="site-branding navbar navbar-inverse orange" role="navigation">
-				<h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
+				<div class="col-md-4">
+					<h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
+				</div>
+				<div class="col-md-8 pull-left">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</div>
 			</nav>
 		</div>
 	</div>
-	<div class="container">
-
-		<div class="row" style="height: 400px; background: red;">
-jk		</div>
-		
-		<div class="row">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #site-navigation -->
-		</div>
-		
+	<div class="row" style="height: 400px; background: red;">
 		
 	</div>
+	<div class="row">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- #site-navigation -->
+	</div>
+		
+		
 </header><!-- #masthead -->
 
 	<div id="content" class="site-content container">
