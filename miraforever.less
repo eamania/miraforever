@@ -1,9 +1,10 @@
 @import ('less/variables.less');
-@import('less/typograpy.less');
 @import('less/elements.less');
 @import('less/forms.less');
 @import('less/layout.less');
 
+// CAROUSEL FULL HEIGHT CSS
+@import url(layouts/carousel-full.css);
 //FONT
 @import url(http://fonts.googleapis.com/css?family=Hind:400,300,500,600,700);
 
@@ -12,16 +13,40 @@
 
 /*HEADER*/
 
+.body {
+    padding-top: 70px;
+}
+
 .site-header{
     height: 100vh;
-    background: @water;
 
-    h3 a{
-    font-family: 'Hind', sans-serif;
-    text-transform: uppercase;
-    font-size: @big-text;
-    color: @grey;
-    border: solid 3px @grey;
-    padding: 5px;
+    h3 {
+        a{
+        font-family: 'Hind', sans-serif;
+        text-transform: uppercase;
+        font-size: @big-text;
+        color: @grey;
+        border: solid 3px @grey;
+        padding: 5px;
+        }
+
+        a:hover, a:active{
+        text-decoration: none;
+        }
+
+
     }
+    .black-bar{
+        background-color: @black;
+    }
+    .navbar-inverse{
+        //bootstrap override
+        border: none; 
+    }
+
 }
+
+
+    
+
+

@@ -20,6 +20,10 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+ </script>
 </body>
 </html>
