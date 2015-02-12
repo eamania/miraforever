@@ -101,8 +101,8 @@ add_action( 'widgets_init', 'miraforever_widgets_init' );
  */
 function miraforever_scripts() {
 	wp_enqueue_style( 'miraforever-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'miraforever-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
-	wp_enqueue_style( 'miraforever-css', get_template_directory_uri() . '/miraforever.less' );
+	//wp_enqueue_style( 'miraforever-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+	wp_enqueue_style( 'miraforever-css', get_template_directory_uri() . '/miraforever.css' );
 
 	
 	wp_deregister_script('jquery');
@@ -113,7 +113,7 @@ function miraforever_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	wp_enqueue_script( 'miraforever-bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '', true );
-	//wp_enqueue_script( 'less', '//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.js' );
+	wp_enqueue_script( 'less', '//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.js' );
 
 }
 
@@ -134,16 +134,7 @@ function miraforever_register_required_plugins() {
     $plugins = array(
 
         // This is an example of how to include a plugin pre-packaged with a theme.
-        array(
-            'name'               => 'wp-less', // The plugin name.
-            'slug'               => 'wp-less', // The plugin slug (typically the folder name).
-            'source'             => get_template_directory() . '/inc/plugins/wp-less.zip', // The plugin source.
-            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-            'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
-            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-        ),
+        
 	 array(
             'name'      => 'Max Mega Menu',
             'slug'      => 'megamenu',
