@@ -1,3 +1,4 @@
+//@import('bootstrap/less/bootstrap.less');
 @import ('less/variables.less');
 @import('less/elements.less');
 @import('less/forms.less');
@@ -22,31 +23,36 @@
 
     h3 {
         a{
-        font-family: 'Hind', sans-serif;
-        text-transform: uppercase;
-        font-size: @big-text;
-        color: @grey;
-        border: solid 3px @grey;
-        padding: 5px;
+            font-family: 'Hind', sans-serif;
+            text-transform: uppercase;
+            font-size: @big-text;
+            color: @white;
+            border: solid 3px @white;
+            padding: 5px;
         }
 
         a:hover, a:active{
-        text-decoration: none;
+            text-decoration: none;
         }
 
 
     }
-    .black-bar{
-        background-color: @black;
+    .top-bar{
+        background-color: @orange;
     }
     .navbar-inverse{
         //bootstrap override
         border: none; 
     }
 
+    .mega-menu-wrap{
+        //megamenu override
+        background-color: transparent!important;
+    }
+
 }
 
 
-    
+
 
 
