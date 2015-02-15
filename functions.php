@@ -187,10 +187,6 @@ function miraforever_register_required_plugins() {
 
 
 
-
-
-
-
 /**
  * Implement the Custom Header feature.
  */

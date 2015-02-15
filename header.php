@@ -35,6 +35,8 @@
 				</div>
 			</div>
 			<div class="row" style="height:100%">
+				
+
 				<div id="myCarousel" class="carousel slide">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -75,6 +77,23 @@
 					<a class="right carousel-control" href="#myCarousel" data-slide="next">
 						<span class="icon-next"></span>
 					</a>
+
+
+<?php 
+
+// WP_Query arguments
+$args = array (
+	'posts_per_page'         => '5',
+);
+
+// The Query
+$query = new WP_Query( $args );
+
+
+
+
+?>
+
 
 				</div>
 
