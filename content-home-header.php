@@ -4,7 +4,7 @@
  */
 ?>
 <div id="carousel-header" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
+	<!-- Indicators --> 
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-header" data-slide-to="0" class="active"></li>
 		<li data-target="#carousel-header" data-slide-to="1"></li>
@@ -28,10 +28,10 @@
 			<?php the_post_thumbnail('large' ,array('class' => "effect-img-slideshow"));?>
 				<div class="container">
 				<div class="row">
-						<div class="col-md-6 carousel-caption ">
-							<div class="row"><div class="title-header col-md-6 " ><h4 ><?php the_title();?></h4></div> </div>
-							<div class="row"><div class="excerpt-header"><?php the_excerpt();?></div></div>
-							<div class="row"><div class="thumbnail-header"><?php the_post_thumbnail('medium');?></div></div>
+						<div class="carousel-caption ">
+							<div class=""><div class="title-header" ><h4 ><?php the_title();?></h4></div> </div>
+							<div class=""><div class="excerpt-header"><?php the_excerpt();?></div></div>
+							<div class=""><div class="thumbnail-header"><?php the_post_thumbnail('medium');?></div></div>
 						</div>
 						</div>
 				</div>
