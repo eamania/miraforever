@@ -28,10 +28,12 @@
 			<?php the_post_thumbnail('large' ,array('class' => "effect-img-slideshow"));?>
 				<div class="container">
 				<div class="row">
-						<div class="carousel-caption ">
-							<div class=""><div class="title-header" ><h4 ><?php the_title();?></h4></div> </div>
-							<div class=""><div class="excerpt-header"><?php the_excerpt();?></div></div>
-							<div class=""><div class="thumbnail-header"><?php the_post_thumbnail('medium');?></div></div>
+						<div class="carousel-caption">
+							<div class="col-md-9 col-md-offset-3 carousel-caption-background">
+								<div class="row col-md-12 "><div class="title-header" ><h4 ><?php the_title();?></h4></div> </div>
+								<div class="row col-md-4 "><div class="thumbnail-header"><?php the_post_thumbnail('medium');?></div></div>
+								<div class="row col-md-8 "><div class="excerpt-header"><?php the_excerpt();?></div></div>
+							</div>
 						</div>
 						</div>
 				</div>
