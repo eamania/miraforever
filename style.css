@@ -64,11 +64,6 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
   -webkit-filter: blur(10px) brightness(2);
   -moz-filter: blur(10px);
 }
-.site-header .carousel .carousel-caption {
-  top: auto;
-  bottom: 50px;
-  position: absolute;
-}
 .site-header .carousel .carousel-caption .title-header h4 {
   font-size: 34px;
 }
@@ -96,4 +91,6 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
   height: auto;
   z-index: 999;
   font-size: 80px;
+  text-shadow: 2px 2px 8px #222222;
+  color: #ffffff;
 }
