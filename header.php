@@ -24,10 +24,14 @@
 			<!-- logo -->
 			<div class="container">
 				<div class="row">
-					<div id="logo" class="logo">
+					<div id="logo" class="logo col-md-4">
 						<img src="logo-cl.png" height="200px" class="img-responsive">
 					</div>
+					<div class="col-md-8">
+						<h1 class="big-name-site">mirabilandia forever</h1>
+					</div>
 				</div>
+
 			</div>
 			<!-- home page slideshow -->
 			<div class="row" >
