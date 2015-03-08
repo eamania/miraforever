@@ -15,7 +15,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 */
-   
+
 //BOOTSTRAP
 @import url('inc/bootstrap/css/bootstrap.css');
 //VARIABLES LESS FILE
@@ -24,14 +24,15 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 @import url('layouts/carousel-full.css');
 //FONT
 @import url('http://fonts.googleapis.com/css?family=Hind:400,300,500,600,700');
-//SLIDESHOW
-.body {
-    padding-top: 70px; 
+
+body {
+
+    background-color: @grey;
 }
 .contaier{
-    width: 100%;
+    width: 100%;   
     position: relative;
-}
+}//fine container
 .site-header{ 
     height: 100vh; 
     h3 {
@@ -84,33 +85,33 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
             //bottom: 50px;
             //position: absolute;
 
-  
-             .title-header {
-                
-                 h4  {
-               font-size: @big-text+6;
-               }
-  
-             }      
 
-              .excerpt-header  {
-                p{
+            .title-header {
+
+               h4  {
+                 font-size: @big-text+6;
+             }
+
+         }      
+
+         .excerpt-header  {
+            p{
                 font-size: @p-text+6;
-                }
-               }
-            
-            .thumbnail-header{
-
             }
-            .carousel-caption-background{
+        }
 
-                background-color: @blackopacity;
-            }
-
-
+        .thumbnail-header{
 
         }
-    }
+        .carousel-caption-background{
+
+            background-color: @blackopacity;
+        }
+
+
+
+        } //fine carousell caption
+    }//fine carousell
     .logo {
 
         img { 
@@ -127,7 +128,7 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
             max-height: 250px;
         }
 
-    }
+    } //fine logo
     .big-name-site{
 
         position: absolute;
@@ -137,10 +138,12 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
         font-size: 80px;
         text-shadow: 2px 2px 8px @black;
         color: @white;
-          }
-}
+    }
+}// fine site header
+.site-content{
 
-
+    background-color: @white;
+}//fine site content
 
 
 

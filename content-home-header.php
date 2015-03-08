@@ -18,7 +18,7 @@
 	<div class="carousel-inner" role="listbox">
 		<?php 
 		$the_query = new WP_Query(array(
-			'posts_per_page' => 1,
+			'posts_per_page' => 2,
 			'category' => "featured" ,
 			)); 
 		while ( $the_query->have_posts() ) : 
@@ -26,17 +26,17 @@
 		?>
 		<div class="item ">
 			<?php the_post_thumbnail('large' ,array('class' => "effect-img-slideshow"));?>
-				<div class="container">
+			<div class="container">
 				<div class="row">
-						<div class="carousel-caption">
-							<div class="col-md-9 col-md-offset-3 carousel-caption-background">
-								<div class="row col-md-12 "><div class="title-header" ><h4 ><?php the_title();?></h4></div> </div>
-								<div class="row col-md-4 "><div class="thumbnail-header"><?php the_post_thumbnail('medium');?></div></div>
-								<div class="row col-md-8 "><div class="excerpt-header"><?php the_excerpt();?></div></div>
-							</div>
+					<div class="carousel-caption">
+						<div class="col-md-9 col-md-offset-3 carousel-caption-background">
+							<div class="col-md-12 "><div class="title-header" ><h4 ><?php the_title();?></h4></div> </div>
+							<div class="col-md-4 "><div class="thumbnail-header"><?php the_post_thumbnail('medium');?></div></div>
+							<div class="col-md-8 "><div class="excerpt-header"><?php the_excerpt();?></div></div>
 						</div>
-						</div>
+					</div>
 				</div>
+			</div>
 		</div><!-- item -->
 		<?php 
 		endwhile; 
