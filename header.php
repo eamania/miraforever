@@ -21,24 +21,23 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header container-fluid" role="banner">
-			<!-- logo -->
+			<!-- logo and name of website-->
 			<div class="container">
 				<div class="row">
-					<div id="logo" class="logo col-md-4">
+					<div id="logo" class="col-md-3 logo ">
 						<img src="logo-cl.png" height="200px" class="img-responsive">
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-9">
 						<h1 class="big-name-site">mirabilandia forever</h1>
 					</div>
 				</div>
-
 			</div>
 			<!-- home page slideshow -->
-			<div class="row" >
+			<div class="row hidden-xs" >
 				<?php 
 				if ( is_home() ) {
     					// This is the blog posts index
-					get_template_part("content" , "home-header" );		
+					get_template_part("carousell" , "home-header" );		
 				} else {
 					echo ("non è home page");
 				}
@@ -61,9 +60,7 @@
 					</nav>
 				</div>
 			</div>
-			
-
-					</header><!-- #masthead -->
+		</header><!-- #masthead close container fluid -->
 
 		<!-- inizio contenuto -->
 		<div id="content" class="site-content container">

@@ -54,6 +54,7 @@ body {
 .site-header .carousel {
   padding-top: 0;
   height: 100vh;
+  min-height: 600px;
   overflow: hidden;
 }
 .site-header .carousel img {
@@ -63,6 +64,12 @@ body {
   filter: blur(10px) brightness(2);
   -webkit-filter: blur(10px) brightness(2);
   -moz-filter: blur(10px);
+}
+.site-header .carousel .carousel-indicators {
+  bottom: 90px;
+}
+.site-header .carousel .carousel-caption {
+  bottom: 90px;
 }
 .site-header .carousel .carousel-caption .title-header h4 {
   font-size: 34px;

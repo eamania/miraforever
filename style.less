@@ -51,7 +51,6 @@ body {
     } 
     nav.top-bar{
         background-color: @topheader;
-        //filter: blur(@blur-slideshow) opacity(0.9);  
         margin-top: -90px;  
     }
     .navbar-inverse{
@@ -65,7 +64,9 @@ body {
     .carousel {
         padding-top: 0;
         height: 100vh;
+        min-height: 600px;
         overflow: hidden;
+
 
         img{
             width: 100%;
@@ -79,10 +80,16 @@ body {
             -moz-filter: blur(@blur-slideshow);
         }
 
-        .carousel-caption {
+        //bootstrap override
+        .carousel-indicators  {
+            bottom: 90px;
+        }
+
+        //bootstrap override 
+        .carousel-caption  {
 
             //top: auto;
-            //bottom: 50px;
+            bottom: 90px;
             //position: absolute;
 
 
@@ -107,7 +114,7 @@ body {
 
             background-color: @blackopacity;
         }
-
+        
 
 
         } //fine carousell caption
