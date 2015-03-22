@@ -80,6 +80,11 @@ body {
 .site-header .carousel .carousel-caption .carousel-caption-background {
   background-color: rgba(20, 20, 20, 0.7);
 }
+.site-header .carousel .carousel-caption .img-header-shadow {
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
+}
 .site-header .logo img {
   max-width: 100%;
   max-height: 500px;

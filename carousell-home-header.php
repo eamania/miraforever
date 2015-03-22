@@ -29,9 +29,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="carousel-caption">
-							<div class="col-md-12 hidden-xs"><div class="title-header" ><h4 ><?php the_title();?></h4></div> </div>
-							<div class="col-md-4 hidden-xs"><div class="thumbnail-header"><?php the_post_thumbnail('medium');?></div></div>
-							<div class="col-md-8 hidden-xs"><div class="excerpt-header"><?php the_excerpt();?></div></div>
+						<div class="col-md-4 hidden-xs"><div class="thumbnail-header "><?php the_post_thumbnail('medium' , array( 'class' => 'img-responsive , img-header-shadow' ) );?></div></div>
+						<div class="col-md-8 hidden-xs"><div class="title-header" ><h4 ><?php the_title();?></h4></div> </div>
+						<div class="col-md-8 hidden-xs"><div class="excerpt-header"><?php the_excerpt();?></div></div>
 					</div>
 				</div>
 			</div>
