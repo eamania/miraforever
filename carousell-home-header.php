@@ -33,7 +33,7 @@
 						
 
 
-						<div class="col-md-8 hidden-xs"><div class="title-header" ><h4 ><?php the_title( sprintf( '<class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?></h4></div> </div>
+						<div class="col-md-8 hidden-xs"><div class="title-header" ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> </div>
 						<div class="col-md-8 hidden-xs"><div class="excerpt-header"><?php the_excerpt();?></div></div>
 					</div>
 				</div>
