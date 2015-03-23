@@ -16,7 +16,7 @@
 	<?php wp_head(); ?>
 
 
-	 
+
 </head>
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
@@ -64,3 +64,4 @@
 
 		<!-- inizio contenuto -->
 		<div id="content" class="site-content container">
+			<div class="row">
