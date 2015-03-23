@@ -22,25 +22,20 @@
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header container-fluid" role="banner">
 			<!-- logo and name of website-->
-			<div class="container">
-				<div class="row">
-					<div id="logo" class="col-md-3 logo ">
-						<img src="logo-cl.png" height="200px" class="img-responsive">
-					</div>
-					<div class="col-md-9">
-						<h1 class="big-name-site">mirabilandia forever</h1>
-					</div>
-				</div>
+			<div class="container">	
+				<?php 
+				if ( is_home() ) {
+					get_template_part("partial/home/carousell" , "logo" );		
+				} else {}
+				?>
 			</div>
 			<!-- home page slideshow -->
 			<div class="row hidden-xs" >
 				<?php 
 				if ( is_home() ) {
     					// This is the blog posts index
-					get_template_part("carousell" , "home-header" );		
-				} else {
-					echo ("non è home page");
-				}
+					get_template_part("partial/home/carousell" , "home-header" );		
+				} else {}
 				?>
 			</div>
 			<!-- MENU -->
