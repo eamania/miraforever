@@ -18,7 +18,7 @@
 	<div class="carousel-inner" role="listbox">
 		<?php 
 		$the_query = new WP_Query(array(
-			'posts_per_page' => 1,
+			'posts_per_page' => 2,
 			'category' => "featured" ,
 			)); 
 		while ( $the_query->have_posts() ) : 
@@ -28,13 +28,10 @@
 			<?php the_post_thumbnail('large' ,array('class' => "effect-img-slideshow"));?>
 			<div class="container">
 				<div class="row">
-					<div class="carousel-caption">
-						<div class="col-md-4 hidden-xs"><div class="thumbnail-header "><?php the_post_thumbnail('medium' , array( 'class' => 'img-responsive , img-header-shadow' ) );?></div></div>
-						
-
-
-						<div class="col-md-8 hidden-xs"><div class="title-header" ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> </div>
-						<div class="col-md-8 hidden-xs"><div class="excerpt-header"><?php the_excerpt();?></div></div>
+					<div class="col-md-10 col-lg-8 carousel-caption">
+						<div class="col-md-5 col-lg-5 "><div class="thumbnail-header "><?php the_post_thumbnail('medium' , array( 'class' => 'img-responsive , img-header-shadow' ) );?></div></div>
+						<div class="col-md-7 col-lg-7"><div class="title-header" ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> </div>
+						<div class="col-md-12 col-lg-7"><div class="excerpt-header"><?php the_excerpt();?></div></div>
 					</div>
 				</div>
 			</div>

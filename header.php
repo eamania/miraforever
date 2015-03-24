@@ -22,7 +22,7 @@
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header container-fluid" role="banner">
 			<!-- logo and name of website-->
-			<div class="container">	
+			<div class="container hidden-sm hidden-xs">	
 				<?php 
 				if ( is_home() ) {
 					get_template_part("partial/home/carousell" , "logo" );		
@@ -30,7 +30,7 @@
 				?>
 			</div>
 			<!-- home page slideshow -->
-			<div class="row hidden-xs" >
+			<div class="row hidden-sm hidden-xs" >
 				<?php 
 				if ( is_home() ) {
     					// This is the blog posts index

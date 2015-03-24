@@ -88,8 +88,14 @@ body {
   -webkit-box-shadow: 0px 0px 30px 0px #000000;
   -moz-box-shadow: 0px 0px 30px 0px #000000;
   box-shadow: 0px 0px 30px 0px #000000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-height: 350px;
 }
-/* line 99, style.less */
+/* line 104, style.less */
 .site-header .carousel .carousel-caption .title-header h1,
 .site-header .carousel .carousel-caption .title-header h2,
 .site-header .carousel .carousel-caption .title-header h3,
@@ -100,11 +106,11 @@ body {
 .site-header .carousel .carousel-caption .title-header a {
   color: #ffffff;
 }
-/* line 102, style.less */
+/* line 107, style.less */
 .site-header .carousel .carousel-caption .title-header a {
   font-size: 34px;
 }
-/* line 110, style.less */
+/* line 115, style.less */
 .site-header .carousel .carousel-caption .excerpt-header h1,
 .site-header .carousel .carousel-caption .excerpt-header h2,
 .site-header .carousel .carousel-caption .excerpt-header h3,
@@ -114,21 +120,26 @@ body {
 .site-header .carousel .carousel-caption .excerpt-header p {
   text-shadow: 0 1px 10px #000000;
 }
-/* line 114, style.less */
+/* line 119, style.less */
 .site-header .carousel .carousel-caption .excerpt-header p {
   font-size: 18px;
 }
-/* line 125, style.less */
+/* line 127, style.less */
+.site-header .carousel .carousel-caption .thumbnail-header {
+  max-height: 300px;
+  overflow: hidden;
+}
+/* line 131, style.less */
 .site-header .carousel .carousel-caption .carousel-caption-background {
   background-color: rgba(20, 20, 20, 0.7);
 }
-/* line 132, style.less */
+/* line 138, style.less */
 .site-header .carousel .carousel-caption .img-header-shadow {
   -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
 }
-/* line 142, style.less */
+/* line 148, style.less */
 .site-header .logo img {
   max-width: 100%;
   max-height: 500px;
@@ -136,7 +147,7 @@ body {
   top: 20px;
   z-index: 999;
 }
-/* line 157, style.less */
+/* line 163, style.less */
 .site-header .big-name-site {
   position: absolute;
   top: 20px;
@@ -146,7 +157,7 @@ body {
   text-shadow: 2px 2px 8px #222222;
   color: #ffffff;
 }
-/* line 168, style.less */
+/* line 174, style.less */
 .site-content {
   background-color: #ffffff;
 }
