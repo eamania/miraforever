@@ -51,7 +51,7 @@ function miraforever_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'miraforever' ),
-	) );
+		) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -59,7 +59,7 @@ function miraforever_setup() {
 	 */
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
+		) );
 
 	/*
 	 * Enable support for Post Formats.
@@ -67,13 +67,13 @@ function miraforever_setup() {
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link',
-	) );
+		) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'miraforever_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-	) ) );
+		) ) );
 }
 endif; // miraforever_setup
 add_action( 'after_setup_theme', 'miraforever_setup' );
@@ -92,9 +92,19 @@ function miraforever_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
-	) );
+		) );
 }
 add_action( 'widgets_init', 'miraforever_widgets_init' );
+
+
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 150, 150, true ); // dimensioni di default della miniatura
+    }
+
+    if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'thumbnails-header-home-page', 350, 300, true ); // larghezza 300 pixel (e altezza illimitata)
+}
 
 /**
  * Enqueue scripts and styles.
@@ -130,15 +140,15 @@ function miraforever_register_required_plugins() {
     $plugins = array(
 
         // This is an example of how to include a plugin pre-packaged with a theme.
-        
-	 array(
-            'name'      => 'Max Mega Menu',
-            'slug'      => 'megamenu',
-            'required'  => true,
-	    'force_activation' => true,
-        ),
-	
-    );
+
+    	array(
+    		'name'      => 'Max Mega Menu',
+    		'slug'      => 'megamenu',
+    		'required'  => true,
+    		'force_activation' => true,
+    		),
+
+    	);
 
 /**
      * Array of configuration settings. Amend each line as needed.
@@ -147,7 +157,7 @@ function miraforever_register_required_plugins() {
      * Some of the strings are added into a sprintf, so see the comments at the
      * end of each line for what each argument will be.
      */
-    $config = array(
+$config = array(
         'default_path' => '',                      // Default absolute path to pre-packaged plugins.
         'menu'         => 'tgmpa-install-plugins', // Menu slug.
         'has_notices'  => true,                    // Show admin notices or not.
@@ -156,8 +166,8 @@ function miraforever_register_required_plugins() {
         'is_automatic' => false,                   // Automatically activate plugins after installation or not.
         'message'      => '',                      // Message to output right before the plugins table.
         'strings'      => array(
-            'page_title'                      => __( 'Install Required Plugins', 'tgmpa' ),
-            'menu_title'                      => __( 'Install Plugins', 'tgmpa' ),
+        	'page_title'                      => __( 'Install Required Plugins', 'tgmpa' ),
+        	'menu_title'                      => __( 'Install Plugins', 'tgmpa' ),
             'installing'                      => __( 'Installing Plugin: %s', 'tgmpa' ), // %s = plugin name.
             'oops'                            => __( 'Something went wrong with the plugin API.', 'tgmpa' ),
             'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ), // %1$s = plugin name(s).
@@ -174,10 +184,10 @@ function miraforever_register_required_plugins() {
             'plugin_activated'                => __( 'Plugin activated successfully.', 'tgmpa' ),
             'complete'                        => __( 'All plugins installed and activated successfully. %s', 'tgmpa' ), // %s = dashboard link.
             'nag_type'                        => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
-        )
-    );
+            )
+);
 
-    tgmpa( $plugins, $config );
+tgmpa( $plugins, $config );
 
 }
 

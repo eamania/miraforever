@@ -124,11 +124,6 @@ body {
 .site-header .carousel .carousel-caption .excerpt-header p {
   font-size: 18px;
 }
-/* line 127, style.less */
-.site-header .carousel .carousel-caption .thumbnail-header {
-  max-height: 300px;
-  overflow: hidden;
-}
 /* line 131, style.less */
 .site-header .carousel .carousel-caption .carousel-caption-background {
   background-color: rgba(20, 20, 20, 0.7);
