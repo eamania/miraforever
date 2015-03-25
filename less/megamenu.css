@@ -1,0 +1,6 @@
+.mega-menu-wrap {
+  background-color: transparent!important;
+}
+.mega-menu-wrap .mega-menu li a {
+  height: 90px!important;
+}

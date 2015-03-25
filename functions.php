@@ -97,14 +97,7 @@ function miraforever_widgets_init() {
 add_action( 'widgets_init', 'miraforever_widgets_init' );
 
 
-if ( function_exists( 'add_theme_support' ) ) {
-	add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 150, 150, true ); // dimensioni di default della miniatura
-    }
 
-    if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'thumbnails-header-home-page', 350, 300, true ); // larghezza 300 pixel (e altezza illimitata)
-}
 
 /**
  * Enqueue scripts and styles.
@@ -190,6 +183,20 @@ $config = array(
 tgmpa( $plugins, $config );
 
 }
+
+add_filter( 'jpeg_quality', create_function( '', 'return 80;' ) );
+
+
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 150, 150, true ); // dimensioni di default della miniatura
+    }
+
+    if ( function_exists( 'add_image_size' ) ) { 
+    	add_image_size( 'thumbnails-header-home-page', 350, 300, true ); 
+    	add_image_size( 'header-home-page', 1600, 900, true ); 
+
+    }
 
 
 

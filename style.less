@@ -18,6 +18,8 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 
 //BOOTSTRAP
 @import url('inc/bootstrap/css/bootstrap.css');
+//MEGAMENU OVERRIDE
+//@import url('less/megamenu.less');
 //VARIABLES LESS FILE
 @import url('less/variables.less');
 // CAROUSEL FULL HEIGHT CSS
@@ -57,10 +59,10 @@ body {
         //bootstrap override
         border: none; 
     }
-    .mega-menu-wrap{
-        //megamenu override
-        background-color: transparent!important;
-    }
+
+
+
+
     .carousel {
         padding-top: 0;
         height: 100vh;
@@ -87,7 +89,7 @@ body {
 
         //bootstrap override 
 
-        .carousel-caption   {
+        .carousel-caption  {
             top: 200px;
             bottom: auto;
             background-color: rgba(0, 0, 0, 0.75);
@@ -101,12 +103,12 @@ body {
 
             .title-header {
 
-             h1, h2, h3, h4, h5, h6, p, a, {
+               h1, h2, h3, h4, h5, h6, p, a, {
                 color: @white; 
             }
             a {
-             font-size: @big-text+6;
-         }
+               font-size: @big-text+6;
+           }
 
            }//title header      
 
@@ -147,8 +149,7 @@ body {
 
         img { 
             max-width: 100%;
-            max-height: 500px;
-            //height: 50vh;
+            max-height: 200px;
             position: absolute;
             top: 20px;
             z-index: 999;
