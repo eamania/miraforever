@@ -18,8 +18,6 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 
 //BOOTSTRAP
 @import url('inc/bootstrap/css/bootstrap.css');
-//MEGAMENU OVERRIDE
-@import url('less/megamenu.less');
 //VARIABLES LESS FILE
 @import url('less/variables.less');
 // CAROUSEL FULL HEIGHT CSS
@@ -27,9 +25,12 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 //FONT
 @import url('http://fonts.googleapis.com/css?family=Hind:400,300,500,600,700');
 
+//MEGAMENU OVERRIDE
+@import url('less/megamenu.less');
+
 body {
 
-    background-color: @grey;
+    background-color: @white;
 }
 .contaier{
     width: 100%;   
@@ -54,6 +55,11 @@ body {
     nav.top-bar{
         background-color: @topheader;
         margin-top: -90px;  
+
+        //bootstrap override
+        .container{
+            padding:0px 
+        }
     }
     .navbar-inverse{
         //bootstrap override

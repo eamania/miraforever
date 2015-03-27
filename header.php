@@ -41,22 +41,24 @@
 			<!-- MENU -->
 			<div class="row">
 				<div id="menu-top-fixed ">
-					<nav class="site-branding navbar navbar-inverse  top-bar " role="navigation">
+					<nav class="site-branding navbar navbar-inverse top-bar " role="navigation">
 						<div class="container">
-							<div class="col-md-4">
+						<!-- 	<div class="col-md-4">
 								<h3 class="site-title">
 									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><?php bloginfo( 'name' ); ?></a>
 								</h3>
 							</div>
-							<div class="col-md-8 pull-left">
-								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-							</div>
+						-->							
+						<div class="row"><div class="col-md-12 pull-left">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 						</div>
-					</nav>
+					</div>
 				</div>
-			</div>
-		</header><!-- #masthead close container fluid -->
+			</nav>
+		</div>
+	</div>
+</header><!-- #masthead close container fluid -->
 
-		<!-- inizio contenuto -->
-		<div id="content" class="site-content container">
-			<div class="row">
+<!-- inizio contenuto -->
+<div id="content" class="site-content container">
+	<div class="row">
