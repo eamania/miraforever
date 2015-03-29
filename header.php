@@ -50,6 +50,7 @@
 							</div>
 						-->							
 						<div class="row"><div class="col-md-12 pull-left">
+							<div class="logo-mega-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><?php bloginfo( 'name' ); ?></a></div>
 							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 						</div>
 					</div>

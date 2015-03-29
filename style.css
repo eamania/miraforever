@@ -40,6 +40,15 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 .mega-menu  > li > a:visited {
   background-color: #fa6900 !important;
 }
+/* line 19, less/megamenu.less */
+.mega-menu  > li:first-child {
+  margin-left: 200px!important;
+}
+/* line 24, less/megamenu.less */
+.logo-mega-menu {
+  position: absolute;
+  top: 12px;
+}
 /* line 31, style.less */
 body {
   background-color: #ffffff;

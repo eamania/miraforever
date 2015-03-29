@@ -16,3 +16,10 @@
 .mega-menu  > li > a:visited {
   background-color: #fa6900 !important;
 }
+.mega-menu  > li:first-child {
+  margin-left: 200px!important;
+}
+.logo-mega-menu {
+  position: absolute;
+  top: 12px;
+}
