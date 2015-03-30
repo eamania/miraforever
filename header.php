@@ -50,7 +50,8 @@
 							</div>
 						-->							
 						<div class="row"><div class="col-md-12">
-							<div class="logo-mega-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><?php bloginfo( 'name' ); ?></a></div>
+							<!-- nascondere scritta logo se larghezza è sm e accorciare il margin del primo elemento-->
+							<div class="mega-menu-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><span class="hidden-sm hidden-xs"><?php bloginfo( 'name' ); ?></span></a></div>
 							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 						</div>
 					</div>
