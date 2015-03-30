@@ -40,7 +40,8 @@
 			</div>
 			<!-- MENU -->
 			<div class="row">
-				<div id="menu-top-fixed ">
+				<div id="menu-top-fixed">
+					<!-- aggiungere position quando raggiunge 100vh: "fixed;op: 90px;width: 100%; z-index: 100000;"-->
 					<nav class="site-branding navbar navbar-inverse top-bar " role="navigation">
 						<div class="container">
 						<!-- 	<div class="col-md-4">

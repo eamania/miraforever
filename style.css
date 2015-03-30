@@ -56,13 +56,13 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
     margin-left: 60px!important;
   }
 }
-/* line 36, less/megamenu.less */
+/* line 30, less/megamenu.less */
 .mega-menu-logo {
   position: absolute;
   top: 12px;
   z-index: 1000;
 }
-/* line 41, less/megamenu.less */
+/* line 35, less/megamenu.less */
 .mega-menu-logo a {
   color: #ffffff;
   text-decoration: none;
@@ -80,7 +80,13 @@ body {
 .site-header {
   height: 100vh;
 }
-/* line 42, style.less */
+@media (max-width: 992px) {
+  /* line 41, style.less */
+  .site-header {
+    height: auto;
+  }
+}
+/* line 45, style.less */
 .site-header h3 a {
   font-family: 'Hind', sans-serif;
   text-transform: uppercase;
@@ -88,21 +94,21 @@ body {
   color: #ffffff;
   padding: 5px;
 }
-/* line 51, style.less */
+/* line 54, style.less */
 .site-header h3 a:hover,
 .site-header h3 a:active {
   text-decoration: none;
 }
-/* line 55, style.less */
+/* line 58, style.less */
 .site-header nav.top-bar {
   background-color: rgba(255, 105, 0, 0.8);
   margin-top: -90px;
 }
-/* line 60, style.less */
+/* line 63, style.less */
 .site-header nav.top-bar .container {
   padding: 0px;
 }
-/* line 64, style.less */
+/* line 67, style.less */
 .site-header .navbar-inverse {
   border: none;
 }

@@ -38,6 +38,9 @@ body {
 }//fine container
 .site-header{ 
     height: 100vh; 
+    @media (max-width:@md) {
+        height:auto;
+    }
     h3 {
         a{
             font-family: 'Hind', sans-serif;
@@ -65,9 +68,6 @@ body {
         //bootstrap override
         border: none; 
     }
-
-
-
 
     .carousel {
         padding-top: 0;
