@@ -29,5 +29,23 @@ $('.carousel-inner > div.item').first().addClass("active");
 $('#carousel-header').carousel();
 
 </script>
+<!-- MEGAMENU fisso in alto durante lo scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+  var menutopfixed = $("#menu-top-fixed");
+  var posizione = menutopfixed.position();
+
+  // intercettiamo qui l'evento "scroll"                 
+  $(window).scroll(function() {
+    // "$(window).scrollTop()" ci dice di quanto abbiamo scrollato la pagina
+    if ($(window).scrollTop() >= posizione.top) {
+      // abbiamo scrollato oltre il div, dobbiamo bloccarlo
+      menutopfixed.addClass("mega-menu-top-fixed");
+    } else {
+      // abbiamo scrollato verso l'alto, sopra il div, possiamo sbloccarlo
+      menu.removeClass("mega-menu-top-fixed"); 
+    }
+  });
+});</script>
 </body>
 </html>
