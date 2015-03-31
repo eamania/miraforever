@@ -22,18 +22,19 @@
 <?php wp_footer(); ?>
 <script type="text/javascript">
 
-if ( $('.carousel-inner').length > 0)
-{
-$('.carousel-inner > div.item').first().addClass("active");
-}
-$('#carousel-header').carousel();
+  if ( $('.carousel-inner').length > 0)
+  {
+    $('.carousel-inner > div.item').first().addClass("active");
+  }
+  $('#carousel-header').carousel();
 
 </script>
 <!-- MEGAMENU fisso in alto durante lo scrolling -->
 <script type="text/javascript">
-$(document).ready(function() {
-  var menutopfixed = $("#menu-top-fixed");
-  var posizione = menutopfixed.position();
+  $(document).ready(function() {
+    var menutopfixed = $("#menu-top-fixed");
+    var posizione = menutopfixed.position();
+    var siteheaderbackgroud = $(".site-header nav.top-bar");
 
   // intercettiamo qui l'evento "scroll"                 
   $(window).scroll(function() {
@@ -41,9 +42,12 @@ $(document).ready(function() {
     if ($(window).scrollTop() >= posizione.top) {
       // abbiamo scrollato oltre il div, dobbiamo bloccarlo
       menutopfixed.addClass("mega-menu-top-fixed");
+      siteheaderbackgroud.addClass("mega-menu-top-fixed-background");
     } else {
       // abbiamo scrollato verso l'alto, sopra il div, possiamo sbloccarlo
-      menu.removeClass("mega-menu-top-fixed"); 
+      menutopfixed.removeClass("mega-menu-top-fixed"); 
+      siteheaderbackgroud.removeClass("mega-menu-top-fixed-background");
+
     }
   });
 });</script>

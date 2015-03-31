@@ -67,6 +67,17 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
   color: #ffffff;
   text-decoration: none;
 }
+/* line 42, less/megamenu.less */
+.mega-menu-top-fixed {
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  z-index: 100000;
+}
+/* line 51, less/megamenu.less */
+.mega-menu-top-fixed-background {
+  background-color: #ff6900 !important;
+}
 /* line 31, style.less */
 body {
   background-color: #ffffff;
