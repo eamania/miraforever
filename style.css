@@ -23,60 +23,64 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 /* line 4, less/megamenu.less */
 .mega-menu-wrap {
   background-color: transparent!important;
+  transition-property: background-color !important;
+  transition-duration: 0.5s !important;
 }
 @media (max-width: 992px) {
-  /* line 6, less/megamenu.less */
+  /* line 8, less/megamenu.less */
   .mega-menu-wrap {
     margin-top: 90px!important;
   }
 }
-/* line 11, less/megamenu.less */
+/* line 13, less/megamenu.less */
 .mega-menu  > li {
   float: right;
 }
-/* line 14, less/megamenu.less */
+/* line 16, less/megamenu.less */
 .mega-menu  > li > a {
   height: 90px!important;
   padding-top: 20px!important;
 }
-/* line 18, less/megamenu.less */
+/* line 20, less/megamenu.less */
 .mega-menu  > li > a:hover,
 .mega-menu  > li > a:active,
 .mega-menu  > li > a:focus,
 .mega-menu  > li > a:visited {
   background-color: #fa6900 !important;
 }
-/* line 22, less/megamenu.less */
+/* line 24, less/megamenu.less */
 .mega-menu  > li:first-child {
   margin-left: 200px!important;
 }
 @media (max-width: 992px) {
-  /* line 25, less/megamenu.less */
+  /* line 27, less/megamenu.less */
   .mega-menu  > li:first-child {
     margin-left: 60px!important;
   }
 }
-/* line 30, less/megamenu.less */
+/* line 32, less/megamenu.less */
 .mega-menu-logo {
   position: absolute;
   top: 12px;
   z-index: 1000;
 }
-/* line 35, less/megamenu.less */
+/* line 37, less/megamenu.less */
 .mega-menu-logo a {
   color: #ffffff;
   text-decoration: none;
 }
-/* line 42, less/megamenu.less */
+/* line 44, less/megamenu.less */
 .mega-menu-top-fixed {
   position: fixed;
   top: 90px;
   width: 100%;
   z-index: 100000;
 }
-/* line 51, less/megamenu.less */
+/* line 53, less/megamenu.less */
 .mega-menu-top-fixed-background {
   background-color: #ff6900 !important;
+  transition-property: background-color !important;
+  transition-duration: 0.5s !important;
 }
 /* line 31, style.less */
 body {

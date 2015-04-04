@@ -2,6 +2,8 @@
 /* http://paletton.com */
 .mega-menu-wrap {
   background-color: transparent!important;
+  transition-property: background-color !important;
+  transition-duration: 0.5s !important;
 }
 @media (max-width: 992px) {
   .mega-menu-wrap {
@@ -46,4 +48,6 @@
 }
 .mega-menu-top-fixed-background {
   background-color: #ff6900 !important;
+  transition-property: background-color !important;
+  transition-duration: 0.5s !important;
 }
