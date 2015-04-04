@@ -1,6 +1,68 @@
 .mega-menu-wrap {
-	background-color: transparent!important;
+  background-color: transparent!important;
+  transition-property: background-color !important;
+  transition-duration: 0.5s !important;
 }
-.mega-menu-wrap .mega-menu li a {
-	height: 90px!important;
+@media (max-width: 992px) {
+  .mega-menu-wrap {
+    margin-top: 90px!important;
+  }
+}
+.mega-menu  > li {
+  float: right;
+}
+.mega-menu  > li > a {
+  height: 90px!important;
+  padding-top: 20px!important;
+}
+.mega-menu  > li > a:hover,
+.mega-menu  > li > a:active,
+.mega-menu  > li > a:focus,
+.mega-menu  > li > a:visited {
+  background-color: #fa6900 !important;
+}
+.mega-menu  > li:first-child {
+  margin-left: 200px!important;
+}
+@media (max-width: 992px) {
+  .mega-menu  > li:first-child {
+    margin-left: 60px!important;
+  }
+}
+.mega-menu-logo {
+  position: absolute;
+  top: 12px;
+  z-index: 1000;
+}
+.mega-menu-logo a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.mega-menu-search {
+  background: none repeat scroll 0 0 red;
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+.mega-menu-social-div {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 1000;
+  height: 70px;
+  padding-top: 20px;
+  width: auto;
+}
+.mega-menu-top-fixed {
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  z-index: 100000;
+}
+.mega-menu-top-fixed-background {
+  background-color: #ff6900 !important;
+  transition-property: background-color !important;
+  transition-duration: 0.5s !important;
 }

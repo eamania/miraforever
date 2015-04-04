@@ -41,28 +41,25 @@
 			<!-- MENU -->
 			<div class="row">
 				<div id="menu-top-fixed">
-					<!-- aggiungere position quando raggiunge 100vh: "fixed;op: 90px;width: 100%; z-index: 100000;"-->
 					<nav class="site-branding navbar navbar-inverse top-bar " role="navigation">
-						<div class="container">
-						<!-- 	<div class="col-md-4">
-								<h3 class="site-title">
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><?php bloginfo( 'name' ); ?></a>
-								</h3>
-							</div>
-						-->							
-						<div class="row">
-							<div class="col-md-12">
-								<div class="mega-menu-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><span class="hidden-sm hidden-xs"><?php bloginfo( 'name' ); ?></span></a></div>
-								<div class="mega-menu-search "><span class="glyphicon glyphicon-search"></span>CERCA</div>
-								<span id="mega-menu-prymary-big"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></span>
+						<div class="container">						
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mega-menu-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><span class="hidden-sm hidden-xs"><?php bloginfo( 'name' ); ?></span></a></div>				
+									<span id="mega-menu-prymary-big"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></span>
+									<div id="social-link-search" class="mega-menu-social-div">
+										<div class="mega-menu-social-link pull-left">| FB | TW | FL | IS |</div>
+										<a id="slick-slidetoggle" class="mega-menu-search-icon pull-left" href="#"><span class="glyphicon glyphicon-search"></span></a></h3>
+										<div id="mega-menu-search-id" class="mega-menu-search pull-left">cceraca</div>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</nav>
+					</nav>
+				</div>
 			</div>
-		</div>
-	</header><!-- #masthead close container fluid -->
+		</header><!-- #masthead close container fluid -->
 
-	<!-- inizio contenuto -->
-	<div id="content" class="site-content container">
-		<div class="row">
+		<!-- inizio contenuto -->
+		<div id="content" class="site-content container">
+			<div class="row">
