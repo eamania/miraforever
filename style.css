@@ -70,13 +70,22 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
   text-decoration: none;
 }
 /* line 44, less/megamenu.less */
+.mega-menu-search {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 1000;
+  height: 70px;
+  padding-top: 20px;
+}
+/* line 52, less/megamenu.less */
 .mega-menu-top-fixed {
   position: fixed;
   top: 90px;
   width: 100%;
   z-index: 100000;
 }
-/* line 53, less/megamenu.less */
+/* line 61, less/megamenu.less */
 .mega-menu-top-fixed-background {
   background-color: #ff6900 !important;
   transition-property: background-color !important;
