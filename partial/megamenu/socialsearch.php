@@ -1,10 +1,11 @@
 <div id="social-link-search" class="mega-menu-social-div">
 	<div class="mega-menu-social-link pull-left">
-		<a href=""><i class="fa fa-facebook fa-2x"></i></a>
-		<a href=""><i class="fa fa-twitter fa-2x"></i></a>
+		<a href=""><i class="fa fa-facebook-square fa-2x"></i></a>
+		<a href=""><i class="fa fa-twitter-square fa-2x"></i></a>
 		<a href=""><i class="fa fa-flickr fa-2x"></i></a>
 		<a href=""><i class="fa fa-instagram fa-2x"></i></a>
-		<a href=""><i class="fa fa-ellipsis-v fa-2x"></i></a>
+		<a href=""><i class="fa fa-rss-square fa-2x"></i></a>
+		<a href=""><i class="divider-vertical"></i></a>
 		<a id="slick-slidetoggle" href="#"><i class="fa fa-search fa-2x"></i></a>
 
 	</div>

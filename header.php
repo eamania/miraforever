@@ -34,7 +34,7 @@
 				<?php 
 				if ( is_home() ) {
     					// This is the blog posts index
-					get_template_part("partial/home/carousell" , "home-header" );		
+					get_template_part("partial/home/carousell" , "header" );		
 				} else {}
 				?>
 			</div>
@@ -47,7 +47,7 @@
 								<div class="col-md-12">
 									<div class="mega-menu-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="logo-cl.png" height="60px" /><span class="hidden-sm hidden-xs"><?php bloginfo( 'name' ); ?></span></a></div>				
 									<span id="mega-menu-prymary-big"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></span>
-									<?php get_template_part("partial/megamenu" , "social-search" );?>
+									<?php get_template_part("partial/megamenu/socialsearch" );?>
 								</div>
 							</div>
 						</div>

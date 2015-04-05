@@ -15,6 +15,12 @@ get_header(); ?>
 <div id="primary" class="content-area col-md-8">
 	<main id="main" class="site-main" role="main">
 		
+		<?php
+
+
+		get_template_part( 'partial/home/lastnews' );
+		?>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
