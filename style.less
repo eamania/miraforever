@@ -109,12 +109,12 @@ body {
 
             .title-header {
 
-             h1, h2, h3, h4, h5, h6, p, a, {
+               h1, h2, h3, h4, h5, h6, p, a, {
                 color: @white; 
             }
             a {
-             font-size: @big-text+6;
-         }
+               font-size: @big-text+6;
+           }
 
            }//title header      
 
@@ -181,11 +181,27 @@ body {
 .site-content{
 
     background-color: @white;
+    .home-page-last-news {
 
+    }
     .lastnews-box{
-        background-color: red;
-        margin:10px;
+        //background-color: red;
         height:150px;
+        margin-top: 15px;
+
+        img{
+            height:100%;
+            width:100%;
+        }
+
+        .title-header-box {
+            background: none repeat scroll 0 0 red;
+            position:absolute;
+            bottom: 0;
+            left: 15px;
+            right:15px;
+            padding: 5px;
+        }
     }
 }//fine site content
 

@@ -163,10 +163,23 @@ body {
 .site-content {
   background-color: #ffffff;
 }
-/* line 185, style.less */
+/* line 187, style.less */
 .site-content .lastnews-box {
-  background-color: red;
-  margin: 10px;
   height: 150px;
+  margin-top: 15px;
+}
+/* line 192, style.less */
+.site-content .lastnews-box img {
+  height: 100%;
+  width: 100%;
+}
+/* line 197, style.less */
+.site-content .lastnews-box .title-header-box {
+  background: none repeat scroll 0 0 red;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */
