@@ -12,13 +12,14 @@
  */
 
 get_header(); ?>	
+<div class="row">
+	<?php
+	get_template_part( 'partial/home/lastnews' );
+	?>
+</div>
 <div id="primary" class="content-area col-md-8">
 	<main id="main" class="site-main" role="main">
-		<div class="row">
-			<?php
-			get_template_part( 'partial/home/lastnews' );
-			?>
-		</div>
+
 	</main><!-- #main --> 
 </div><!-- #primary -->
 <div class="col-md-4">
