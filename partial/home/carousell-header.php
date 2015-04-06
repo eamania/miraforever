@@ -24,7 +24,7 @@
 		while ( $the_query->have_posts() ) : 
 			$the_query->the_post();
 		?>
-		<div class="item ">
+		<div class="item">
 			<?php the_post_thumbnail('header-home-page' ,array('class' => "effect-img-slideshow"));?>
 			<div class="container">
 				<div class="row">

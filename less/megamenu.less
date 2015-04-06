@@ -15,13 +15,17 @@
 
  	& > a  {
  		height: 90px!important;
- 		padding-top: 20px!important;
+ 		padding-top: 27px!important;
  	}  
- 	& > a:hover, & > a:active, & > a:focus, & > a:visited{background-color: @orange!important;}
+ 	& > a:hover, & > a:active, & > a:focus, & > a:visited {background-color: @orange!important;}
 
  }
 
- li.mega-menu-item:hover & > a {background-color: @orange!important;}
+ li.mega-menu-item { 
+ 	.mega-menu-toggle, .mega-menu-toggle-on{
+ 		background-color: @orange!important;
+ 	}
+ }
 
  .mega-menu & > li:first-child {
 
@@ -34,10 +38,12 @@
 
 
  .mega-menu-logo {
- 	position:absolute;
- 	top: 12px;
+ 	height: 90px;
+ 	padding: 17px 5px 0;
+ 	position: absolute;
+ 	top: 0;
  	z-index: 1000;
- 	
+
  	a {
  		color:@white;
  		text-decoration: none;
@@ -79,6 +85,12 @@
  				color:@white;
  				padding-left: 5px;
  				padding-right:5px;
+ 				opacity: 0.5;
+ 			}
+ 			i:hover{
+ 				opacity: 1;
+ 				transition-property: opacity!important;
+ 				transition-duration: @t-slow!important;
  			}
  		}
  	}
