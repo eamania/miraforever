@@ -103,7 +103,9 @@ add_action( 'widgets_init', 'miraforever_widgets_init' );
  * Enqueue scripts and styles.
  */
 function miraforever_scripts() {
+	//wp_enqueue_style('megamenu-style', get_template_directory_uri() . '/megamenu.css', true);
 	wp_enqueue_style( 'miraforever-style', get_stylesheet_uri() );
+
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"), true);
 	wp_enqueue_script('jquery');
