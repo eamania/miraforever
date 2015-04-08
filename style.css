@@ -163,23 +163,32 @@ body {
 .site-content {
   background-color: #ffffff;
 }
-/* line 187, style.less */
-.site-content .lastnews-box {
+/* line 189, style.less */
+.site-content .home-page-last-news > article:first-child {
+  height: 315px;
+}
+/* line 192, style.less */
+.site-content .home-page-last-news .lastnews-box {
   height: 150px;
   margin-top: 15px;
 }
-/* line 192, style.less */
-.site-content .lastnews-box img {
+/* line 199, style.less */
+.site-content .home-page-last-news .lastnews-box img {
   height: 100%;
   width: 100%;
 }
-/* line 199, style.less */
-.site-content .lastnews-box .title-header-box {
+/* line 206, style.less */
+.site-content .home-page-last-news .lastnews-box .title-header-box {
   background: none repeat scroll 0 0 red;
   position: absolute;
   bottom: 0;
   left: 15px;
   right: 15px;
   padding: 5px;
+  border: 1px;
+}
+/* line 219, style.less */
+.site-content .home-page-last-news .lastnews-box:hover {
+  height: 200px;
 }
 /*# sourceMappingURL=style.css.map */

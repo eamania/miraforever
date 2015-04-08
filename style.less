@@ -181,13 +181,20 @@ body {
 .site-content{
 
     background-color: @white;
+
+
+
     .home-page-last-news {
 
-    }
-    .lastnews-box{
+        & > article:first-child{
+            height:315px;
+        }
+        .lastnews-box{
         //background-color: red;
         height:150px;
         margin-top: 15px;
+
+
 
         img{
             height:100%;
@@ -203,11 +210,22 @@ body {
             left: 15px;
             right:15px;
             padding: 5px;
+            border:1px;       
         }
 
 
     }
+
+    .lastnews-box:hover {
+        height:200px;
+    }
+}
+
+
+
+
 }//fine site content
+
 
 
 

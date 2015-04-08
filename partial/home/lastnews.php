@@ -1,6 +1,5 @@
-	
-<div id="home-page-last-news" class="col-md-12 home-page-last-news"><!--blocco ultime news home page -->
-	<h2>Ultime Notizie</h2>
+<h2>Ultime Notizie</h2>	
+<div class="home-page-last-news col-md-12"><!--blocco ultime news home page -->
 	<?php 
 	$the_query = new WP_Query(array(
 		'posts_per_page' => 5,
@@ -8,11 +7,15 @@
 	while ( $the_query->have_posts() ) : 
 		$the_query->the_post();
 	?>
+	
 	<article class="lastnews-box col-md-4"><!-- 5 blocchi singoli delle news -->
-		<?php the_post_thumbnail('thumbnail');?>
-		<div class="title-header-box"><div class="title-header" ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> </div>
-		<!--<div class="col-md-12"><div class="excerpt-header"><?php the_excerpt();?></div></div>-->
-	</article><!-- item -->
+		<a href="">
+			<?php the_post_thumbnail('thumbnail');?>
+			<div class="title-header-box"><div class="title-header" ><?php the_title(); ?></h4></div> </div>
+			<!--<div class="col-md-12"><div class="excerpt-header"><?php the_excerpt();?></div></div>-->
+		</a>
+	</article>
+	<!-- item -->
 	<?php 
 	endwhile; 
 	wp_reset_postdata();

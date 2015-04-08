@@ -13,11 +13,11 @@
 
 get_header(); ?>	
 <div class="col-md-12">
-	<div class="row">
+	<section id="home-page-last-news" class="row">
 		<?php
 		get_template_part( 'partial/home/lastnews' );
 		?>
-	</div>
+	</section>
 </div>
 <div id="primary" class="content-area col-md-8">
 	<main id="main" class="site-main" role="main">
