@@ -109,12 +109,12 @@ body {
 
             .title-header {
 
-               h1, h2, h3, h4, h5, h6, p, a, {
+             h1, h2, h3, h4, h5, h6, p, a, {
                 color: @white; 
             }
             a {
-               font-size: @big-text+6;
-           }
+             font-size: @big-text+6;
+         }
 
            }//title header      
 
@@ -199,6 +199,8 @@ body {
         img{
             height:100%;
             width:100%;
+            display:block;
+            background-color: @orange;
         }
 
 
@@ -213,11 +215,25 @@ body {
             border:1px;       
         }
 
+        .the-excerpt {
+
+            background: none repeat scroll 0 0 red;
+            height: 100%;
+            margin-right: 15px;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            overflow:hidden;
+            visibility:hidden;
+        }
+
+
+
 
     }
 
     .lastnews-box:hover {
-        height:200px;
+
     }
 }
 

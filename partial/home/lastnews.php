@@ -8,11 +8,12 @@
 		$the_query->the_post();
 	?>
 	
-	<article class="lastnews-box col-md-4"><!-- 5 blocchi singoli delle news -->
+	<article class="lastnews-box col-md-4" id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
 		<a href="">
 			<?php the_post_thumbnail('thumbnail');?>
 			<div class="title-header-box"><div class="title-header" ><?php the_title(); ?></h4></div> </div>
 			<!--<div class="col-md-12"><div class="excerpt-header"><?php the_excerpt();?></div></div>-->
+			<div class="the-excerpt" ><?php the_excerpt();?></div>
 		</a>
 	</article>
 	<!-- item -->

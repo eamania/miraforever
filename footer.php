@@ -60,6 +60,20 @@
 				return false;
 			});
 		});
-		</script
-	</body>
-	</html>
+	</script>
+
+	<script type="text/javascript" >
+		$(function() {
+			$('.lastnews-box').hover( function(){
+				var recupero_id = $(this).attr("id");   	
+			//alert(recupero_id);
+			recupero_id.addClass('prova');
+		},
+		function(){
+			recupero_id.removeClass('prova');
+		});
+		});
+
+	</script>
+</body>
+</html>

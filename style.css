@@ -176,8 +176,10 @@ body {
 .site-content .home-page-last-news .lastnews-box img {
   height: 100%;
   width: 100%;
+  display: block;
+  background-color: #fa6900;
 }
-/* line 206, style.less */
+/* line 208, style.less */
 .site-content .home-page-last-news .lastnews-box .title-header-box {
   background: none repeat scroll 0 0 red;
   position: absolute;
@@ -187,8 +189,15 @@ body {
   padding: 5px;
   border: 1px;
 }
-/* line 219, style.less */
-.site-content .home-page-last-news .lastnews-box:hover {
-  height: 200px;
+/* line 218, style.less */
+.site-content .home-page-last-news .lastnews-box .the-excerpt {
+  background: none repeat scroll 0 0 red;
+  height: 100%;
+  margin-right: 15px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */
