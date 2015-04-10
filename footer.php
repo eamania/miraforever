@@ -29,6 +29,17 @@
 	$('#carousel-header').carousel();
 
 </script>
+
+<!-- primo elemento lastnews grande-->
+<script type="text/javascript">
+
+	if ( $('.home-page-last-news').length > 0)
+	{
+		$('.home-page-last-news > article.lastnews-box').first().addClass("active");
+	}
+
+</script>
+
 <!-- MEGAMENU fisso in alto durante lo scrolling -->
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -62,18 +73,5 @@
 		});
 	</script>
 
-	<script type="text/javascript" >
-		$(function() {
-			$('.lastnews-box').hover( function(){
-				var recupero_id = $(this).attr("id");   	
-			//alert(recupero_id);
-			recupero_id.addClass('prova');
-		},
-		function(){
-			recupero_id.removeClass('prova');
-		});
-		});
-
-	</script>
 </body>
 </html>
