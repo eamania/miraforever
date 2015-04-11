@@ -12,7 +12,7 @@
 				<?php the_post_thumbnail('thumbnail');?>
 				<div class="title-header-box"><div class="title-header" ><?php the_title(); ?></h4></div> </div>
 				<!--<div class="col-md-12"><div class="excerpt-header"><?php the_excerpt();?></div></div>-->
-				<div class="the-excerpt" ><?php echo last_news_excerpt()."[...]"; ?></div>
+				<div class="the-excerpt" ><?php echo the_excerpt()."[...]"; ?></div>
 			</article>
 		</a>
 		<!-- item -->
