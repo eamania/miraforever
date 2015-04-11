@@ -56,7 +56,7 @@ body {
 /* line 58, style.less */
 .site-header nav.top-bar {
   background-color: rgba(255, 105, 0, 0.8);
-  margin-top: -89.99999999px;
+  margin-top: -90px;
 }
 /* line 63, style.less */
 .site-header nav.top-bar .container {
@@ -164,23 +164,39 @@ body {
   background-color: #ffffff;
 }
 /* line 189, style.less */
-.site-content .home-page-last-news .big {
-  height: 315px!important;
+.site-content .boxes-news .box {
+  margin-top: 15px;
+  height: auto;
 }
 /* line 193, style.less */
-.site-content .home-page-last-news .lastnews-box {
-  height: 150px;
-  margin-top: 15px;
-}
-/* line 202, style.less */
-.site-content .home-page-last-news .lastnews-box img {
+.site-content .boxes-news .box img {
   height: 100%;
   width: 100%;
   display: block;
   background-color: #fa6900;
 }
-/* line 211, style.less */
-.site-content .home-page-last-news .lastnews-box .title-header-box {
+/* line 202, style.less */
+.site-content .boxes-news .big {
+  height: 315px!important;
+}
+/* line 204, style.less */
+.site-content .boxes-news .big .title-header {
+  background-color: blue;
+}
+/* line 209, style.less */
+.site-content .boxes-news .lastnews {
+  height: 150px;
+}
+/* line 214, style.less */
+.site-content .boxes-news .novelty {
+  height: 200px;
+}
+/* line 216, style.less */
+.site-content .boxes-news .novelty .title-header {
+  background-color: #e0e4cc;
+}
+/* line 221, style.less */
+.site-content .boxes-news .title-header {
   background: none repeat scroll 0 0 red;
   position: absolute;
   bottom: 0;
@@ -189,8 +205,8 @@ body {
   padding: 5px;
   border: 1px;
 }
-/* line 221, style.less */
-.site-content .home-page-last-news .lastnews-box .the-excerpt {
+/* line 231, style.less */
+.site-content .boxes-news .the-excerpt {
   background: none repeat scroll 0 0 #222222;
   height: 100%;
   margin-right: 15px;
@@ -201,8 +217,8 @@ body {
   transition-property: opacity;
   transition-duration: 0.5s;
 }
-/* line 234, style.less */
-.site-content .home-page-last-news .lastnews-box .the-excerpt:hover {
+/* line 244, style.less */
+.site-content .boxes-news .the-excerpt:hover {
   opacity: 0.7;
   transition-property: opacity;
   transition-duration: 0.5s;

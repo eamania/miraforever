@@ -109,12 +109,12 @@ body {
 
             .title-header {
 
-               h1, h2, h3, h4, h5, h6, p, a, {
+             h1, h2, h3, h4, h5, h6, p, a, {
                 color: @white; 
             }
             a {
-               font-size: @big-text+6;
-           }
+             font-size: @big-text+6;
+         }
 
            }//title header      
 
@@ -184,21 +184,12 @@ body {
 
 
 
-    .home-page-last-news {
+    .boxes-news {
 
-        .big{
-            height:315px!important;
-        }
-        
-        .lastnews-box{
+        .box{ //box di aase
         //background-color: red;
-        height:150px;
         margin-top: 15px;
-
-
-
-
-
+        height:auto;
         img{
             height:100%;
             width:100%;
@@ -206,39 +197,54 @@ body {
             background-color: @orange;
         }
 
+    } 
 
-
-        .title-header-box {
-            background: none repeat scroll 0 0 red;
-            position:absolute;
-            bottom: 0;
-            left: 15px;
-            right:15px;
-            padding: 5px;
-            border:1px;       
+    .big{ //box grande last news
+        height:315px!important;
+        .title-header {
+            background-color: blue;
         }
+    }
 
-        .the-excerpt {
+    .lastnews { // box normale last news
+        height:150px;
+        
+    }
 
-            background: none repeat scroll 0 0 @black;
-            height: 100%;
-            margin-right: 15px;
-            padding: 20px;
-            position: absolute;
-            top: 0;
-            opacity: 0;
-            transition-property: opacity;
-            transition-duration: @t-slow;
+    .novelty{
+        height:200px;
+        .title-header {
+            background-color: @grey;
         }
+    }
 
-        .the-excerpt:hover {
-            opacity:0.7;
-            transition-property: opacity;
-            transition-duration: @t-slow;
-        }
+    .title-header {
+        background: none repeat scroll 0 0 red;
+        position:absolute;
+        bottom: 0;
+        left: 15px;
+        right:15px;
+        padding: 5px;
+        border:1px;       
+    }
 
+    .the-excerpt {
 
+        background: none repeat scroll 0 0 @black;
+        height: 100%;
+        margin-right: 15px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: @t-slow;
+    }
 
+    .the-excerpt:hover {
+        opacity:0.7;
+        transition-property: opacity;
+        transition-duration: @t-slow;
     }
 
 }

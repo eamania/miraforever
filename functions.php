@@ -79,13 +79,7 @@ endif; // miraforever_setup
 add_action( 'after_setup_theme', 'miraforever_setup' );
 
 
-function last_news_excerpt(){
-	$excerpt = get_the_content();
-	$excerpt = strip_shortcodes($excerpt);
-	$excerpt = strip_tags($excerpt);
-	$the_str = substr($excerpt, 0, 200);
-	return $the_str;
-}
+
 /**
  * Register widget area.
  *
@@ -241,3 +235,6 @@ require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
 //Custom Post Type
 require get_template_directory() . '/inc/custom-post-type.php';
+
+//Custom Post Type
+require get_template_directory() . '/inc/excerpt.php';

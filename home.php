@@ -20,12 +20,16 @@ get_header(); ?>
 	</section>
 </div>
 <div id="primary" class="content-area col-md-8">
-	<main id="main" class="site-main" role="main">
-
-	</main><!-- #main --> 
-</div><!-- #primary -->
-<div class="col-md-4">
-	<?php get_sidebar(); ?>
-</div>
+	<main id="main" class="site-main" role="main">	
+		<section id="home-page-last-news" class="row">
+			<?php
+			get_template_part( 'partial/home/novelty' );
+			?>
+			</section
+		</main><!-- #main --> 
+	</div><!-- #primary -->
+	<div class="col-md-4">
+		<?php get_sidebar(); ?>
+	</div>
 </div>
 <?php get_footer(); ?>
