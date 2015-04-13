@@ -18,8 +18,8 @@
 	<div class="carousel-inner" role="listbox">
 		<?php 
 		$the_query = new WP_Query(array(
-			'posts_per_page' => 6,
-			'category' => "featured" ,
+			'posts_per_page' => 2,
+			'category_name' => "featured" ,
 			)); 
 		while ( $the_query->have_posts() ) : 
 			$the_query->the_post();

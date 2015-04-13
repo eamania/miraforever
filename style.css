@@ -77,17 +77,17 @@ body {
 .site-header .carousel img {
   width: 100%;
 }
-/* line 85, style.less */
+/* line 86, style.less */
 .site-header .carousel .effect-img-slideshow {
   filter: blur(10px) brightness(2);
   -webkit-filter: blur(10px) brightness(2);
   -moz-filter: blur(10px);
 }
-/* line 92, style.less */
+/* line 93, style.less */
 .site-header .carousel .carousel-indicators {
   bottom: 90px;
 }
-/* line 98, style.less */
+/* line 99, style.less */
 .site-header .carousel .carousel-caption {
   top: 200px;
   bottom: auto;
@@ -102,7 +102,7 @@ body {
   margin: auto;
   max-height: 350px;
 }
-/* line 112, style.less */
+/* line 113, style.less */
 .site-header .carousel .carousel-caption .title-header h1,
 .site-header .carousel .carousel-caption .title-header h2,
 .site-header .carousel .carousel-caption .title-header h3,
@@ -113,11 +113,11 @@ body {
 .site-header .carousel .carousel-caption .title-header a {
   color: #ffffff;
 }
-/* line 115, style.less */
+/* line 116, style.less */
 .site-header .carousel .carousel-caption .title-header a {
   font-size: 34px;
 }
-/* line 123, style.less */
+/* line 124, style.less */
 .site-header .carousel .carousel-caption .excerpt-header h1,
 .site-header .carousel .carousel-caption .excerpt-header h2,
 .site-header .carousel .carousel-caption .excerpt-header h3,
@@ -127,21 +127,21 @@ body {
 .site-header .carousel .carousel-caption .excerpt-header p {
   text-shadow: 0 1px 10px #000000;
 }
-/* line 127, style.less */
+/* line 128, style.less */
 .site-header .carousel .carousel-caption .excerpt-header p {
   font-size: 18px;
 }
-/* line 139, style.less */
+/* line 140, style.less */
 .site-header .carousel .carousel-caption .carousel-caption-background {
   background-color: rgba(20, 20, 20, 0.7);
 }
-/* line 146, style.less */
+/* line 147, style.less */
 .site-header .carousel .carousel-caption .img-header-shadow {
   -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
 }
-/* line 156, style.less */
+/* line 157, style.less */
 .site-header .logo img {
   max-width: 100%;
   max-height: 200px;
@@ -149,7 +149,7 @@ body {
   top: 20px;
   z-index: 999;
 }
-/* line 170, style.less */
+/* line 171, style.less */
 .site-header .big-name-site {
   position: absolute;
   top: 20px;
@@ -159,43 +159,43 @@ body {
   text-shadow: 2px 2px 8px #222222;
   color: #ffffff;
 }
-/* line 181, style.less */
+/* line 182, style.less */
 .site-content {
   background-color: #ffffff;
 }
-/* line 189, style.less */
+/* line 190, style.less */
 .site-content .boxes-news .box {
   margin-top: 15px;
   height: auto;
+  overflow: hidden;
 }
-/* line 193, style.less */
+/* line 196, style.less */
 .site-content .boxes-news .box img {
-  height: 100%;
+  height: auto;
   width: 100%;
   display: block;
-  background-color: #fa6900;
 }
-/* line 202, style.less */
+/* line 205, style.less */
 .site-content .boxes-news .big {
   height: 315px!important;
 }
-/* line 204, style.less */
+/* line 207, style.less */
 .site-content .boxes-news .big .title-header {
   background-color: blue;
 }
-/* line 209, style.less */
+/* line 212, style.less */
 .site-content .boxes-news .lastnews {
   height: 150px;
 }
-/* line 214, style.less */
+/* line 217, style.less */
 .site-content .boxes-news .novelty {
   height: 200px;
 }
-/* line 216, style.less */
+/* line 219, style.less */
 .site-content .boxes-news .novelty .title-header {
   background-color: #e0e4cc;
 }
-/* line 221, style.less */
+/* line 224, style.less */
 .site-content .boxes-news .title-header {
   background: none repeat scroll 0 0 red;
   position: absolute;
@@ -205,7 +205,7 @@ body {
   padding: 5px;
   border: 1px;
 }
-/* line 231, style.less */
+/* line 234, style.less */
 .site-content .boxes-news .the-excerpt {
   background: none repeat scroll 0 0 #222222;
   height: 100%;
@@ -217,7 +217,7 @@ body {
   transition-property: opacity;
   transition-duration: 0.5s;
 }
-/* line 244, style.less */
+/* line 247, style.less */
 .site-content .boxes-news .the-excerpt:hover {
   opacity: 0.7;
   transition-property: opacity;
