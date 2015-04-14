@@ -200,6 +200,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     	add_image_size( 'thumbnails-header-home-page', 350, 300, true ); 
     	add_image_size( 'header-home-page', 1600, 900, true ); 
     	add_image_size( 'thumbnails-novelty', 305, 160, true);
+    	add_image_size( 'thumbnails-last-news', 350, 315, true);
 
     }
 
