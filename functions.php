@@ -197,10 +197,11 @@ if ( function_exists( 'add_theme_support' ) ) {
     }
 
     if ( function_exists( 'add_image_size' ) ) { 
-    	add_image_size( 'thumbnails-header-home-page', 350, 300, true ); 
-    	add_image_size( 'header-home-page', 1600, 900, true ); 
-    	add_image_size( 'thumbnails-novelty', 305, 160, true);
-    	add_image_size( 'thumbnails-last-news', 350, 315, true);
+    	add_image_size( 'thumbnails-header', 370, 280, true ); //   home page header
+    	add_image_size( 'thumbnails-header-background', 1600, 900, true ); //home page header
+    	add_image_size( 'thumbnails-rectangle', 350, 150, true); // last news
+    	add_image_size( 'thumbnails-rectangle-big', 305, 160, true); // novelty
+    	add_image_size( 'thumbnails-square', 350, 315, true); // last news
 
     }
 

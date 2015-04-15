@@ -14,22 +14,58 @@
 get_header(); ?>	
 <div class="col-md-12">
 	<section id="home-page-last-news" class="row">
-		<?php
-		get_template_part( 'partial/home/lastnews' );
-		?>
+		<div class="col-md-12"><?php
+			get_template_part( 'partial/home/lastnews' );
+			?>
+		</div>
 	</section>
 </div>
 <div id="primary" class="content-area col-md-8">
 	<main id="main" class="site-main" role="main">	
-		<section id="home-page-last-news" class="row">
-			<?php
-			get_template_part( 'partial/home/novelty' );
+		<section id="home-page-news" class="row">
+
+			<div class="col-md-12">
+				<?php
+				get_template_part( 'partial/home/novelty' );
+				?>
+			</div>
+
+			<div class="col-md-6">
+				<?php
+				get_template_part( 'partial/home/sapeviche' );
+				?>
+			</div>
+			<div class="col-md-6">
+				<?php
+				get_template_part( 'partial/home/otherpark' );
+				?>
+			</div>
+			<div class="col-md-12">
+				<?php
+				get_template_part( 'partial/home/attraction' );
+				?>
+			</div>
+			<div class="col-md-12"
+			><?php
+			get_template_part( 'partial/home/oldattraction' );
 			?>
-			</section
-		</main><!-- #main --> 
-	</div><!-- #primary -->
-	<div class="col-md-4">
-		<?php get_sidebar(); ?>
-	</div>
+		</div>
+		<div class="col-md-6">
+			<?php
+			get_template_part( 'partial/home/show' );
+			?>
+		</div>
+		<div class="col-md-6">
+			<?php
+			get_template_part( 'partial/home/shopfood' );
+			?>
+		</div>
+	</section>
+
+</main><!-- #main --> 
+</div><!-- #primary -->
+<div class="col-md-4">
+	<?php get_sidebar(); ?>
+</div>
 </div>
 <?php get_footer(); ?>
