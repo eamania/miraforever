@@ -25,11 +25,11 @@
 			$the_query->the_post();
 		?>
 		<div class="item">
-			<?php the_post_thumbnail('thumbnails-header-background' ,array('class' => "effect-img-slideshow"));?>
+			<?php the_post_thumbnail('thumbnails_header_background' ,array('class' => "effect-img-slideshow"));?>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-lg-8 carousel-caption">
-						<div class="col-md-5 col-lg-4 tierre "><div class="thumbnail-header"><?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails-header', array( 'class' => 'img-responsive, img-header-shadow' ) ); }?></div></div>
+						<div class="col-md-5 col-lg-4 tierre "><div class="thumbnail-header"><?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_header', array( 'class' => 'img-responsive, img-header-shadow' ) ); }?></div></div>
 						<div class="col-md-7 col-lg-8"><div class="title-header" ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> </div>
 						<div class="col-md-7 col-lg-8"><div class="excerpt-header"><?php echo header_excerpt();?></div></div>
 					</div>

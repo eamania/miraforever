@@ -15,56 +15,42 @@ get_header(); ?>
 <div class="col-md-12">
 	<section id="home-page-last-news" class="row">
 		<div class="col-md-12"><?php
-			get_template_part( 'partial/home/lastnews' );
+			get_template_part( 'partial/home/last-news' );
 			?>
 		</div>
 	</section>
 </div>
-<div id="primary" class="content-area col-md-8">
+<div id="primary" class="content-area col-md-9">
 	<main id="main" class="site-main" role="main">	
 		<section id="home-page-news" class="row">
+			<span id="novelty-news"><?php
+				set_query_var('category', novita );
+				set_query_var('post_per_page', 4 );
+				set_query_var('thumbnail_type', thumbnails_rectangle_big );
+				set_query_var('box_per_row', 3 );
+				get_template_part( 'partial/home/box-big' );
+				?>
+			</span>
+			<span id="lo-sapevi-che"><?php
+				set_query_var('category', losapeviche );
+				set_query_var('post_per_page', 4 );
+				set_query_var('thumbnail_type', thumbnails_rectangle );
+				get_template_part( 'partial/home/box-big' );
+				?>
+			</span>
+			<span id="miralife">
+				<?php
+				set_query_var('category', miralife );
+				set_query_var('post_per_page', 4 );
+				set_query_var('thumbnail_type', thumbnails_rectangle );
+				get_template_part( 'partial/home/box-big' );
+				?>
+			</span>
+		</section>
 
-			<div class="col-md-12">
-				<?php
-				get_template_part( 'partial/home/novelty' );
-				?>
-			</div>
-
-			<div class="col-md-6">
-				<?php
-				get_template_part( 'partial/home/sapeviche' );
-				?>
-			</div>
-			<div class="col-md-6">
-				<?php
-				get_template_part( 'partial/home/otherpark' );
-				?>
-			</div>
-			<div class="col-md-12">
-				<?php
-				get_template_part( 'partial/home/attraction' );
-				?>
-			</div>
-			<div class="col-md-12"
-			><?php
-			get_template_part( 'partial/home/oldattraction' );
-			?>
-		</div>
-		<div class="col-md-6">
-			<?php
-			get_template_part( 'partial/home/show' );
-			?>
-		</div>
-		<div class="col-md-6">
-			<?php
-			get_template_part( 'partial/home/shopfood' );
-			?>
-		</div>
-	</section>
-
-</main><!-- #main --> 
+	</main><!-- #main --> 
 </div><!-- #primary -->
-<div class="col-md-4">
+<div class="col-md-3">
 	<?php get_sidebar(); ?>
 </div>
 </div>
