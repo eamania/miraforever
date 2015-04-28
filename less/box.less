@@ -1,0 +1,96 @@
+ .boxes-news {
+     .news-box-down{
+        padding: 0px;
+        border-bottom: 2px dashed @grey;
+
+
+        margin-left: 30px;
+        color: @black;
+
+        img{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+        .box{ //box di aase
+        //background-color: red;
+        margin-top: 15px;
+        height:auto;
+        overflow:hidden;
+        color: @white;
+
+        img{
+            height:auto;
+            width:100%;
+            display:block;
+            //border: 3px solid @orange;
+           // background-color: @orange;  
+       }
+
+
+
+       .entry-date{
+        background: rgba(250, 105, 0, 0.8);
+        left: 15px;
+        padding: 5px;
+        position: absolute;
+        top: 0;
+        font-size: @p-text;      
+    }
+
+    .the-author{
+        .entry-date;
+        background:#fa6900 !important;
+        left: 0;
+        line-height: 140%;
+        backrground-opacity: 1;
+
+    }
+
+
+    .title-header {
+        background: none repeat scroll 0 0 rgba(250, 105, 0, 0.8);
+        position:absolute;
+        bottom: 0;
+        left: 15px;
+        right:15px;
+        padding: 5px;
+        border:1px; 
+        padding: 10px;
+        font-size: @p-text+5;      
+    }
+
+    .the-excerpt {
+
+        background: none repeat scroll 0 0 @black;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: @t-slow;
+        padding: 25px;
+        padding-top: 50px;
+
+        line-height: 160%;
+        right: 15px;
+        left:15px;
+    }
+
+    .the-excerpt:hover {
+        opacity:0.8;
+
+    }
+
+
+    }//box
+    .big{ //box grande last news
+        .title-header {
+           // background-color: blue;
+       }
+   }
+
+
+
+
+}

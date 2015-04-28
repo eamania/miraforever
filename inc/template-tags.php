@@ -24,11 +24,11 @@ function the_posts_navigation() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'miraforever' ) ); ?></div>
+				<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'miraforever' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'miraforever' ) ); ?></div>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'miraforever' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -56,8 +56,8 @@ function the_post_navigation() {
 		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'miraforever' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+			previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
+			next_post_link( '<div class="nav-next">%link</div>', '%title' );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -72,7 +72,7 @@ if ( ! function_exists( 'miraforever_posted_on' ) ) :
 function miraforever_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -80,17 +80,17 @@ function miraforever_posted_on() {
 		esc_html( get_the_date() ),
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
-	);
+		);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'miraforever' ),
+		_x( 'Invaito il %s', 'post date', 'miraforever' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+		);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'miraforever' ),
+		_x( 'da %s', 'post author', 'miraforever' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+		);
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
 
@@ -107,19 +107,19 @@ function miraforever_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'miraforever' ) );
 		if ( $categories_list && miraforever_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'miraforever' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( 'Nelle categorie %1$s', 'miraforever' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'miraforever' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'miraforever' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( '<br>Tags %1$s', 'miraforever' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'miraforever' ), __( '1 Comment', 'miraforever' ), __( '% Comments', 'miraforever' ) );
+		comments_popup_link( __( ' <br>Leave a comment', 'miraforever' ), __( '1 Comment', 'miraforever' ), __( '% Comments', 'miraforever' ) );
 		echo '</span>';
 	}
 
@@ -235,7 +235,7 @@ function miraforever_categorized_blog() {
 
 			// We only need to know if there is more than one category.
 			'number'     => 2,
-		) );
+			) );
 
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );

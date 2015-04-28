@@ -8,12 +8,16 @@
 		while ( $the_query->have_posts() ) : 
 			$the_query->the_post();
 		?>
-		<a href="">
+		<a href="<?php echo get_permalink(); ?>">
 
 			<article class="box lastnews big col-md-4" id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_square', array( 'class' => 'img-responsive' ) ); }?>
-				<div class="title-header" ><?php the_title(); ?></h4></div> 
-				<div class="the-excerpt" ><?php echo the_excerpt()."[...]"; ?></div>
+				<span class="entry-date"><?php echo get_the_date(); ?></span>
+				<span class="title-header" ><?php the_title(); ?></h4></span> 
+				<span class="the-excerpt" ><?php echo the_excerpt()."[...]"; ?>
+					<span class="the-author">Inviato da: <?php  the_author( );?> il <?php  the_date(); ?> </span>
+				</span>
+
 			</article>
 		</a>
 		<!-- item -->
@@ -25,16 +29,22 @@
 	<span>
 		<?php 
 		$the_query = new WP_Query(array(
-			'posts_per_page' => 2,
+			'posts_per_page' => 4,
+			'offset' => 1,
 			)); 
 		while ( $the_query->have_posts() ) : 
 			$the_query->the_post();
 		?>
-		<a href="">
+
+		<a href="<?php echo get_permalink(); ?>">
 			<article class="box lastnews col-md-4"  id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_rectangle', array( 'class' => 'img-responsive' ) ); }?>
-				<div class="title-header" ><?php the_title(); ?></h4></div> 
-				<div class="the-excerpt" ><?php echo last_news_excerpt()."[...]"; ?></div>
+				<span class="entry-date"><?php echo get_the_date(); ?></span>
+				<span class="title-header" ><?php the_title(); ?></h4></span> 
+				<span class="the-excerpt" ><?php echo last_news_excerpt()."[...]"; ?>
+					<span class="the-author">Inviato da: <?php  the_author( );?> il <?php  the_date(); ?> </span>
+				</span>
+
 			</article>
 		</a>
 		<!-- item -->

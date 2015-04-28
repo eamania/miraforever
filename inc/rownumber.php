@@ -15,7 +15,6 @@ elseif ($box_per_row == 1) {
 	$col = "col-md-12";
 }
 else {
-	echo "Hai inserito un valore non supportato, puoi inserire solo da quattro a un box per riga";
 }
 
 

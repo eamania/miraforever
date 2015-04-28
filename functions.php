@@ -201,9 +201,11 @@ if ( function_exists( 'add_theme_support' ) ) {
     	add_image_size( 'thumbnails_header_background', 1600, 900, true ); //home page header
     	add_image_size( 'thumbnails_rectangle', 350, 150, true); // last news
     	add_image_size( 'thumbnails_square', 350, 315, true); // last news
-    	add_image_size( 'thumbnails_rectangle_big', 305, 160, true); // novelty
-    	add_image_size( $name, $width, $height, $crop );
+    	add_image_size( 'thumbnails_rectangle_big', 305, 260, true); // novelty
+    	//add_image_size( $name, $width, $height, $crop );
     }
+
+
 
 
 
@@ -241,3 +243,4 @@ require get_template_directory() . '/inc/custom-post-type.php';
 
 //Custom Post Type
 require get_template_directory() . '/inc/excerpt.php';
+

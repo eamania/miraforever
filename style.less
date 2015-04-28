@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: miraforever
 Tags:
-
+ 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
@@ -20,22 +20,45 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 @import url('inc/bootstrap/css/bootstrap.css');
 //VARIABLES LESS FILE
 @import url('less/variables.less');
-// CAROUSEL FULL HEIGHT CSS
+// CAROUSEL FULL HEIGHT CSS   
 @import url('layouts/carousel-full.css');
 //FONT
 @import url('http://fonts.googleapis.com/css?family=Hind:400,300,500,600,700');
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,900');
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
+@import url('http://fonts.googleapis.com/css?family=Lobster');
 @import url('css/font-awesome.min.css');
-//MEGAMENU OVERRIDE
+//MEGAMENU OVERRIDE 
 //@import url('less/megamenu.less');
-
 body {
 
     background-color: @white;
+    font-family: 'Droid Sans', sans-serif;
+    a{
+
+    }
 }
 .contaier{
     width: 100%;   
     position: relative;
 }//fine container
+
+.tierre{
+    height: 100%;
+    display: table;
+}
+
+.table-cell{
+
+    display: table-cell;
+    vertical-align: top;
+}
+
+.vCenter {
+    position:absolute;  
+    margin:auto;
+    top:0; left:0; bottom:0; right:0;
+}
 .site-header{ 
     height: 100vh; 
     @media (max-width:@md) {
@@ -98,15 +121,15 @@ body {
         //bootstrap override 
 
         .carousel-caption  {
-            top: 200px;
-            bottom: auto;
+
+
             background-color: rgba(0, 0, 0, 0.75);
             -webkit-box-shadow: @shadows-caraousel-caption;
             -moz-box-shadow:    @shadows-caraousel-caption;
             box-shadow:         @shadows-caraousel-caption;
-            top: 0; left: 0; bottom: 0; right: 0;
-            margin:auto;
-            max-height: @caraousel-caption-height;
+            padding-bottom: 20px!important;
+
+            
             overflow: hidden;
 
 
@@ -116,7 +139,7 @@ body {
                 color: @white; 
             }
             a {
-               font-size: @big-text+6;
+               font-size: 34px;
            }
 
            }//title header      
@@ -129,18 +152,16 @@ body {
 
             p {
 
-                font-size: @p-text+6; 
+                font-size: 17px; 
             }
 
 
         }//excertp header
 
-        .tierre{
-            top: 15px;
-            left:5px;
-        }
+
         .thumbnail-header{
 
+            .thumbnail{margin-bottom:0px;}
         }
         .carousel-caption-background{
 
@@ -155,6 +176,15 @@ body {
             box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.75);
         }
 
+        .entry-meta {
+            position: absolute;
+            bottom: 0px;
+            right:15px;
+            a{
+                color: @white;
+                font-weight: bold;
+            }
+        }
         } //fine carousell caption
     }//fine carousell
     .logo {
@@ -176,13 +206,17 @@ body {
     .big-name-site{
 
         position: absolute;
-        top: 20px;
+        top: 0;
         height: auto;
         z-index: 999;
-        font-size: 80px;
+        font-size: 85px;
         text-shadow: 2px 2px 8px @black;
-        color: @white;
-    }
+        color: rgba(255, 255, 255, 0.95);
+        font-family: 'lobster', sans-serif;
+       // font-weight: 300;
+       text-transform: capitalize;
+
+   }
 }// fine site header
 .site-content{
 
@@ -190,72 +224,7 @@ body {
 
 
 
-    .boxes-news {
 
-        .box{ //box di aase
-        //background-color: red;
-        margin-top: 15px;
-        height:auto;
-        overflow:hidden;
-
-        img{
-            height:auto;
-            width:100%;
-            display:block;
-           // background-color: @orange;  
-       }
-
-   } 
-
-    .big{ //box grande last news
-        //height:315px!important;
-        .title-header {
-            background-color: blue;
-        }
-    }
-
-    .lastnews { // box normale last news
-       // height:150px;
-
-   }
-
-   .novelty{
-   // height:200px;
-   .title-header {
-    background-color: @grey;
-}
-}
-
-.title-header {
-    background: none repeat scroll 0 0 red;
-    position:absolute;
-    bottom: 0;
-    left: 15px;
-    right:15px;
-    padding: 5px;
-    border:1px;       
-}
-
-.the-excerpt {
-
-    background: none repeat scroll 0 0 @black;
-    height: 100%;
-    margin-right: 15px;
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: @t-slow;
-}
-
-.the-excerpt:hover {
-    opacity:0.7;
-    transition-property: opacity;
-    transition-duration: @t-slow;
-}
-
-}
 
 
 
@@ -266,6 +235,7 @@ body {
 
 
 
+@import url('less/box.less');
 
 
 

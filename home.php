@@ -25,27 +25,31 @@ get_header(); ?>
 		<section id="home-page-news" class="row">
 			<span id="novelty-news"><?php
 				set_query_var('category', novita );
-				set_query_var('post_per_page', 4 );
+				set_query_var('post_per_page', 3 );
 				set_query_var('thumbnail_type', thumbnails_rectangle_big );
 				set_query_var('box_per_row', 3 );
 				get_template_part( 'partial/home/box-big' );
 				?>
 			</span>
-			<span id="lo-sapevi-che"><?php
-				set_query_var('category', losapeviche );
+			<span id="novelty-news"><?php
+				set_query_var('category', novita );
 				set_query_var('post_per_page', 4 );
 				set_query_var('thumbnail_type', thumbnails_rectangle );
-				get_template_part( 'partial/home/box-big' );
+				set_query_var('box_per_row', 3 );
+				get_template_part( 'partial/home/box-tiny' );
 				?>
 			</span>
-			<span id="miralife">
-				<?php
-				set_query_var('category', miralife );
+			<span id="novelty-news"><?php
+				set_query_var('category', novita );
 				set_query_var('post_per_page', 4 );
 				set_query_var('thumbnail_type', thumbnails_rectangle );
-				get_template_part( 'partial/home/box-big' );
+				set_query_var('box_per_row', 3 );
+				get_template_part( 'partial/home/box-tiny' );
 				?>
 			</span>
+		</section>
+		<section>
+
 		</section>
 
 	</main><!-- #main --> 

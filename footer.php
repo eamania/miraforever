@@ -73,5 +73,19 @@
 		});
 	</script>
 
+	<script>
+
+		$(function () {
+
+			var h = $('.carousel-caption').height();
+
+			$('.carousel-caption').height(h);
+
+			$('.carousel-caption').addClass("vCenter");
+
+		});
+
+	</script>
+
 </body>
 </html>
