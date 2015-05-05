@@ -1,6 +1,6 @@
 <h2>Ultime Notizie</h2>	
 
-<div class="boxes-news col-md-12"><!--blocco ultime news home page -->
+<div class="boxes-news"><!--blocco ultime news home page -->
 	<span><?php 
 		$the_query = new WP_Query(array(
 			'posts_per_page' => 1,
@@ -10,7 +10,7 @@
 		?>
 		<a href="<?php echo get_permalink(); ?>">
 
-			<article class="box lastnews big col-md-4" id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
+			<article class="col-md-4 box lastnews big col-md-4" id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_square', array( 'class' => 'img-responsive' ) ); }?>
 				<span class="entry-date"><?php echo get_the_date(); ?></span>
 				<span class="title-header" ><?php the_title(); ?></h4></span> 
@@ -37,7 +37,7 @@
 		?>
 
 		<a href="<?php echo get_permalink(); ?>">
-			<article class="box lastnews col-md-4"  id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
+			<article class="col-md-4 box lastnews"  id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_rectangle', array( 'class' => 'img-responsive' ) ); }?>
 				<span class="entry-date"><?php echo get_the_date(); ?></span>
 				<span class="title-header" ><?php the_title(); ?></h4></span> 

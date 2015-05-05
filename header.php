@@ -39,6 +39,7 @@
     					// This is the blog posts index
 					get_template_part("partial/home/carousell" , "header" );		
 				} else {}
+				
 				?>
 			</div>
 			<!-- MENU -->
