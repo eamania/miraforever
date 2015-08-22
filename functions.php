@@ -95,6 +95,56 @@ function miraforever_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 		) );
+
+	register_sidebar( array(
+		'name'          => __( 'home', 'miraforever' ),
+		'id'            => 'sidebar-home',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'footer_one', 'miraforever' ),
+		'id'            => 'footer_one',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'footer_two', 'miraforever' ),
+		'id'            => 'footer_two',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'footer_three', 'miraforever' ),
+		'id'            => 'footer_three',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'footer_four', 'miraforever' ),
+		'id'            => 'footer_four',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+		) );
 }
 add_action( 'widgets_init', 'miraforever_widgets_init' );
 
@@ -110,11 +160,15 @@ function miraforever_scripts() {
 
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"), true);
+
+
+
 	wp_enqueue_script('jquery');
 	//wp_enqueue_script( 'miraforever', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
 	//wp_enqueue_script( 'miraforever-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), NULL, true );
 	wp_enqueue_script( 'miraforever-bootstrap', get_template_directory_uri() . '/inc/bootstrap/js/bootstrap.min.js', true );
-	
+	//wp_enqueue_script( 'carousell', get_template_directory_uri() . '/inc/carouselljs/js/owl.carousel.js', true);
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -208,30 +262,75 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 
 
+/**
+ * Get taxonomies terms links.
+ *
+ * @see get_object_taxonomies()
+ */
+function wpdocs_custom_taxonomies_terms_links() {
+    // Get post by post ID.
+	$post = get_post( $post->ID );
+
+    // Get post type by post.
+	$post_type = $post->post_type;
+
+    // Get post type taxonomies.
+	$taxonomies = get_object_taxonomies( $post_type, 'objects' );
+
+	$out = array();
+
+	foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
+
+        // Get the terms related to post.
+		$terms = get_the_terms( $post->ID, $taxonomy_slug );
+
+
+		if ( ! empty( $terms ) ) {
+			foreach ( $terms as $term ) {
+				$out[] = $term->name ;
+				if ($term != end($terms)) {
+					$out[] =  ", ";
+				}
+				else {
+					
+					
+				}
+
+			}
+
+		}
+
+
+	}
+	return implode( $out );
+}
+
+
+
 
 /**
- * Implement the Custom Header feature.
- */
+* Implement the Custom Header feature.
+*/
 //require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Custom template tags for this theme.
- */
+* Custom template tags for this theme.
+*/
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
- */
+* Custom functions that act independently of the theme templates.
+*/
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
- */
+* Customizer additions.
+*/
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load Jetpack compatibility file.
- */
+* Load Jetpack compatibility file.
+*/
 require get_template_directory() . '/inc/jetpack.php';
 
 
@@ -244,3 +343,4 @@ require get_template_directory() . '/inc/custom-post-type.php';
 //Custom Post Type
 require get_template_directory() . '/inc/excerpt.php';
 
+flush_rewrite_rules();

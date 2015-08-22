@@ -3,7 +3,10 @@
  * @package miraforever
  */
 ?>
-<div id="carousel-header" class="carousel slide" data-ride="carousel">
+
+
+
+<div id="carousel-header" class="carousel  carousel-fade slide" data-ride="carousel">
 	<!-- Indicators --> 
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-header" data-slide-to="0" class="active"></li>
@@ -32,8 +35,8 @@
 						<div class="col-md-3 col-lg-5 tierre ">
 							<div class="thumbnail-header table-cell "><?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_header', array( 'class' => 'thumbnail img-responsive, img-header-shadow' ) ); }?></div>
 						</div>
-						<div class="col-md-9 col-lg-7 tierre">
-							<div class="table-cell">
+						<div class="col-md-9 col-lg-7 tierre" >
+							<div class="centertext " >
 								<div class="title-header " ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> 
 								<div class="excerpt-header "><p><?php echo header_excerpt()."[...]";?></p></div>
 								<div class="entry-meta">

@@ -18,6 +18,12 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 
 //BOOTSTRAP
 @import url('inc/bootstrap/css/bootstrap.css');
+
+//carousell per attrazionie  e altro
+@import url('inc/carouselljs/assets/owl.carousel.css');
+@import url('inc/carouselljs/assets/owl.theme.css'); 
+
+
 //VARIABLES LESS FILE
 @import url('less/variables.less');
 // CAROUSEL FULL HEIGHT CSS   
@@ -38,6 +44,7 @@ body {
 
     }
 }
+
 .contaier{
     width: 100%;   
     position: relative;
@@ -60,7 +67,7 @@ body {
     top:0; left:0; bottom:0; right:0;
 }
 .site-header{ 
-    height: 100vh; 
+    //height: 100vh; 
     @media (max-width:@md) {
         height:auto;
     }
@@ -111,6 +118,7 @@ body {
             filter: blur(@blur-slideshow) brightness(@brightness-slideshow);   
             -webkit-filter: blur(@blur-slideshow) brightness(@brightness-slideshow);  
             -moz-filter: blur(@blur-slideshow);
+            filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
         }
 
         //bootstrap override
@@ -128,8 +136,6 @@ body {
             -moz-box-shadow:    @shadows-caraousel-caption;
             box-shadow:         @shadows-caraousel-caption;
             padding-bottom: 20px!important;
-
-            
             overflow: hidden;
 
 
@@ -209,7 +215,7 @@ body {
         top: 0;
         height: auto;
         z-index: 999;
-        font-size: 85px;
+        font-size: 85px; 
         text-shadow: 2px 2px 8px @black;
         color: rgba(255, 255, 255, 0.95);
         font-family: 'lobster', sans-serif;
@@ -222,7 +228,11 @@ body {
 
     background-color: @white;
 
+    .content-area{
+        margin-bottom: 35px;
+    }
 
+    
 
 
 
@@ -232,14 +242,64 @@ body {
 }//fine site content
 
 
-
-
-
-@import url('less/box.less');
-
+// footer
+.footer {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,f9c300+100 */
+    background: #fa6900; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fa6900 0%, #f9c300 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fa6900), color-stop(100%,#f9c300)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fa6900 0%,#f9c300 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fa6900 0%,#f9c300 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fa6900 0%,#f9c300 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fa6900 0%,#f9c300 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa6900', endColorstr='#f9c300',GradientType=0 ); /* IE6-9 */
+    height:600px; 
+    text-align:center; 
+}
 
 
 .no_padding {
     padding-right: 0;
     padding-left: 0; 
 }
+
+.attrazioni-display {
+    opacity: 0;
+    background-size: 100%;
+    background-position: center;
+    padding-bottom: 50px;
+    padding-top: 50;
+
+    h1, h2 {
+        color: white;
+        font-weight: bold;
+        font-size:@extra-big-text;
+        text-shadow:2px 2px 2px rgba(0, 0, 0, 0.8);
+    }
+    h2{
+        font-size:@big-text; 
+    }
+
+}
+.mappa-home-page {
+
+    background:#86a346;
+    text-align:center;
+   // padding-top: 50px;
+} 
+
+
+@tempo:2s;
+.attrazioni-display-yes {
+    opacity: 1;
+    -webkit-transition: all @tempo ease; 
+    -moz-transition: all @tempo ease;
+    -ms-transition: all @tempo ease;
+    -o-transition: all @tempo ease;
+    transition: all @tempo ease;
+}
+
+@import url('less/box.less');
+
+@import url('less/owl-carousel.less');
+
