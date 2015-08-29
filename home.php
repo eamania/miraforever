@@ -95,7 +95,7 @@ get_header(); ?>
 		get_template_part( 'partial/home/carousel' );?>
 	</section>
 	<!-- fine carousell attrazioni, spettacoli e mappa del parco -->
-<!-- 	<section id="spettacoli_carousel" class="row" >
+	<section id="spettacoli_carousel" class="row" >
 		<div  id="mappa" class="container-fluid attrazioni-display mappa-home-page carousel-div"  >
 			<h1>La Mappa di Mirabilandia</h1>
 			<div class="row">
@@ -114,7 +114,7 @@ get_header(); ?>
 				});
 			</script> 
 		</div>
-	</section> -->
+	</section> 
 
 </div>
 

@@ -159,7 +159,7 @@ function miraforever_scripts() {
 	wp_enqueue_style( 'miraforever-style', get_stylesheet_uri() );
 
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"), true);
+	wp_register_script('jquery', ("https://code.jquery.com/jquery-1.11.3.js"), true);
 
 
 
@@ -308,6 +308,298 @@ function wpdocs_custom_taxonomies_terms_links() {
 
 
 
+//custom post type and taxonomy 
+function attrazioni_taxonomy() {
+
+	$labels = array(
+		'name'                       => 'Attrazioni',
+		'singular_name'              => 'Attrazione',
+		'menu_name'                  => 'Attrazioni',
+		'all_items'                  => 'All Items',
+		'parent_item'                => 'Parent Item',
+		'parent_item_colon'          => 'Parent Item:',
+		'new_item_name'              => 'New Item Name',
+		'add_new_item'               => 'Add New Item',
+		'edit_item'                  => 'Edit Item',
+		'update_item'                => 'Update Item',
+		'view_item'                  => 'View Item',
+		'separate_items_with_commas' => 'Separate items with commas',
+		'add_or_remove_items'        => 'Add or remove items',
+		'choose_from_most_used'      => 'Choose from the most used',
+		'popular_items'              => 'Popular Items',
+		'search_items'               => 'Search Items',
+		'not_found'                  => 'Not Found',
+		);
+	$rewrite = array(
+		'slug'                       => 'attrazioni-mirabilandia-category',
+		'with_front'                 => false,
+		'hierarchical'               => true,
+		);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+		);
+	register_taxonomy( 'attrazioni_mirabilandia', array( 'attrazioni', 'attrazioni_rimosse' ), $args );
+
+}
+
+function spettacoli_taxonomy() {
+
+	$labels = array(
+		'name'                       => 'Spettacoli',
+		'singular_name'              => 'Spettacolo',
+		'menu_name'                  => 'Spettacoli',
+		'all_items'                  => 'All Items',
+		'parent_item'                => 'Parent Item',
+		'parent_item_colon'          => 'Parent Item:',
+		'new_item_name'              => 'New Item Name',
+		'add_new_item'               => 'Add New Item',
+		'edit_item'                  => 'Edit Item',
+		'update_item'                => 'Update Item',
+		'view_item'                  => 'View Item',
+		'separate_items_with_commas' => 'Separate items with commas',
+		'add_or_remove_items'        => 'Add or remove items',
+		'choose_from_most_used'      => 'Choose from the most used',
+		'popular_items'              => 'Popular Items',
+		'search_items'               => 'Search Items',
+		'not_found'                  => 'Not Found',
+		);
+	$rewrite = array(
+		'slug'                       => 'spettacoli-mirabilandia-category',
+		'with_front'                 => false,
+		'hierarchical'               => true,
+		);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+		);
+	register_taxonomy( 'spettacoli_mirabilandia', array( 'spettacoli', 'spettacoli_rimossi' ), $args );
+
+}
+
+
+// Register Custom Post Type
+function attrazioni() {
+
+	$labels = array(
+		'name'                => 'Attrazioni',
+		'singular_name'       => 'Attrazione',
+		'menu_name'           => 'Attrazioni',
+		'name_admin_bar'      => 'Attrazioni',
+		'parent_item_colon'   => 'Parent Item:',
+		'all_items'           => 'All Items',
+		'add_new_item'        => 'Add New Item',
+		'add_new'             => 'Add New',
+		'new_item'            => 'New Item',
+		'edit_item'           => 'Edit Item',
+		'update_item'         => 'Update Item',
+		'view_item'           => 'View Item',
+		'search_items'        => 'Search Item',
+		'not_found'           => 'Not found',
+		'not_found_in_trash'  => 'Not found in Trash',
+		);
+	$rewrite = array(
+		'slug'                => 'attrazioni-mirabilandia',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+		);
+	$args = array(
+		'label'               => 'Attrazione',
+		'description'         => 'Attrazioni di mirabilandia',
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+		'taxonomies'          => array( 'attrazioni_taxonomy' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 5,
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => true,
+		'can_export'          => true,
+		'has_archive'         => true,		
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'post',
+		);
+	register_post_type( 'attrazioni', $args );
+
+}
+
+
+function attrazioni_rimosse() {
+
+	$labels = array(
+		'name'                => 'Attrazioni rimosse',
+		'singular_name'       => 'Attrazione rimossa',
+		'menu_name'           => 'Attrazioni rimosse',
+		'name_admin_bar'      => 'Attrazioni rimosse',
+		'parent_item_colon'   => 'Parent Item:',
+		'all_items'           => 'All Items',
+		'add_new_item'        => 'Add New Item',
+		'add_new'             => 'Add New',
+		'new_item'            => 'New Item',
+		'edit_item'           => 'Edit Item',
+		'update_item'         => 'Update Item',
+		'view_item'           => 'View Item',
+		'search_items'        => 'Search Item',
+		'not_found'           => 'Not found',
+		'not_found_in_trash'  => 'Not found in Trash',
+		);
+	$rewrite = array(
+		'slug'                => 'attrazioni-rimosse',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+		);
+	$args = array(
+		'label'               => 'Attrazione',
+		'description'         => 'Attrazioni rimosse da mirabilandia',
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+		'taxonomies'          => array( 'attrazioni_taxonomy' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 5,
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => true,
+		'can_export'          => true,
+		'has_archive'         => true,		
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'post',
+		);
+	register_post_type( 'attrazioni_rimosse', $args );
+
+}
+
+function spettacoli() {
+
+	$labels = array(
+		'name'                => 'Spettacoli',
+		'singular_name'       => 'Spettacolo',
+		'menu_name'           => 'Spettacoli',
+		'name_admin_bar'      => 'Spettacoli',
+		'parent_item_colon'   => 'Parent Item:',
+		'all_items'           => 'All Items',
+		'add_new_item'        => 'Add New Item',
+		'add_new'             => 'Add New',
+		'new_item'            => 'New Item',
+		'edit_item'           => 'Edit Item',
+		'update_item'         => 'Update Item',
+		'view_item'           => 'View Item',
+		'search_items'        => 'Search Item',
+		'not_found'           => 'Not found',
+		'not_found_in_trash'  => 'Not found in Trash',
+		);
+	$rewrite = array(
+		'slug'                => 'spettacoli-mirabilandia',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+		);
+	$args = array(
+		'label'               => 'Spettacolo',
+		'description'         => 'Spettacoli di mirabilandia',
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+		'taxonomies'          => array( 'spettacoli_taxonomy' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 5,
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => true,
+		'can_export'          => true,
+		'has_archive'         => true,		
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'post',
+		);
+	register_post_type( 'spettacoli', $args );
+
+}
+
+function spettacoli_rimossi() {
+
+	$labels = array(
+		'name'                => 'Spettacoli rimossi',
+		'singular_name'       => 'Spettacolo rimosso',
+		'menu_name'           => 'Spettacoli rimossi',
+		'name_admin_bar'      => 'Spettacoli rimossi',
+		'parent_item_colon'   => 'Parent Item:',
+		'all_items'           => 'All Items',
+		'add_new_item'        => 'Add New Item',
+		'add_new'             => 'Add New',
+		'new_item'            => 'New Item',
+		'edit_item'           => 'Edit Item',
+		'update_item'         => 'Update Item',
+		'view_item'           => 'View Item',
+		'search_items'        => 'Search Item',
+		'not_found'           => 'Not found',
+		'not_found_in_trash'  => 'Not found in Trash',
+		);
+	$rewrite = array(
+		'slug'                => 'spettacoli-rimossi',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+		);
+	$args = array(
+		'label'               => 'Spettacolo',
+		'description'         => 'Spettacoli rimossi da mirabilandia',
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+		'taxonomies'          => array( 'spettacoli_taxonomy' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 5,
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => true,
+		'can_export'          => true,
+		'has_archive'         => true,		
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'post',
+		);
+	register_post_type( 'spettacoli_rimossi', $args );
+
+}
+add_action( 'init', 'attrazioni', 0 );
+add_action( 'init', 'attrazioni_rimosse', 0 );
+add_action( 'init', 'spettacoli', 0 );
+add_action( 'init', 'spettacoli_rimossi', 0 );
+add_action( 'init', 'attrazioni_taxonomy', 0 );
+add_action( 'init', 'spettacoli_taxonomy', 0 );
+
+
+
+
+
+
+
 /**
 * Implement the Custom Header feature.
 */
@@ -337,10 +629,6 @@ require get_template_directory() . '/inc/jetpack.php';
 //TGM ACTIVATOR
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
-//Custom Post Type
-require get_template_directory() . '/inc/custom-post-type.php';
 
-//Custom Post Type
 require get_template_directory() . '/inc/excerpt.php';
 
-flush_rewrite_rules();
