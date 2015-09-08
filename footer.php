@@ -136,7 +136,11 @@
 
 
 
+	<script type="text/javascript"  async defer>
+// aggiunta icon nel megamenu
+$( "#mega-menu-item-14659 > a" ).last().addClass( "dsfasdfdsfads" );
 
+</script>
 
 </body>
 </html>

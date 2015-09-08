@@ -343,6 +343,13 @@ body {
   margin-top: 26px;
   font-size: 17px;
 }
+.carousell-box p {
+  color: white;
+  background: none;
+  font-size: 22px;
+  text-shadow: 0 1px 2px #000000;
+  line-height: 180%;
+}
 .background-carousel {
   background-color: rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 30px 0px #000000;
