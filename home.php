@@ -66,7 +66,7 @@ get_header(); ?>
 				</section>
 			</section>
 
-		</main><!-- #main --> 
+		</main><!-- fine #main   -->  
 	</div><!-- #primary -->
 	<div class="col-md-3" id="sidebar-home-page">
 		<?php get_sidebar('home'); 
