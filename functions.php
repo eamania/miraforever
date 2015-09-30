@@ -603,7 +603,7 @@ add_action( 'init', 'spettacoli_taxonomy', 0 );
 /**
 * Implement the Custom Header feature.
 */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
 * Custom template tags for this theme.

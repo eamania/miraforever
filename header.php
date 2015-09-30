@@ -38,6 +38,7 @@
 					get_template_part("partial/home/carousell" , "logo" );		
 				} else {
 					get_template_part("partial/home/carousell" , "logo" );
+
 				}
 				?>
 			</div>
@@ -48,8 +49,9 @@
     					// This is the blog posts index
 					get_template_part("partial/home/carousell" , "header" );		
 				} else 
-				{			
-					get_template_part("partial/home/carousell" , "header" );		
+				{
+					get_template_part("partial/share/article", "header" );
+
 				}
 
 				?>

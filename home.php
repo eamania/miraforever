@@ -11,9 +11,9 @@
  * @package miraforever
  */
 
-get_header(); ?>		
+get_header(); ?>
 <div id="content" class="site-content container">
-	<div class="row">	
+	<div class="row">
 		<div class="col-md-12">
 			<section id="home-page-last-news" class="row">
 				<div class="col-md-12"><?php
@@ -24,7 +24,7 @@ get_header(); ?>
 			</section>
 		</div>
 		<div id="primary" class="content-area col-md-9">
-			<main id="main" class="site-main" role="main">	
+			<main id="main" class="site-main" role="main">
 				<section id="home-page-news" class="row">
 					<div class="col-md-12">			
 						<span id="news_box_1"><?php
@@ -46,7 +46,7 @@ get_header(); ?>
 					<span id="" class="col-md-6">
 						<span id="content_box"><?php
 							$box_post = get_post('35');
-							echo apply_filters( 'the_content', $box_post->post_content ); 
+							echo apply_filters( 'the_content', $box_post->post_content );
 							?>
 						</span>
 					</span>
@@ -64,16 +64,17 @@ get_header(); ?>
 						?>
 					</span>
 				</section>
-			</section>
+				</section>
 
-		</main><!--  #main   -->
-	</div><!-- #primary -->
-	<div class="col-md-3" id="sidebar-home-page">
-		<?php get_sidebar('home'); 
-		?>
+			</main><!--  #main   -->
+		</div><!-- #primary -->
+		<div class="col-md-3" id="sidebar-home-page">
+			<?php get_sidebar('home');
+			?>
+		</div>
 	</div>
-</div>
 </div><!-- #content -->
+<!--inizio sezione larga con attrazioni e spettacoli ecc-->
 <div class="container-fluid">
 	<!-- carousell attrazioni, spettacoli e mappa del parco -->
 	<section id="attrazioni_carousel" class="row" >
@@ -100,7 +101,7 @@ get_header(); ?>
 			<h1>La Mappa di Mirabilandia</h1>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2"><a href="http://mirabilandia.it/sites/mirabilandia.it/files/Fronte_mappa_2015_ESEC_zoom.jpg"><img class="img-responsive" src="<?php echo get_template_directory_uri() . '/image/mappacentro.jpg'?>" ></a></div>
-			</div> 
+			</div>
 			<script type="text/javascript">
 				$(document).ready(function() {
 					var mappa = $("#mappa");
@@ -112,9 +113,9 @@ get_header(); ?>
 						}
 					});
 				});
-			</script> 
+			</script>
 		</div>
-	</section> 
+	</section>
 
 </div>
 
