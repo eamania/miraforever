@@ -10,25 +10,27 @@
 
 
 <footer class="container-fluid footer" >
+	<div class="container">
 
-	<div class="row" >
-		<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'footer_one' ); ?>
-		</div><!-- #secondary -->
+		<div class="row" >
+			<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'footer_one' ); ?>
+				</div><!-- #secondary -->
+			</div>
+			<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'footer_two' ); ?>
+				</div><!-- #secondary -->
+			</div>
+			<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'footer_three' ); ?>
+				</div><!-- #secondary -->
+			</div>
+			<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'footer_four' ); ?>
+				</div><!-- #secondary -->
+			</div>
+		</div>
 	</div>
-	<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
-		<?php dynamic_sidebar( 'footer_two' ); ?>
-	</div><!-- #secondary -->
-</div>
-<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'footer_three' ); ?>
-</div><!-- #secondary -->
-</div>
-<div class="col-md-3"><div id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'footer_four' ); ?>
-</div><!-- #secondary -->
-</div>
-</div>
 
 </footer>
 
@@ -37,13 +39,7 @@
 
 
 
-<footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'miraforever' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'miraforever' ), 'WordPress' ); ?></a>
-		<span class="sep"> | </span>
-		<?php printf( __( 'Theme: %1$s by %2$s.', 'miraforever' ), 'miraforever', '<a href="http://underscores.me/" rel="designer">Andrea Vignando</a>' ); ?>
-	</div><!-- .site-info -->
-</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
