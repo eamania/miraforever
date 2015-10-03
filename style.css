@@ -85,6 +85,11 @@ body {
   min-height: 700px;
   overflow: hidden;
 }
+.site-header .carousel .thumbnail-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .site-header .carousel img {
   width: 100%;
   height: 100%;
