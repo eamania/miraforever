@@ -38,7 +38,7 @@
 						<div class="col-md-9 col-lg-7 tierre" >
 							<div class="centertext " >
 								<div class="title-header " ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> 
-								<div class="excerpt-header "><p><?php echo header_excerpt()."[...]";?></p></div>
+								<div class="excerpt-header "><p><?php echo header_excerpt();?></p></div>
 								<div class="entry-meta">
 									<?php miraforever_posted_on(); ?>
 								</div><!-- .entry-meta -->

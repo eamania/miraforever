@@ -538,7 +538,16 @@ function spettacoli() {
 	register_post_type( 'spettacoli', $args );
 
 }
-
+function TagliaStringa($stringa, $max_char){
+	if(strlen($stringa)>$max_char){
+		$stringa_tagliata=substr($stringa, 0,$max_char);
+		$last_space=strrpos($stringa_tagliata," ");
+		$stringa_ok=substr($stringa_tagliata, 0,$last_space);
+		return $stringa_ok." ... ";
+	}else{
+		return $stringa;
+	}
+}
 function spettacoli_rimossi() {
 
 	$labels = array(
