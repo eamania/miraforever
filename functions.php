@@ -252,6 +252,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
     if ( function_exists( 'add_image_size' ) ) { 
     	add_image_size( 'thumbnails_header', 370, 280, true ); //   home page header
+		add_image_size( 'thumbnails_article_big', 848, 400, true ); //   home page header
     	add_image_size( 'thumbnails_header_background', 1600, 900, true ); //home page header
     	add_image_size( 'thumbnails_rectangle', 350, 150, true); // last news
     	add_image_size( 'thumbnails_square', 350, 315, true); // last news
