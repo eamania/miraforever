@@ -9,16 +9,15 @@
 	<div class="container">
 		<div class="row">
 			<h1><?php echo $title_carousel;?></h1>
-		</div>
-		<div class="row">
 			<span id="content_box " class="carousell-box"><?php
 
 
 				$box_post = get_post($post_text_id);
-				echo apply_filters( 'the_content', $box_post->post_content ); 
+				echo apply_filters( 'the_content', $box_post->post_content );
 				?>
-			</span> 
+			</span>
 		</div>
+	
 
 
 		<div class="row">

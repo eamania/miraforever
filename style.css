@@ -1,7 +1,7 @@
 @import url('inc/bootstrap/css/bootstrap.css');
 @import url('inc/carouselljs/assets/owl.carousel.css');
 @import url('inc/carouselljs/assets/owl.theme.css');
-@import url('layouts/carousel-full.css');
+@import url('inc/carousel-full.css');
 @import url('http://fonts.googleapis.com/css?family=Hind:400,300,500,600,700');
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,900');
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
@@ -370,27 +370,32 @@ body {
   text-shadow: 0 1px 2px #000000;
   line-height: 180%;
 }
-.background-carousel {
-  background-color: rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 30px 0px #000000;
-  -moz-box-shadow: 0px 0px 30px 0px #000000;
-  box-shadow: 0px 0px 30px 0px #000000;
+#attrazioni_carousel {
+  background-color: #fa6900;
+}
+#spettacoli_carousel {
+  background-color: rgba(105, 210, 231, 0.8);
+}
+.carousel-home-page {
+  height: 100vh;
+}
+.carousel-home-page .background-carousel {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 2px;
   padding-bottom: 7px;
   margin: 0px;
 }
-.owl-vertical-center-button {
+.carousel-home-page .owl-vertical-center-button {
   top: 45%;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
 }
-.owl-theme .owl-controls .owl-buttons div {
+.carousel-home-page .owl-theme .owl-controls .owl-buttons div {
   background: none;
   border-radius: 0;
   font-size: 35px;
 }
-.owl-prev {
+.carousel-home-page .owl-prev {
   position: absolute!important;
   top: 0!important;
   bottom: 0!important;
@@ -398,7 +403,7 @@ body {
   margin-left: -45px !important;
   padding: 0!important;
 }
-.owl-next {
+.carousel-home-page .owl-next {
   position: absolute!important;
   top: 0!important;
   bottom: 0!important;
@@ -406,14 +411,14 @@ body {
   margin-right: -45px !important;
   padding: 0!important;
 }
-.owl-pagination {
+.carousel-home-page .owl-pagination {
   left: 0;
   position: absolute;
   right: 0;
   bottom: -40px;
 }
-.owl-controls span,
-.carousel-indicators li {
+.carousel-home-page .owl-controls span,
+.carousel-home-page .carousel-indicators li {
   background-color: #000000 !important;
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -425,19 +430,19 @@ body {
   width: 15px!important;
   opacity: 0.5;
 }
-.owl-controls .active span {
+.carousel-home-page .owl-controls .active span {
   background-color: #fff !important;
   border: 2px solid rgba(0, 0, 0, 0.5) !important;
 }
-.carousel-indicators li:hover {
+.carousel-home-page .carousel-indicators li:hover {
   opacity: 1;
 }
-.carousel-indicators .active {
+.carousel-home-page .carousel-indicators .active {
   background-color: #ffffff !important;
   border: 2px solid rgba(0, 0, 0, 0.5) !important;
   opacity: 1;
 }
-.carousel-div {
+.carousel-home-page .carousel-div {
   height: 100%;
   border-top: #fa6900 solid 5px;
   text-align: center;

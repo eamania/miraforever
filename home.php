@@ -77,20 +77,20 @@ get_header(); ?>
 <!--inizio sezione larga con attrazioni e spettacoli ecc-->
 <div class="container-fluid">
 	<!-- carousell attrazioni, spettacoli e mappa del parco -->
-	<section id="attrazioni_carousel" class="row" >
+	<section id="attrazioni_carousel" class="row carousel-home-page" >
 		<?php
 		set_query_var('id_carousel', "attrazioni" );
 		set_query_var('title_carousel', "Attrazioni di Mirabilandia" );
-		set_query_var('background_image_carousel', "http://localhost/miraforever/attrazioni.jpg" );
+		//set_query_var('background_image_carousel', "orange" );
 		set_query_var('box_color', "attrazioni_rgba" );
 		set_query_var('post_text_id',"14971");
 		get_template_part( 'partial/home/carousel' );?>
 	</section>
-	<section id="spettacoli_carousel" class="row" >
+	<section id="spettacoli_carousel" class="row carousel-home-page" >
 		<?php
 		set_query_var('id_carousel', "spettacoli" );
 		set_query_var('title_carousel', "Spettacoli di Mirabilandia" );
-		set_query_var('background_image_carousel', "http://localhost/miraforever/spettacoli.jpg" );
+		//set_query_var('background_image_carousel', "http://localhost/miraforever/spettacoli.jpg" );
 		set_query_var('box_color', "attrazioni_rgba" );
 		set_query_var('post_text_id',"14971");
 		get_template_part( 'partial/home/carousel' );?>
