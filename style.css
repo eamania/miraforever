@@ -185,19 +185,19 @@ body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,f9c300+100 */
   background: #fa6900;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #fa6900 0%, #f9c300 100%);
+  background: -moz-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fa6900), color-stop(100%, #f9c300));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fa6900), color-stop(100%, #fc8a00));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #fa6900 0%, #f9c300 100%);
+  background: -webkit-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #fa6900 0%, #f9c300 100%);
+  background: -o-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #fa6900 0%, #f9c300 100%);
+  background: -ms-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, #fa6900 0%, #f9c300 100%);
+  background: linear-gradient(to bottom, #fa6900 0%, #fc8a00 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa6900', endColorstr='#f9c300', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa6900', endColorstr='#fc8a00', GradientType=0);
   /* IE6-9 */
 }
 .footer .widget-title {
@@ -371,13 +371,46 @@ body {
   line-height: 180%;
 }
 #attrazioni_carousel {
-  background-color: #fa6900;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,fc8a00+100 */
+  background: #fa6900;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fa6900), color-stop(100%, #fc8a00));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fa6900 0%, #fc8a00 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #fa6900 0%, #fc8a00 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa6900', endColorstr='#fc8a00', GradientType=0);
+  /* IE6-9 */
 }
 #spettacoli_carousel {
-  background-color: rgba(105, 210, 231, 0.8);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#de47ac+0,ad1283+0,cb60b3+100 */
+  background: #69d2e7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #de47ac 0%, #ad1283 0%, #cb60b3 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #de47ac), color-stop(0%, #ad1283), color-stop(100%, #cb60b3));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #de47ac 0%, #ad1283 0%, #cb60b3 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #de47ac 0%, #ad1283 0%, #cb60b3 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #de47ac 0%, #ad1283 0%, #cb60b3 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #de47ac 0%, #ad1283 0%, #cb60b3 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#de47ac', endColorstr='#cb60b3', GradientType=0);
+  /* IE6-9 */
 }
 .carousel-home-page {
-  height: 100vh;
+  height: 100%;
+  margin-top: 20px;
 }
 .carousel-home-page .background-carousel {
   padding-left: 10px;
@@ -444,6 +477,5 @@ body {
 }
 .carousel-home-page .carousel-div {
   height: 100%;
-  border-top: #fa6900 solid 5px;
   text-align: center;
 }

@@ -28,7 +28,7 @@
 			$the_query->the_post();
 		?>
 		<div class="item">
-			<?php the_post_thumbnail('thumbnails_header_background' ,array('class' => "effect-img-slideshow"));?>
+			<?php the_post_thumbnail('thumbnails_header_background' ,array('class' => "effect-img-slideshow "));?>
 			<div class="container">
 				<div class="row ">
 					<div class="col-md-10 col-lg-8 carousel-caption">

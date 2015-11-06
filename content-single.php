@@ -10,9 +10,23 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header class="entry-header">
                 <div id="content-article-header">
-
-                    <?php the_post_thumbnail('thumbnails_article_big', array('class' => "img-responsive")); ?>
                     <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+
+                    <?php
+                    $format = get_post_format();
+                    switch ($format) {
+                        case 'video':
+                            $videoEmbed= get_post_meta($post->ID,'VideoEmbed', true);
+                            echo" <div class='embed-responsive embed-responsive-16by9'>$videoEmbed</div>";
+                            break;
+                        case 'image':
+                            /* template image*/
+                            break;
+                        default:
+                            the_post_thumbnail('thumbnails_article_big', array('class' => "img-responsive"));
+                    }
+                    ?>
+                   
 
                     <?php miraforever_posted_on(); ?>
                 </div>
