@@ -27,6 +27,8 @@
 					'posts_per_page' => 36,
 				//'category_name' => $category_name_carousel,
 					'post_type' => "$id_carousel",
+					'orderby' => 'title',
+					'order' => 'ASC',
 					)); 
 				while ( $the_query->have_posts() ) : 
 					$the_query->the_post();

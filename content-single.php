@@ -26,7 +26,7 @@
                             the_post_thumbnail('thumbnails_article_big', array('class' => "img-responsive"));
                     }
                     ?>
-                   
+
 
                     <?php miraforever_posted_on(); ?>
                 </div>

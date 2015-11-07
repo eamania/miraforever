@@ -104,6 +104,16 @@ body {
 .site-header .carousel .carousel-indicators {
   bottom: 90px;
 }
+.site-header .carousel .carousel-indicators li {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.site-header .carousel .carousel-indicators li:hover {
+  background-color: #000000;
+}
+.site-header .carousel .carousel-indicators li .active {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #222222;
+}
 .site-header .carousel .carousel-caption {
   background-color: rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 30px 0px #000000;
@@ -430,16 +440,14 @@ body {
 }
 .carousel-home-page .owl-prev {
   position: absolute!important;
-  top: 0!important;
-  bottom: 0!important;
+  top: 40%!important;
   left: 0!important;
   margin-left: -45px !important;
   padding: 0!important;
 }
 .carousel-home-page .owl-next {
   position: absolute!important;
-  top: 0!important;
-  bottom: 0!important;
+  top: 40%!important;
   right: 0!important;
   margin-right: -45px !important;
   padding: 0!important;
