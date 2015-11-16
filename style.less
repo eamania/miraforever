@@ -21,7 +21,7 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 
 //carousell per attrazionie  e altro
 @import url('inc/carouselljs/assets/owl.carousel.css');
-@import url('inc/carouselljs/assets/owl.theme.css'); 
+@import url('inc/carouselljs/assets/owl.theme.css');
 
 
 //VARIABLES LESS FILE
@@ -41,32 +41,32 @@ body {
     background-color: @white;
     font-family: 'Droid Sans', sans-serif;
     a{
-
+        //color: @orange;
+    }
+    a:hover{
+        color:@orange;
+        text-decoration: none;
     }
 }
-
 .contaier{
-    width: 100%;   
+    width: 100%;
     position: relative;
 }//fine container
-
 .tierre{
     height: 100%;
     display: table;
 }
-
 .table-cell{
 
     display: table-cell;
     vertical-align: top;
 }
-
 .vCenter {
-    position:absolute;  
+    position:absolute;
     margin:auto;
     top:0; left:0; bottom:0; right:0;
 }
-.site-header{ 
+.site-header{
     //height: 100vh; 
     @media (max-width:@md) {
         height:auto;
@@ -84,19 +84,19 @@ body {
         a:hover, a:active{
             text-decoration: none;
         }
-    } 
+    }
     nav.top-bar{
         background-color: @topheader;
-        margin-top: -90px;  
+        margin-top: -90px;
 
         //bootstrap override
         .container{
-            padding:0px 
+            padding:0px
         }
     }
     .navbar-inverse{
         //bootstrap override
-        border: none; 
+        border: none;
     }
 
     .carousel {
@@ -116,15 +116,15 @@ body {
         }
         img{
             width: 100%;
-           height: 100%;
+            height: 100%;
             display: block;
 
 
-        }  
+        }
 
         .effect-img-slideshow {
-            filter: blur(@blur-slideshow) brightness(@brightness-slideshow);   
-            -webkit-filter: blur(@blur-slideshow) brightness(@brightness-slideshow);  
+            filter: blur(@blur-slideshow) brightness(@brightness-slideshow);
+            -webkit-filter: blur(@blur-slideshow) brightness(@brightness-slideshow);
             -moz-filter: blur(@blur-slideshow);
             filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
         }
@@ -160,61 +160,61 @@ body {
 
             .title-header {
 
-             h1, h2, h3, h4, h5, h6, p, a, {
-                color: @white; 
+                h1, h2, h3, h4, h5, h6, p, a, {
+                    color: @white;
+                }
+                a {
+                    font-size: 34px;
+                }
+
+            }//title header
+
+            .excerpt-header  {
+
+                h1, h2, h3, h4, h5, h6, p {
+                    text-shadow: 0 1px 10px rgba(0, 0, 0, 1);
+                }
+
+                p {
+
+                    font-size: 17px;
+                }
+
+
+            }//excertp header
+
+
+            .thumbnail-header{
+
+                .thumbnail{margin-bottom:0px;}
             }
-            a {
-             font-size: 34px;
-         }
+            .carousel-caption-background{
 
-           }//title header      
-
-           .excerpt-header  {
-
-            h1, h2, h3, h4, h5, h6, p {
-                text-shadow: 0 1px 10px rgba(0, 0, 0, 1);
-            }
-
-            p {
-
-                font-size: 17px; 
+                background-color: @blackopacity;
             }
 
 
-        }//excertp header
 
-
-        .thumbnail-header{
-
-            .thumbnail{margin-bottom:0px;}
-        }
-        .carousel-caption-background{
-
-            background-color: @blackopacity;
-        }
-
-
-
-        .img-header-shadow{
-            -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
-            -moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.75);
-            box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.75);
-        }
-
-        .entry-meta {
-            position: absolute;
-            bottom: 0px;
-            right:15px;
-            a{
-                color: @white;
-                font-weight: bold;
+            .img-header-shadow{
+                -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
+                -moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.75);
+                box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.75);
             }
-        }
+
+            .entry-meta {
+                position: absolute;
+                bottom: 0px;
+                right:15px;
+                a{
+                    color: @white;
+                    font-weight: bold;
+                }
+            }
         } //fine carousell caption
     }//fine carousell
     .logo {
 
-        img { 
+        img {
             max-width: 100%;
             max-height: 200px;
             position: absolute;
@@ -234,33 +234,37 @@ body {
         top: 0;
         height: auto;
         z-index: 999;
-        font-size: 85px; 
+        font-size: 85px;
         text-shadow: 2px 2px 8px @black;
         color: rgba(255, 255, 255, 0.95);
         font-family: 'lobster', sans-serif;
-       // font-weight: 300;
-       text-transform: capitalize;
+        // font-weight: 300;
+        text-transform: capitalize;
 
-   }
+    }
 }// fine site header
-.site-content{
-
+.site-content {
     background-color: @white;
-
-    .content-area{
+    .content-area {
         margin-bottom: 35px;
     }
+    .site-main {
+        font-size: 16px;
+        line-height: 160%;
+        text-align: justify;
+    }
+    .nav-links {
+        height: 30px;
+        .nav-next {
 
-    
-
-
-
-
-
+            float: right;
+        }
+        .nav-previous {
+            float: left;
+        }
+    }
 
 }//fine site content
-
-
 // footer
 .footer {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,f9c300+100 */
@@ -272,9 +276,9 @@ body {
     background: -ms-linear-gradient(top,  #fa6900 0%,#fc8a00 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #fa6900 0%,#fc8a00 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa6900', endColorstr='#fc8a00',GradientType=0 ); /* IE6-9 */
-   // height:600px;
+    // height:600px;
     //text-align:center;
-    
+
     .widget-title {
         color: #fff;
         text-transform: uppercase;
@@ -290,24 +294,21 @@ body {
         }
 
     }
-    
+
     ul {
         list-style: none;
         padding: 0;
-        
+
         li a {
             color: @black;
 
         }
     }
 }
-
-
 .no_padding {
     padding-right: 0;
-    padding-left: 0; 
+    padding-left: 0;
 }
-
 .attrazioni-display {
     opacity: 0;
     background-size: 100%;
@@ -322,7 +323,7 @@ body {
         text-shadow:2px 2px 2px rgba(0, 0, 0, 0.8);
     }
     h2{
-        font-size:@big-text; 
+        font-size:@big-text;
     }
 
 }
@@ -330,20 +331,17 @@ body {
 
     background:#86a346;
     text-align:center;
-   // padding-top: 50px;
-} 
-
-
+    // padding-top: 50px;
+}
 @tempo:2s;
 .attrazioni-display-yes {
     opacity: 1;
-    -webkit-transition: all @tempo ease; 
+    -webkit-transition: all @tempo ease;
     -moz-transition: all @tempo ease;
     -ms-transition: all @tempo ease;
     -o-transition: all @tempo ease;
     transition: all @tempo ease;
 }
-
 @import url('less/box.less');
 #attrazioni_carousel{
 
@@ -372,7 +370,6 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de47ac', endColorstr='#cb60b3',GradientType=0 ); /* IE6-9 */
 
 }
-
 .carousel-home-page {
 
     height: 100%;

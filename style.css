@@ -33,6 +33,10 @@ body {
   background-color: #ffffff;
   font-family: 'Droid Sans', sans-serif;
 }
+body a:hover {
+  color: #fa6900;
+  text-decoration: none;
+}
 .contaier {
   width: 100%;
   position: relative;
@@ -190,6 +194,20 @@ body {
 }
 .site-content .content-area {
   margin-bottom: 35px;
+}
+.site-content .site-main {
+  font-size: 16px;
+  line-height: 160%;
+  text-align: justify;
+}
+.site-content .nav-links {
+  height: 30px;
+}
+.site-content .nav-links .nav-next {
+  float: right;
+}
+.site-content .nav-links .nav-previous {
+  float: left;
 }
 .footer {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,f9c300+100 */

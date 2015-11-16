@@ -4,7 +4,7 @@
  */
 ?>
 
-
+<div class="site-content">
 <div id="primary" class="content-area col-md-9 ">
     <main id="main" class="site-main" role="main">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -65,7 +65,7 @@
     endif;
     ?>
 </div><!-- #primary -->
-
+</div>
 
 <div id="sidebar-article" class="col-md-3">
     <?php get_sidebar(); ?>
