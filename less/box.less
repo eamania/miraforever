@@ -18,19 +18,29 @@
 
          //box di aase
         //background-color: red;
-        margin-top: 16px;
+        //margin-top: 16px;
         height:auto;
         overflow:hidden;
         color: @white;
-        padding-left:  @box_padding_position;
-        padding-right:  @box_padding_position;
+        padding:  @box_padding_position;
+
         min-height: 144px;
+
+      -webkit-transition: all 0.15s ease-in-out;
+      -o-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+
+
         img{
+          -webkit-transition: all 0.15s ease-in-out;
+          -o-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out;
             height:auto;
             width:100%;
             display:block;
             //border: 3px solid @orange;
-           // background-color: @orange;  
+           // background-color: @orange;
+
        }
 
 
@@ -40,9 +50,9 @@
         left:  @box_padding_position;
         padding: 5px;
         position: absolute;
-        top: 0;
-        font-size: @p-text; 
-        text-transform: uppercase; 
+        top: @box_padding_position;
+        font-size: @p-text;
+        text-transform: uppercase;
     }
 
     .the-author{
@@ -63,22 +73,23 @@
     .title-header {
         background: none repeat scroll 0 0 rgba(250, 105, 0, 0.8);
         position:absolute;
-        bottom: 0;
+        bottom: @box_padding_position;
         left: @box_padding_position;
         right:@box_padding_position;
         padding: 5px;
-        border:1px; 
+        border:1px;
         padding: 10px;
-        font-size: @p-text+5;      
+        font-size: @p-text+5;
 
     }
 
     .the-excerpt {
 
         background: none repeat scroll 0 0 @black;
-        height: 100%;
+        height: auto;
         position: absolute;
-        top: 0;
+        top: @box_padding_position;
+      bottom: @box_padding_position;
         opacity: 0;
         transition-property: opacity;
         transition-duration: @t-slow;
@@ -87,15 +98,27 @@
         left: @box_padding_position;
         right:@box_padding_position;
         line-height: 160%;
-        text-align: center; 
-        
+        text-align: center;
+        &:hover, &:active{
+          opacity:0.9;
+        }
     }
 
-    .the-excerpt:hover {
-        opacity:0.9;
+
+      .mBox {
+        -webkit-transition: all @t-slow ease-in-out;
+        -o-transition: all @t-slow ease-in-out;
+        transition: all @t-slow ease-in-out;
+        &:hover, &:focus {
+          -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+         // filter: brightness(50%);
+
+        }
+      }
 
 
-    }
 
     .azure {background: @azure_rgba}
     .orange {background: @orange_rgba}
@@ -106,7 +129,8 @@
     .facebook {background: @facebook_rgba} 
 
 
-    }//box
+    }
+   //box
     .big{ //box grande last news
         .title-header {
            // background-color: blue;

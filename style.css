@@ -6,6 +6,7 @@
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,900');
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
 @import url('http://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic');
 @import url('css/font-awesome.min.css');
 /*
 Theme Name: miraforever
@@ -31,7 +32,7 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 }
 body {
   background-color: #ffffff;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body a:hover {
   color: #fa6900;
@@ -293,15 +294,19 @@ body a:hover {
   margin-bottom: 5px;
 }
 .boxes-news .box {
-  margin-top: 16px;
   height: auto;
   overflow: hidden;
   color: #ffffff;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 8px;
   min-height: 144px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .boxes-news .box img {
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   height: auto;
   width: 100%;
   display: block;
@@ -311,7 +316,7 @@ body a:hover {
   left: 8px;
   padding: 5px;
   position: absolute;
-  top: 0;
+  top: 8px;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -320,7 +325,7 @@ body a:hover {
   left: 8px;
   padding: 5px;
   position: absolute;
-  top: 0;
+  top: 8px;
   font-size: 12px;
   text-transform: uppercase;
   background: #fa6900 ;
@@ -333,7 +338,7 @@ body a:hover {
 .boxes-news .box .title-header {
   background: none repeat scroll 0 0 rgba(250, 105, 0, 0.8);
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 8px;
   right: 8px;
   padding: 5px;
@@ -343,12 +348,13 @@ body a:hover {
 }
 .boxes-news .box .the-excerpt {
   background: none repeat scroll 0 0 #222222;
-  height: 100%;
+  height: auto;
   position: absolute;
-  top: 0;
+  top: 8px;
+  bottom: 8px;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 0.5s;
+  transition-duration: 0.18s;
   padding: 25px;
   padding-top: 30px;
   left: 8px;
@@ -356,14 +362,26 @@ body a:hover {
   line-height: 160%;
   text-align: center;
 }
-.boxes-news .box .the-excerpt:hover {
+.boxes-news .box .the-excerpt:hover,
+.boxes-news .box .the-excerpt:active {
   opacity: 0.9;
+}
+.boxes-news .box .mBox {
+  -webkit-transition: all 0.18s ease-in-out;
+  -o-transition: all 0.18s ease-in-out;
+  transition: all 0.18s ease-in-out;
+}
+.boxes-news .box .mBox:hover,
+.boxes-news .box .mBox:focus {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .boxes-news .box .azure {
   background: rgba(105, 210, 231, 0.8);
 }
 .boxes-news .box .orange {
-  background: rgba(250, 105, 0, 0.8);
+  background: rgba(255, 87, 34, 0.8);
 }
 .boxes-news .box .grey {
   background: rgba(237, 237, 237, 0.8);

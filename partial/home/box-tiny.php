@@ -30,13 +30,14 @@ else {
 		?>
 		<a href="<?php echo get_permalink(); ?>">
 			<article class="box col-md-12" id="latest-box-id-<?php the_ID(); ?>">
-				<?php if ( has_post_thumbnail() ) { the_post_thumbnail($thumbnail_type, array( 'class' => 'img-responsive ' ) ); }?>
+				<div class="mBox">
+					<?php if ( has_post_thumbnail() ) { the_post_thumbnail($thumbnail_type, array( 'class' => 'img-responsive ' ) ); }?>
 				<span class="entry-date"><?php echo get_the_date(); ?></span>
 				<span class="title-header" ><?php the_title(); ?></h4></span> 
 				<span class="the-excerpt" ><?php echo novelty_excerpt()."[...]"; ?>
 					<span class="the-author">Inviato da: <?php  the_author( );?> il <?php  the_date(); ?> </span>
 				</span>
-
+			</div>
 			</article>
 		</a>
 		<!-- item -->
