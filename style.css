@@ -124,7 +124,7 @@ body a:hover {
   -webkit-box-shadow: 0px 0px 30px 0px #000000;
   -moz-box-shadow: 0px 0px 30px 0px #000000;
   box-shadow: 0px 0px 30px 0px #000000;
-  padding-bottom: 20px!important;
+  padding-bottom: 20px !important;
   overflow: hidden;
 }
 .site-header .carousel .carousel-caption .title-header h1,
@@ -273,11 +273,11 @@ body a:hover {
 }
 .attrazioni-display-yes {
   opacity: 1;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  transition: all 2s ease;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 .boxes-news {
   margin-left: -15px;
@@ -299,19 +299,33 @@ body a:hover {
   color: #ffffff;
   padding: 8px;
   min-height: 144px;
-  -webkit-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.17s ease-in-out;
+  -o-transition: all 0.17s ease-in-out;
+  transition: all 0.17s ease-in-out;
 }
-.boxes-news .box img {
-  -webkit-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+.boxes-news .box .mBox {
+  -webkit-transition: all 0.17s ease-in-out;
+  -o-transition: all 0.17s ease-in-out;
+  transition: all 0.17s ease-in-out;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.boxes-news .box .mBox:hover,
+.boxes-news .box .mBox:focus {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.boxes-news .box .mBox img {
   height: auto;
   width: 100%;
   display: block;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
-.boxes-news .box .entry-date {
+.boxes-news .box .mBox .entry-date {
   background: rgba(250, 105, 0, 0.8);
   left: 8px;
   padding: 5px;
@@ -319,8 +333,11 @@ body a:hover {
   top: 8px;
   font-size: 12px;
   text-transform: uppercase;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-left-radius: 2px;
 }
-.boxes-news .box .the-author {
+.boxes-news .box .mBox .the-author {
   background: rgba(250, 105, 0, 0.8);
   left: 8px;
   padding: 5px;
@@ -328,14 +345,17 @@ body a:hover {
   top: 8px;
   font-size: 12px;
   text-transform: uppercase;
-  background: #fa6900 ;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-left-radius: 2px;
+  background: #fa6900;
   line-height: 140%;
   backrground-opacity: 1;
   position: relative;
   top: 10px;
   left: 0;
 }
-.boxes-news .box .title-header {
+.boxes-news .box .mBox .title-header {
   background: none repeat scroll 0 0 rgba(250, 105, 0, 0.8);
   position: absolute;
   bottom: 8px;
@@ -345,8 +365,14 @@ body a:hover {
   border: 1px;
   padding: 10px;
   font-size: 17px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
-.boxes-news .box .the-excerpt {
+.boxes-news .box .mBox .the-excerpt {
   background: none repeat scroll 0 0 #222222;
   height: auto;
   position: absolute;
@@ -354,67 +380,44 @@ body a:hover {
   bottom: 8px;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 0.18s;
+  transition-duration: 0.17s;
   padding: 25px;
   padding-top: 30px;
   left: 8px;
   right: 8px;
   line-height: 160%;
   text-align: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 16px;
 }
-.boxes-news .box .the-excerpt:hover,
-.boxes-news .box .the-excerpt:active {
+.boxes-news .box .mBox .the-excerpt:hover,
+.boxes-news .box .mBox .the-excerpt:active {
   opacity: 0.9;
 }
-.boxes-news .box .mBox {
-  -webkit-transition: all 0.18s ease-in-out;
-  -o-transition: all 0.18s ease-in-out;
-  transition: all 0.18s ease-in-out;
-}
-.boxes-news .box .mBox:hover,
-.boxes-news .box .mBox:focus {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.boxes-news .box .azure {
+.boxes-news .box .mBox .azure {
   background: rgba(105, 210, 231, 0.8);
 }
-.boxes-news .box .orange {
+.boxes-news .box .mBox .orange {
   background: rgba(255, 87, 34, 0.8);
 }
-.boxes-news .box .grey {
+.boxes-news .box .mBox .grey {
   background: rgba(237, 237, 237, 0.8);
   color: black;
 }
-.boxes-news .box .water {
+.boxes-news .box .mBox .water {
   background: rgba(167, 219, 216, 0.8);
   color: black;
 }
-.boxes-news .box .goldfish {
+.boxes-news .box .mBox .goldfish {
   background: rgba(243, 134, 48, 0.8);
 }
-.boxes-news .box .black {
+.boxes-news .box .mBox .black {
   background: rgba(34, 34, 34, 0.8);
 }
-.boxes-news .box .facebook {
+.boxes-news .box .mBox .facebook {
   background: rgba(59, 89, 152, 0.8);
-}
-.boxes-news .facebook_height {
-  max-height: 144px;
-}
-#content_box p {
-  background: #ededed;
-  padding: 20px;
-  margin-top: 26px;
-  font-size: 17px;
-}
-.carousell-box p {
-  color: white;
-  background: none;
-  font-size: 22px;
-  text-shadow: 0 1px 2px #000000;
-  line-height: 180%;
 }
 #attrazioni_carousel {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,fc8a00+100 */
@@ -522,4 +525,23 @@ body a:hover {
 .carousel-home-page .carousel-div {
   height: 100%;
   text-align: center;
+}
+.carousel-home-page #content_box p {
+  background: #ededed;
+  padding: 20px;
+  margin-top: 26px;
+  font-size: 17px;
+}
+.carousel-home-page .carousell-box p {
+  color: white;
+  background: none;
+  font-size: 22px;
+  text-shadow: 0 1px 2px #000000;
+  line-height: 180%;
+}
+.content-article-box p {
+  background: #ededed;
+  padding: 20px;
+  margin-top: 26px;
+  font-size: 17px;
 }

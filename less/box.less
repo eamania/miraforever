@@ -1,169 +1,156 @@
- .boxes-news {
-    margin-left: -15px;
-    margin-right: -15px;
-    .news-box-down{
-        padding: 0px;
-        border-bottom: 2px dashed @grey;
+.boxes-news {
+  margin-left: -15px;
+  margin-right: -15px;
+  .news-box-down {
+    padding: 0px;
+    border-bottom: 2px dashed @grey;
+    margin-left: 30px;
+    color: @black;
 
-
-        margin-left: 30px;
-        color: @black;
-
-        img{
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
+    img {
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
-    .box{
+  }
+  .box {
 
-         //box di aase
-        //background-color: red;
-        //margin-top: 16px;
-        height:auto;
-        overflow:hidden;
-        color: @white;
-        padding:  @box_padding_position;
+    //box di aase
+    //background-color: red;
+    //margin-top: 16px;
+    height: auto;
+    overflow: hidden;
+    color: @white;
+    padding: @box_padding_position;
 
-        min-height: 144px;
+    min-height: 144px;
 
-      -webkit-transition: all 0.15s ease-in-out;
-      -o-transition: all 0.15s ease-in-out;
-      transition: all 0.15s ease-in-out;
+    -webkit-transition: all @t-slow ease-in-out;
+    -o-transition: all @t-slow ease-in-out;
+    transition: all @t-slow ease-in-out;
+    .mBox {
+      -webkit-transition: all @t-slow ease-in-out;
+      -o-transition: all @t-slow ease-in-out;
+      transition: all @t-slow ease-in-out;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      &:hover, &:focus {
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        // filter: brightness(50%);
 
+      }
 
-        img{
-          -webkit-transition: all 0.15s ease-in-out;
-          -o-transition: all 0.15s ease-in-out;
-          transition: all 0.15s ease-in-out;
-            height:auto;
-            width:100%;
-            display:block;
-            //border: 3px solid @orange;
-           // background-color: @orange;
+      img {
 
-       }
+        height: auto;
+        width: 100%;
+        display: block;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        //border: 3px solid @orange;
+        // background-color: @orange;
 
+      }
 
-
-       .entry-date{
+      .entry-date {
         background: rgba(250, 105, 0, 0.8);
-        left:  @box_padding_position;
+        left: @box_padding_position;
         padding: 5px;
         position: absolute;
         top: @box_padding_position;
         font-size: @p-text;
         text-transform: uppercase;
-    }
+        -webkit-border-top-left-radius: 2px;
+        -moz-border-radius-topleft: 2px;
+        border-top-left-radius: 2px;
+      }
 
-    .the-author{
+      .the-author {
         .entry-date;
-        background:#fa6900 ;
+        background: #fa6900;
         line-height: 140%;
         backrground-opacity: 1;
         position: relative;
-        top:10px;
-        left:0;
+        top: 10px;
+        left: 0;
 
+      }
 
-
-
-    }
-
-
-    .title-header {
+      .title-header {
         background: none repeat scroll 0 0 rgba(250, 105, 0, 0.8);
-        position:absolute;
+        position: absolute;
         bottom: @box_padding_position;
         left: @box_padding_position;
-        right:@box_padding_position;
+        right: @box_padding_position;
         padding: 5px;
-        border:1px;
+        border: 1px;
         padding: 10px;
         font-size: @p-text+5;
+        -webkit-border-bottom-right-radius: 2px;
+        -webkit-border-bottom-left-radius: 2px;
+        -moz-border-radius-bottomright: 2px;
+        -moz-border-radius-bottomleft: 2px;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
 
-    }
+      }
 
-    .the-excerpt {
+      .the-excerpt {
 
         background: none repeat scroll 0 0 @black;
         height: auto;
         position: absolute;
         top: @box_padding_position;
-      bottom: @box_padding_position;
+        bottom: @box_padding_position;
         opacity: 0;
         transition-property: opacity;
         transition-duration: @t-slow;
         padding: 25px;
         padding-top: 30px;
         left: @box_padding_position;
-        right:@box_padding_position;
+        right: @box_padding_position;
         line-height: 160%;
         text-align: center;
-        &:hover, &:active{
-          opacity:0.9;
-        }
-    }
-
-
-      .mBox {
-        -webkit-transition: all @t-slow ease-in-out;
-        -o-transition: all @t-slow ease-in-out;
-        transition: all @t-slow ease-in-out;
-        &:hover, &:focus {
-          -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-         // filter: brightness(50%);
-
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        font-size: @body-text;
+        &:hover, &:active {
+          opacity: 0.9;
         }
       }
 
 
 
-    .azure {background: @azure_rgba}
-    .orange {background: @orange_rgba}
-    .grey {background: @grey_rgba; color: black;}
-    .water {background: @water_rgba; color: black;}
-    .goldfish {background: @goldfish_rgba}
-    .black {background: @black_rgba}
-    .facebook {background: @facebook_rgba} 
-
-
+      .azure {
+        background: @azure_rgba
+      }
+      .orange {
+        background: @orange_rgba
+      }
+      .grey {
+        background: @grey_rgba;
+        color: black;
+      }
+      .water {
+        background: @water_rgba;
+        color: black;
+      }
+      .goldfish {
+        background: @goldfish_rgba
+      }
+      .black {
+        background: @black_rgba
+      }
+      .facebook {
+        background: @facebook_rgba
+      }
     }
-   //box
-    .big{ //box grande last news
-        .title-header {
-           // background-color: blue;
-       }
-   }
-
-
-
-
-   .facebook_height {max-height: 144px;}
+  }
 }
 
 
-#content_box {
 
-    p{
-        background:@grey;
-        padding: 20px;
-        margin-top: 26px;
-        font-size: 17px;
-
-    }
-
-
-}
-.carousell-box{
-
-
-    p{
-        color: white;
-        background: none;
-        font-size: 22px;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 1);  
-        line-height: 180%;
-    }
-}

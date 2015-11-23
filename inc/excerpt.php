@@ -14,7 +14,7 @@ function last_news_excerpt(){
 	$excerpt = get_the_content();
 	$excerpt = strip_shortcodes($excerpt);
 	$excerpt = strip_tags($excerpt);
-	$the_str = TagliaStringa($excerpt,  140);
+	$the_str = TagliaStringa($excerpt,  70);
 	return $the_str;
 }
 
