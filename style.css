@@ -396,6 +396,17 @@ body a:hover {
 .boxes-news .box .mBox .the-excerpt:active {
   opacity: 0.9;
 }
+.boxes-news .box .mBox .icon-post-type-content {
+  background: red none repeat scroll 0 0;
+  border-radius: 21px;
+  font-size: 18px;
+  left: 38%;
+  padding: 20px;
+  position: absolute;
+  text-align: right;
+  top: 38%;
+  width: auto;
+}
 .boxes-news .box .mBox .azure {
   background: rgba(105, 210, 231, 0.8);
 }
