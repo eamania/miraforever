@@ -190,6 +190,35 @@ body a:hover {
   font-family: 'lobster', sans-serif;
   text-transform: capitalize;
 }
+.site-header #menu-top-fixed-mobile .logo-mobile {
+  background: red none repeat scroll 0 0;
+  color: whitesmoke;
+  font-family: "lobster", sans-serif;
+  font-size: 4em;
+  margin: auto;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+}
+.site-header #menu-top-fixed-mobile .navbar-header {
+  background-color: #fa6900;
+}
+.site-header #menu-top-fixed-mobile .navbar-toggle {
+  background: #ffffff;
+}
+.site-header #menu-top-fixed-mobile .navbar-brand {
+  font-size: 25px;
+  float: left;
+  font-family: "lobster", sans-serif;
+  color: #ffffff;
+}
+.site-header #menu-top-fixed-mobile .navbar-brand img {
+  float: left;
+  height: 45px;
+  margin-bottom: 0;
+  margin-top: -14px;
+}
 .site-content {
   background-color: #ffffff;
 }
@@ -262,7 +291,6 @@ body a:hover {
   color: white;
   font-weight: bold;
   font-size: 38px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
 }
 .attrazioni-display h2 {
   font-size: 28px;
@@ -299,14 +327,14 @@ body a:hover {
   color: #ffffff;
   padding: 8px;
   min-height: 144px;
-  -webkit-transition: all 0.17s ease-in-out;
-  -o-transition: all 0.17s ease-in-out;
-  transition: all 0.17s ease-in-out;
+  -webkit-transition: all 0.17s ease;
+  -o-transition: all 0.17s ease;
+  transition: all 0.17s ease;
 }
 .boxes-news .box .mBox {
-  -webkit-transition: all 0.17s ease-in-out;
-  -o-transition: all 0.17s ease-in-out;
-  transition: all 0.17s ease-in-out;
+  -webkit-transition: all 0.17s ease;
+  -o-transition: all 0.17s ease;
+  transition: all 0.17s ease;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -392,19 +420,23 @@ body a:hover {
   border-radius: 2px;
   font-size: 16px;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .boxes-news .box .mBox .the-excerpt {
+    font-size: 14px;
+  }
+}
 .boxes-news .box .mBox .the-excerpt:hover,
 .boxes-news .box .mBox .the-excerpt:active {
   opacity: 0.9;
 }
 .boxes-news .box .mBox .icon-post-type-content {
-  background: red none repeat scroll 0 0;
-  border-radius: 21px;
-  font-size: 18px;
-  left: 38%;
-  padding: 20px;
+  border-top-right-radius: 2px;
+  font-size: 16px;
+  padding: 2px 7px;
   position: absolute;
+  right: 8px;
   text-align: right;
-  top: 38%;
+  top: 8px;
   width: auto;
 }
 .boxes-news .box .mBox .azure {
@@ -547,7 +579,6 @@ body a:hover {
   color: white;
   background: none;
   font-size: 22px;
-  text-shadow: 0 1px 2px #000000;
   line-height: 180%;
 }
 .content-article-box p {

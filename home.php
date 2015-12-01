@@ -143,7 +143,7 @@ get_header(); ?>
                             set_query_var('title_box', "Video Gallery");
                             set_query_var('facebook_miraforever_post', false);
                             set_query_var('my_excerpt', "box_excerpt");
-                            set_query_var('icon_type',"glyphicon glyphicon-play");
+                            //set_query_var('icon_type',"glyphicon glyphicon-play");
                             get_template_part('partial/home/box');
                             ?>
 						</span>

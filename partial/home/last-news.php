@@ -14,7 +14,10 @@
 			<article class="col-md-4 box lastnews big" id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
 				<div class="mBox">
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_square', array( 'class' => 'img-responsive' ) ); }?>
-				<span class="entry-date <?php echo $box_color ;?>"><?php echo get_the_date(); ?></span>
+					<?php
+					get_template_part('partial/share/icon-post-content');
+					?>
+					<span class="entry-date <?php echo $box_color ;?>"><?php echo get_the_date(); ?></span>
 				<span class="title-header <?php echo $box_color ;?>" ><?php the_title(); ?></h4></span> 
 				<span class="the-excerpt" ><?php echo the_excerpt()."[...]"; ?>
 					<br><span class="the-author <?php echo $box_color;?>">Inviato da: <?php  the_author( );?> </span>
@@ -43,7 +46,10 @@
 			<article class="col-md-4 box lastnews"  id="latest-box-id-<?php the_ID(); ?>"><!-- 5 blocchi singoli delle news -->
 				<div class="mBox">
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_rectangle', array( 'class' => 'img-responsive' ) ); }?>
-				<span class="entry-date <?php echo $box_color ;?>"><?php echo get_the_date(); ?></span>
+					<?php
+					get_template_part('partial/share/icon-post-content');
+					?>
+					<span class="entry-date <?php echo $box_color ;?>"><?php echo get_the_date(); ?></span>
 				<span class="title-header <?php echo $box_color ;?>" ><?php the_title(); ?></h4></span> 
 				<span class="the-excerpt" ><?php echo last_news_excerpt()."[...]"; ?>
 					<br><span class="the-author <?php echo $box_color;?>">Inviato da: <?php  the_author( );?> </span>

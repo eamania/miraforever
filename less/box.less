@@ -24,13 +24,13 @@
 
     min-height: 144px;
 
-    -webkit-transition: all @t-slow ease-in-out;
-    -o-transition: all @t-slow ease-in-out;
-    transition: all @t-slow ease-in-out;
+    -webkit-transition: all @t-slow ease;
+    -o-transition: all @t-slow ease;
+    transition: all @t-slow ease;
     .mBox {
-      -webkit-transition: all @t-slow ease-in-out;
-      -o-transition: all @t-slow ease-in-out;
-      transition: all @t-slow ease-in-out;
+      -webkit-transition: all @t-slow ease;
+      -o-transition: all @t-slow ease;
+      transition: all @t-slow ease;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
       border-radius: 2px;
@@ -118,6 +118,11 @@
         -moz-border-radius: 2px;
         border-radius: 2px;
         font-size: @body-text;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+
+          font-size: 14px;
+        }
         &:hover, &:active {
           opacity: 0.9;
         }
@@ -126,14 +131,14 @@
       }
 
       .icon-post-type-content {
-        background: red none repeat scroll 0 0;
-        border-radius: 21px;
-        font-size: 18px;
-        left: 38%;
-        padding: 20px;
+        //background: red none repeat scroll 0 0;
+        border-top-right-radius: 2px;
+        font-size: 16px;
+        padding: 2px 7px;
         position: absolute;
+        right: 8px;
         text-align: right;
-        top: 38%;
+        top: 8px;
         width: auto;
       }
 

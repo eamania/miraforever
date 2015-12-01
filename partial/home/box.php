@@ -47,18 +47,23 @@ if ($facebook_miraforever_post == false) {
                         }
 
                         ?>
-                        <?php if($icon_type != NULL){
-                        echo" <span class='icon-post-type-content'>  <i class='$icon_type'></i>  </span>";
-                        }?>
+                        <?php
+                        get_template_part('partial/share/icon-post-content');
+                        ?>
+
+
+
                         <span class="entry-date <?php echo $box_color; ?>"><?php echo get_the_date(); ?></span>
-                        <span class="title-header <?php echo $box_color; ?>"><?php the_title(); ?></h4>                        </span>
+                        <span
+                            class="title-header <?php echo $box_color; ?>"><?php the_title(); ?></h4>                        </span>
 
                         <span class="the-excerpt ">
                             <?php
                             echo $my_excerpt();
                             ?>
-                        <br>
-                            <span class="the-author <?php echo $box_color; ?>">Inviato da: <?php the_author(); ?> </span>
+                            <br>
+                            <span
+                                class="the-author <?php echo $box_color; ?>">Inviato da: <?php the_author(); ?> </span>
                         </span>
                     </div>
                 </article>

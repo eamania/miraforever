@@ -34,6 +34,11 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 
 //MEGAMENU OVERRIDE
 //@import url('less/megamenu.less');
+
+//stili base
+
+
+
 body {
 
   background-color: @white;
@@ -249,6 +254,40 @@ body {
     text-transform: capitalize;
 
   }
+
+  #menu-top-fixed-mobile{
+    .logo-mobile{
+      background: red none repeat scroll 0 0;
+      color: whitesmoke;
+      font-family: "lobster",sans-serif;
+      font-size: 4em;
+      margin: auto;
+      position: fixed;
+      text-align: center;
+      width: 100%;
+      z-index: 999;}
+
+    .navbar-header {
+      background-color: @orange;
+    }
+    .navbar-toggle{
+      background: @white;
+    }
+    .navbar-brand{
+      font-size: 25px;
+      float: left;
+      font-family: "lobster", sans-serif;
+      color: @white;
+
+
+      img{
+        float: left;
+        height: 45px;
+        margin-bottom: 0;
+        margin-top: -14px;
+      }
+    }
+  }
 }
 
 // fine site header
@@ -333,7 +372,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: @extra-big-text;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    //text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
   }
   h2 {
     font-size: @big-text;
@@ -406,3 +445,4 @@ body {
 
 
 }
+

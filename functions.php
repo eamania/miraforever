@@ -51,7 +51,11 @@ function miraforever_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'miraforever' ),
-		) );
+		'mobile' => __( 'Mobile', 'miraforever' ),
+
+	) );
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -642,3 +646,5 @@ require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
 require get_template_directory() . '/inc/excerpt.php';
 
+//include bootstrap menu
+require_once('wp_bootstrap_navwalker.php');
