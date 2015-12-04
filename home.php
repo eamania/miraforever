@@ -78,7 +78,7 @@ get_header(); ?>
 <!--START sezione larga con attrazioni e spettacoli ecc-->
 <div class="container-fluid">
     <!-- carousell attrazioni, spettacoli e mappa del parco -->
-    <section id="attrazioni_carousel" class="row carousel-home-page">
+    <section id="attrazioni_carousel" class="row carousel-home-page  hidden-xs">
         <div class="col-md-12">
             <?php
             set_query_var('id_carousel', "attrazioni");
@@ -89,7 +89,7 @@ get_header(); ?>
             get_template_part('partial/home/carousel'); ?>
         </div>
     </section>
-    <section id="newsboxprova" class="row">
+    <section id="newsboxprova" class="row hidden-sm hidden-xs">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -118,7 +118,7 @@ get_header(); ?>
             </div>
         </div>
     </section>
-    <section id="spettacoli_carousel" class="row carousel-home-page">
+    <section id="spettacoli_carousel" class="row carousel-home-page  hidden-xs">
         <div class="col-md-12">
             <?php
             set_query_var('id_carousel', "spettacoli");
@@ -129,7 +129,7 @@ get_header(); ?>
             get_template_part('partial/home/carousel'); ?>
         </div>
     </section>
-    <section id="home-page-news" class="row">
+    <section id="home-page-news" class="row hidden-sm hidden-xs">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

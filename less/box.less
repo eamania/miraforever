@@ -21,12 +21,16 @@
     overflow: hidden;
     color: @white;
     padding: @box_padding_position;
-
     min-height: 144px;
-
     -webkit-transition: all @t-slow ease;
     -o-transition: all @t-slow ease;
     transition: all @t-slow ease;
+    font-weight: normal;
+
+
+
+
+
     .mBox {
       -webkit-transition: all @t-slow ease;
       -o-transition: all @t-slow ease;
@@ -52,6 +56,19 @@
         border-radius: 2px;
         //border: 3px solid @orange;
         // background-color: @orange;
+
+      }
+
+      @media (min-width: 0px) and (max-width: 992px) {
+        img {
+
+          max-height: 150px;
+          object-fit: cover;
+          //border: 3px solid @orange;
+          // background-color: @orange;
+
+        }
+
 
       }
 
@@ -98,6 +115,25 @@
 
       }
 
+      @media (min-width: 0px) and (max-width: 992px) {
+
+        .title-header {
+
+          border: 0 none;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          bottom: 0;
+          float: left;
+          font-size: 17px;
+          left: 0;
+          padding: 10px;
+          position: relative;
+          right: 0;
+          width: 100%;
+        }
+
+      }
+
       .the-excerpt {
 
         background: none repeat scroll 0 0 @black;
@@ -127,6 +163,32 @@
           opacity: 0.9;
         }
 
+
+      }
+
+      @media (min-width: 0px) and (max-width: 992px) {
+
+        .the-excerpt {
+
+          background: @greyorange_rgba;
+          border-radius: 0;
+          bottom: 0;
+          color: @black;
+          float: left;
+          font-size: 16px;
+          height: auto;
+          left: 0;
+          line-height: 160%;
+          opacity: 1;
+          padding: 10px;
+          position: relative;
+          right: 0;
+          text-align: left;
+          top: 0;
+          width: 100%;
+          transition-duration: 0.17s;
+          transition-property: opacity;
+        }
 
       }
 
@@ -167,6 +229,18 @@
       }
     }
   }
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+  .box {
+    padding: 0px!important;
+    margin: 8px!important;
+
+  &:hover, &:focus {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }}
 }
 
 

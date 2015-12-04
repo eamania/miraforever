@@ -62,8 +62,7 @@ if ($facebook_miraforever_post == false) {
                             echo $my_excerpt();
                             ?>
                             <br>
-                            <span
-                                class="the-author <?php echo $box_color; ?>">Inviato da: <?php the_author(); ?> </span>
+                            <span class="hidden-sm hidden-xs the-author <?php echo $box_color; ?>">Inviato da: <?php the_author(); ?> </span>
                         </span>
                     </div>
                 </article>

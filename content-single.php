@@ -10,7 +10,10 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header class="entry-header">
                 <div id="content-article-header">
-                    <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+                    <?php the_title('<h1 class="entry-title">', '</h1>');?>
+                    <?php miraforever_posted_on(); ?>
+
+                    <h4 style="font-weight: lighter; line-height: 150%">  <?php the_excerpt(); ?></h4>
 
                     <?php
                     $format = get_post_format();
@@ -28,7 +31,6 @@
                     ?>
 
 
-                    <?php miraforever_posted_on(); ?>
                 </div>
                 <div class="entry-meta">
                 </div>
@@ -49,7 +51,7 @@
             <!-- .entry-content -->
 
             <footer class="entry-footer">
-                <?php miraforever_entry_footer(); ?>
+                <?php //miraforever_entry_footer(); ?>
             </footer>
             <!-- .entry-footer -->
         </article>

@@ -60,7 +60,7 @@
 
 							?>	</span>
 									<span class="title-header <?php echo $box_color ;?>" ><?php the_title(); ?></h4></span>
-							<span class="the-excerpt " >
+							<span class="the-excerpt hidden-sm hidden-xs " >
 								<?php
 								echo $my_excerpt();
 								?>

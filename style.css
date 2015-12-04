@@ -229,6 +229,7 @@ body a:hover {
   font-size: 16px;
   line-height: 160%;
   text-align: justify;
+  font-weight: 300;
 }
 .site-content .nav-links {
   height: 30px;
@@ -330,6 +331,7 @@ body a:hover {
   -webkit-transition: all 0.17s ease;
   -o-transition: all 0.17s ease;
   transition: all 0.17s ease;
+  font-weight: normal;
 }
 .boxes-news .box .mBox {
   -webkit-transition: all 0.17s ease;
@@ -352,6 +354,12 @@ body a:hover {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .boxes-news .box .mBox img {
+    max-height: 150px;
+    object-fit: cover;
+  }
 }
 .boxes-news .box .mBox .entry-date {
   background: rgba(250, 105, 0, 0.8);
@@ -400,6 +408,21 @@ body a:hover {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
+@media (min-width: 0px) and (max-width: 992px) {
+  .boxes-news .box .mBox .title-header {
+    border: 0 none;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    bottom: 0;
+    float: left;
+    font-size: 17px;
+    left: 0;
+    padding: 10px;
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
+}
 .boxes-news .box .mBox .the-excerpt {
   background: none repeat scroll 0 0 #222222;
   height: auto;
@@ -428,6 +451,28 @@ body a:hover {
 .boxes-news .box .mBox .the-excerpt:hover,
 .boxes-news .box .mBox .the-excerpt:active {
   opacity: 0.9;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .boxes-news .box .mBox .the-excerpt {
+    background: rgba(224, 228, 204, 0.8);
+    border-radius: 0;
+    bottom: 0;
+    color: #222222;
+    float: left;
+    font-size: 16px;
+    height: auto;
+    left: 0;
+    line-height: 160%;
+    opacity: 1;
+    padding: 10px;
+    position: relative;
+    right: 0;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    transition-duration: 0.17s;
+    transition-property: opacity;
+  }
 }
 .boxes-news .box .mBox .icon-post-type-content {
   border-top-right-radius: 2px;
@@ -461,6 +506,18 @@ body a:hover {
 }
 .boxes-news .box .mBox .facebook {
   background: rgba(59, 89, 152, 0.8);
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .box {
+    padding: 0px!important;
+    margin: 8px!important;
+  }
+  .box:hover,
+  .box:focus {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
 }
 #attrazioni_carousel {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,fc8a00+100 */
