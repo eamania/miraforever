@@ -30,7 +30,112 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 .attrazioni_rgba {
   background: rgba(35, 187, 0, 0.8) !important;
 }
+.mega-menu-wrap {
+  background-color: transparent!important;
+  transition-property: background-color !important;
+  transition-duration: 0.17s !important;
+}
+@media (max-width: 992px) {
+  .mega-menu-wrap {
+    margin-top: 90px!important;
+  }
+}
+.mega-menu  > li {
+  float: right;
+}
+.mega-menu  > li > a {
+  height: 90px!important;
+  padding-top: 27px!important;
+}
+.mega-menu  > li > a:hover,
+.mega-menu  > li > a:active,
+.mega-menu  > li > a:focus,
+.mega-menu  > li > a:visited {
+  background-color: #fa6900 !important;
+}
+li.mega-menu-item .mega-menu-toggle,
+li.mega-menu-item .mega-menu-toggle-on {
+  background-color: #fa6900 !important;
+}
+.mega-menu  > li:first-child {
+  margin-left: 200px!important;
+}
+@media (max-width: 992px) {
+  .mega-menu  > li:first-child {
+    margin-left: 60px!important;
+  }
+}
+.mega-menu-logo {
+  height: 90px;
+  padding: 17px 5px 0;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+.mega-menu-logo a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.mega-menu-search {
+  background: none repeat scroll 0 0 #ededed;
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  top: 78px;
+  width: 100%;
+  display: none;
+}
+.mega-menu-social-div {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 1000;
+  height: 70px;
+  padding-top: 20px;
+  width: auto;
+}
+.mega-menu-social-div .mega-menu-social-link {
+  color: #ffffff;
+}
+.mega-menu-social-div .mega-menu-social-link .divider-vertical {
+  margin: 0 3px 0 9px;
+  border-left: 3px solid #f2f2f2;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.mega-menu-social-div .mega-menu-social-link a i {
+  color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+  opacity: 0.5;
+}
+.mega-menu-social-div .mega-menu-social-link a i:hover {
+  opacity: 1;
+  transition-property: opacity!important;
+  transition-duration: 0.17s !important;
+}
+.mega-sub-menu {
+  -webkit-box-shadow: 0 10px 20px 0 #C2C2C2;
+  box-shadow: 0 10px 20px 0 #C2C2C2;
+}
+.mega-menu-top-fixed {
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  z-index: 100000;
+}
+.mega-menu-top-fixed-background {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4) !important;
+  background-color: #ff6900 !important;
+  transition-property: background-color !important;
+  transition-duration: 0.17s !important;
+}
+html,
 body {
+  height: 100%;
+}
+body {
+  margin: 0;
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
@@ -231,6 +336,9 @@ body a:hover {
   text-align: justify;
   font-weight: 300;
 }
+.site-content .site-main .article-content .article-featured-image {
+  margin-bottom: 12px;
+}
 .site-content .nav-links {
   height: 30px;
 }
@@ -239,6 +347,10 @@ body a:hover {
 }
 .site-content .nav-links .nav-previous {
   float: left;
+}
+.sidebar-article {
+  background: #fafafa none repeat scroll 0 0;
+  padding-top: 20px;
 }
 .footer {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,f9c300+100 */
@@ -491,7 +603,7 @@ body a:hover {
   background: rgba(255, 87, 34, 0.8);
 }
 .boxes-news .box .mBox .grey {
-  background: rgba(237, 237, 237, 0.8);
+  background: #fafafa none repeat scroll 0 0;
   color: black;
 }
 .boxes-news .box .mBox .water {
@@ -639,8 +751,18 @@ body a:hover {
   line-height: 180%;
 }
 .content-article-box p {
-  background: #ededed;
+  background: #fafafa none repeat scroll 0 0;
   padding: 20px;
   margin-top: 26px;
   font-size: 17px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.col {
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+.col-wrap {
+  overflow: hidden;
 }

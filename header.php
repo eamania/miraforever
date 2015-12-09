@@ -57,7 +57,7 @@
 			?>
 		</div>
 		<!-- MENU -->
-		<div class="row">
+		<div class="row" style="height: 0;">
 
 			<div id="menu-top-fixed-mobile" class="hidden-lg hidden-md ">
 
@@ -94,7 +94,7 @@
 			<div id="menu-top-fixed" class="hidden-sm hidden-xs">
 				<nav class="site-branding navbar navbar-inverse top-bar " role="navigation">
 					<div class="container">
-						<div class="row">
+						<div class="row" >
 							<div class="col-md-12">
 								<div class="mega-menu-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://localhost/miraforever/logo-cl.png" height="60px" /><span class="hidden-sm hidden-xs"><?php bloginfo( 'name' ); ?></span></a></div>
 								<span id="mega-menu-prymary-big" ><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></span>

@@ -3,13 +3,13 @@
  * @package miraforever
  */
 ?>
-
+<div class="col-wrap">
 <div class="site-content">
-<div id="primary" class="content-area col-md-9 ">
+<div id="primary" class="content-area col-md-9">
     <main id="main" class="site-main" role="main">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header class="entry-header">
-                <div id="content-article-header">
+                <div id="content-article-header" class="article-content">
                     <?php the_title('<h1 class="entry-title">', '</h1>');?>
                     <?php miraforever_posted_on(); ?>
 
@@ -26,7 +26,7 @@
                             /* template image*/
                             break;
                         default:
-                            the_post_thumbnail('thumbnails_article_big', array('class' => "img-responsive"));
+                            the_post_thumbnail('thumbnails_article_big', array('class' => "article-featured-image img-responsive"));
                     }
                     ?>
 
@@ -69,6 +69,7 @@
 </div><!-- #primary -->
 </div>
 
-<div id="sidebar-article" class="col-md-3">
+<div id="sidebar-article" class="col-md-3 sidebar-article col">
     <?php get_sidebar(); ?>
+</div>
 </div>

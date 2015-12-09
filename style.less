@@ -33,14 +33,14 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 @import url('css/font-awesome.min.css');
 
 //MEGAMENU OVERRIDE
-//@import url('less/megamenu.less');
+@import url('less/megamenu.less');
 
 //stili base
 
-
+html,body{height:100%;}
 
 body {
-
+margin: 0;
   background-color: @white;
   font-family: 'Roboto', sans-serif;
   a {
@@ -301,6 +301,17 @@ body {
     line-height: 160%;
     text-align: justify;
     font-weight: 300;
+
+
+    .article-content{
+
+      .article-featured-image{
+        margin-bottom: 12px;
+      }
+
+    }
+
+
   }
   .nav-links {
     height: 30px;
@@ -314,7 +325,12 @@ body {
   }
 
 }
+.sidebar-article {
 
+  background: @grey_rgba;
+  padding-top: 20px;
+
+}
 //fine site content
 // footer
 .footer {
@@ -437,13 +453,23 @@ body {
 .content-article-box {
 
   p{
-    background:@grey;
+    background:@grey_rgba;
     padding: 20px;
     margin-top: 26px;
     font-size: 17px;
-
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
 
 }
 
+.col{
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+
+}
+.col-wrap{
+  overflow: hidden;
+}
