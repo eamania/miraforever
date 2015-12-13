@@ -349,7 +349,7 @@ body a:hover {
   float: left;
 }
 .sidebar-article {
-  background: #fafafa none repeat scroll 0 0;
+  background: rgba(250, 250, 250, 0.8) none repeat scroll 0 0;
   padding-top: 20px;
 }
 .footer {
@@ -455,9 +455,9 @@ body a:hover {
 }
 .boxes-news .box .mBox:hover,
 .boxes-news .box .mBox:focus {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 .boxes-news .box .mBox img {
   height: auto;
@@ -603,7 +603,7 @@ body a:hover {
   background: rgba(255, 87, 34, 0.8);
 }
 .boxes-news .box .mBox .grey {
-  background: #fafafa none repeat scroll 0 0;
+  background: rgba(250, 250, 250, 0.8) none repeat scroll 0 0;
   color: black;
 }
 .boxes-news .box .mBox .water {
@@ -751,7 +751,7 @@ body a:hover {
   line-height: 180%;
 }
 .content-article-box p {
-  background: #fafafa none repeat scroll 0 0;
+  background: rgba(250, 250, 250, 0.8) none repeat scroll 0 0;
   padding: 20px;
   margin-top: 26px;
   font-size: 17px;

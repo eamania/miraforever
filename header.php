@@ -48,7 +48,12 @@
 			if ( is_home() ) {
 				// This is the blog posts index
 				get_template_part("partial/home/carousell" , "header" );
-			} else
+			}
+			elseif ( 'attrazioni' == get_post_type() ) {
+
+				get_template_part("partial/attrazioni/header" );			}
+
+			else
 			{
 				get_template_part("partial/share/article", "header" );
 

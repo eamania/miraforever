@@ -52,13 +52,16 @@ get_header(); ?>
 						</span>
 					</span>
 					<span id="news_box_2" class="col-md-6 hidden-xs ">
-<h2>Meteo Mirabilandia</h2>
+                        <h2>Meteo Mirabilandia</h2>
 						<div id="cont_f7ad19157d640204fc5cb823a9336f6a">
                             <span id="h_f7ad19157d640204fc5cb823a9336f6a"></span>
                             <script type="text/javascript" async
                                     src="http://www.ilmeteo.net/wid_loader/f7ad19157d640204fc5cb823a9336f6a"></script>
                         </div>
 					</span>
+                    <div style="position: relative; margin: auto; text-align: center;">
+                        <iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=eamania-21&o=29&p=12&l=ur1&category=it_videogames&banner=1ZNP3FFQSDW1KY634P82&f=ifr" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+</div>
                 </section>
                 </section>
 

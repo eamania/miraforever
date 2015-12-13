@@ -39,9 +39,9 @@
       -moz-border-radius: 2px;
       border-radius: 2px;
       &:hover, &:focus {
-        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow:0 3px 6px rgba(0, 0, 0, 0.4) ;
+        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4) ;
+        box-shadow:0 3px 6px rgba(0, 0, 0, 0.4) ;
         // filter: brightness(50%);
 
       }
@@ -155,6 +155,7 @@
         border-radius: 2px;
         font-size: @body-text;
 
+
         @media (min-width: 992px) and (max-width: 1199px) {
 
           font-size: 14px;
@@ -198,9 +199,9 @@
         font-size: 16px;
         padding: 2px 7px;
         position: absolute;
-        right: 8px;
+        right: @box_padding_position;
         text-align: right;
-        top: 8px;
+        top: @box_padding_position;
         width: auto;
       }
 
