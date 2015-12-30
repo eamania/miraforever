@@ -339,6 +339,39 @@ body a:hover {
 .site-content .site-main .article-content .article-featured-image {
   margin-bottom: 12px;
 }
+.site-content .site-main .entry-content .gallery {
+  float: left;
+}
+.site-content .site-main .entry-content .gallery figure {
+  float: left;
+  margin: 9px 18px 9px 0;
+  border-radius: 2px;
+  overflow: hidden;
+  -webkit-transition: all 0.17s ease;
+  /* Safari and Chrome */
+  -moz-transition: all 0.17s ease;
+  /* Firefox */
+  -ms-transition: all 0.17s ease;
+  /* IE 9 */
+  -o-transition: all 0.17s ease;
+  /* Opera */
+  transition: all 0.17s ease;
+}
+.site-content .site-main .entry-content .gallery figure:hover,
+.site-content .site-main .entry-content .gallery figure:focus {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transform: scale(1.02);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.02);
+  /* Firefox */
+  -ms-transform: scale(1.02);
+  /* IE 9 */
+  -o-transform: scale(1.02);
+  /* Opera */
+  transform: scale(1.02);
+}
 .site-content .nav-links {
   height: 30px;
 }

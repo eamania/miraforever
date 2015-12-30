@@ -70,6 +70,6 @@
 </div>
 
 <!--<div id="sidebar-article" class="col-md-3 sidebar-article col">
-    <?php /*get_sidebar(); */?>
+    <?php get_sidebar(); ?>
 </div>-->
 </div>
