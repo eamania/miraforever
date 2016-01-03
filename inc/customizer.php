@@ -1,6 +1,6 @@
 <?php
 /**
- * miraforever Theme Customizer
+ * miraforever Theme Customizer.
  *
  * @package miraforever
  */

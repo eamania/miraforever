@@ -6,8 +6,8 @@
 
 
 
-<div id="carousel-header" class="carousel  carousel-fade slide" data-ride="carousel">
-	<!-- Indicators --> 
+<div id="carousel-header" class="carousel  carousel-fade slide" data-ride="carousel"  >
+	<!-- Indicators -->
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-header" data-slide-to="0" class="active"></li>
 		<li data-target="#carousel-header" data-slide-to="1"></li>
@@ -19,37 +19,77 @@
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
-		<?php 
+		<?php
 		$the_query = new WP_Query(array(
 			'posts_per_page' => 6,
 			'category_name' => "featured" ,
-			)); 
-		while ( $the_query->have_posts() ) : 
+		));
+		while ( $the_query->have_posts() ) :
 			$the_query->the_post();
-		?>
-		<div class="item">
-			<?php the_post_thumbnail('thumbnails_header_background' ,array('class' => "effect-img-slideshow "));?>
-			<div class="container">
-				<div class="row ">
-					<div class="col-md-10 col-lg-8 carousel-caption">
-						<div class="col-md-3 col-lg-5 tierre ">
-							<div class="thumbnail-header table-cell "><?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_header', array( 'class' => 'thumbnail img-responsive, img-header-shadow' ) ); }?></div>
-						</div>
-						<div class="col-md-9 col-lg-7 tierre" >
-							<div class="centertext " >
-								<div class="title-header " ><?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?></h4></div> 
-								<div class="excerpt-header "><p><?php echo header_excerpt();?></p></div>
+			?>
+			<?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnails_article_big', false); ?>
+
+			<div class="item">
+
+				<?php the_post_thumbnail('thumbnails_header_background' ,array('class' => "effect-img-slideshow "));?>
+
+
+				<div class="article-center-header " >
+					<div class="container b" style="background-color: rgba(0, 0, 0, 0.75); color: white; padding: 20px; ">
+						<div class="row article-center-header-trans">
+							<div class="col-lg-5 col-md-4" >
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_header', array( 'class' => 'thumbnail img-responsive, img-header-shadow img-big' ) ); }?>
+							</div>
+							<div class="col-lg-7 col-md-8" >
+								<div class="title-header"> <?php the_title( sprintf( '<h1 class="entry-title " style="margin-top: 0;"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?></div>
+								<div class="article-header-text">
+									<?php echo header_excerpt(); ?>
+								</div>
+
 								<div class="entry-meta">
 									<?php miraforever_posted_on(); ?>
+									Leggi Tutto
 								</div><!-- .entry-meta -->
 							</div>
+
+						</div>
+						<div class="row">
 						</div>
 					</div>
+
 				</div>
-			</div>
-		</div><!-- item -->
-		<?php 
-		endwhile; 
+
+
+
+
+
+
+
+				<!--			<?php //the_post_thumbnail('thumbnails_header_background' ,array('class' => "effect-img-slideshow "));?>
+<!--			<div class="container">-->
+				<!--				<div class="row ">-->
+				<!--					<div class="col-md-10 col-lg-8 carousel-caption">-->
+				<!--						<div class="col-md-3 col-lg-5 tierre ">-->
+				<!--							<div class="thumbnail-header table-cell ">--><?php //if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_header', array( 'class' => 'thumbnail img-responsive, img-header-shadow' ) ); }?><!--</div>-->
+				<!--						</div>-->
+				<!--						<div class="col-md-9 col-lg-7 tierre" >-->
+				<!--							<div class="centertext " >-->
+				<!--								<div class="title-header " >--><?php //the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?><!--</h4></div> -->
+				<!--								<div class="excerpt-header "><p>--><?php //echo header_excerpt();?><!--</p></div>-->
+				<!--								<div class="entry-meta">-->
+				<!--									--><?php //miraforever_posted_on(); ?>
+				<!--								</div><!-- .entry-meta -->-->
+				<!--							</div>-->
+				<!--						</div>-->
+				<!--					</div>-->
+				<!--				</div>-->
+				<!--			</div>-->
+
+
+
+			</div><!-- item -->
+			<?php
+		endwhile;
 		wp_reset_postdata();
 		?>
 	</div>

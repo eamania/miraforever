@@ -5,7 +5,7 @@ function header_excerpt(){
 	$excerpt = get_the_content();
 	$excerpt = strip_shortcodes($excerpt);
 	$excerpt = strip_tags($excerpt);
-	$the_str = TagliaStringa($excerpt, 300);
+	$the_str = TagliaStringa($excerpt, 550);
 	return $the_str;
 
 
