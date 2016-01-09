@@ -12,18 +12,18 @@ $altezza = get_post_meta($post->ID, 'Altezza', true);
 $lunghezza = get_post_meta($post->ID, 'Lunghezza', true);
 $nome_completo = get_post_meta($post->ID, 'Nome Completo', true);
 $anno_costruzione = get_post_meta($post->ID, 'Anno Costruzione', true);
-$velocita = get_post_meta($post->ID, 'Velocita', true);
+$velocita = get_post_meta($post->ID, 'Velocità', true);
+$capacita = get_post_meta($post->ID, 'Capacità', true);
+$casa_Costruttrice = get_post_meta($post->ID, 'Casa Costruttrice', true);
+$durata = get_post_meta($post->ID, 'Durata', true);
+$elementi = get_post_meta($post->ID, 'Elementi', true);
+$gforce = get_post_meta($post->ID, 'Gforce', true);
+$inversioni = get_post_meta($post->ID, 'Inversioni', true);
+$puntofoto = get_post_meta($post->ID, 'puntofoto', true);
+$tipologia = get_post_meta($post->ID, 'Tipologia', true);
+$vmf = get_post_meta($post->ID, 'Voto MiraForever', true);
+
+
 
 ?>
-
-<?php
-if ($nome_completo != NULL) {echo "Nome: " . $nome_completo . "</br>";}
-if ($velocita != NULL) {echo "Velocità: " . $velocita. "</br>";}
-if ($anno_costruzione != NULL) {echo "Anno di Costruzione: " . $anno_costruzione. "</br>";}
-if ($altezza != NULL) {echo "Altezza: " . $altezza. "</br>";}
-if ($lunghezza != NULL) {echo "Lunghezza: " . $lunghezza. "</br>";}
-
-
-?>
-
 

@@ -51,6 +51,16 @@ body {
     color: @orange;
     text-decoration: none;
   }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li a {
+      color: @black;
+      font-weight: 300;
+    }
+  }
 }
 
 .contaier {
@@ -125,7 +135,6 @@ body {
         height: auto;
         display: block;
 
-
       }
     }
     img {
@@ -171,9 +180,6 @@ body {
 
     }
 
-    
-
-
     .carousel-caption {
 
       background-color: rgba(0, 0, 0, 0.75);
@@ -182,7 +188,6 @@ body {
       box-shadow: @shadows-caraousel-caption;
       padding-bottom: 20px !important;
       overflow: hidden;
-
 
       //title header
 
@@ -342,10 +347,23 @@ body {
   background: @grey_rgba;
   padding-top: 20px;
 
+.widget-title{
+
 }
+  li {
+    a {
+
+      font-size: 17px;}
+  }
+
+}
+
+
 
 //fine site content
 // footer
+
+
 .footer {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,f9c300+100 */
   background: @orange; /* Old browsers */
@@ -375,15 +393,6 @@ body {
 
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
-
-    li a {
-      color: @black;
-
-    }
-  }
 }
 
 .no_padding {
@@ -427,6 +436,7 @@ body {
 }
 
 @import url('less/box.less');
+
 #attrazioni_carousel {
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fa6900+0,fc8a00+100 */
@@ -495,11 +505,11 @@ body {
     margin: 8px 17px 8px 0;
     border-radius: 2px;
     overflow: hidden;
-    -webkit-transition: all @t-slow ease; /* Safari and Chrome */
-    -moz-transition: all @t-slow ease; /* Firefox */
-    -ms-transition: all @t-slow ease; /* IE 9 */
-    -o-transition: all @t-slow ease; /* Opera */
-    transition: all @t-slow ease;
+    -webkit-transition: transform @t-slow ease-in-out; /* Safari and Chrome */
+    -moz-transition: transform @t-slow ease-in-out; /* Firefox */
+    -ms-transition: transform @t-slow ease-in-out; /* IE 9 */
+    -o-transition: transform @t-slow ease-in-out; /* Opera */
+    transition: transform @t-slow ease-in-out;
 
     &:hover, &:focus {
 
@@ -533,14 +543,13 @@ body {
 
 }
 
-.article-center-header{
+.article-center-header {
 
-
-  min-height:100% ;
+  min-height: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  min-height:100% ;
+  min-height: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -549,17 +558,18 @@ body {
   width: 100%;
   height: 100%;
 
-  .container{
+  .container {
     padding: 20px;
     -webkit-box-shadow: @shadows-caraousel-caption;
     -moz-box-shadow: @shadows-caraousel-caption;
     box-shadow: @shadows-caraousel-caption;
     border-radius: 2px;
-    background-color: rgba(0, 0, 0, 0.75); color: white; padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 20px;
   }
 
-
-  .article-center-header-trans{
+  .article-center-header-trans {
     height: auto;
     -webkit-transition: all @t-hight ease-in-out;
     -moz-transition: all @t-hight ease-in-out;
@@ -567,27 +577,29 @@ body {
     -o-transition: all @t-hight ease-in-out;
     transition: all @t-hight ease-in-out;
 
-    .thumbnail{
+    .thumbnail {
 
-        margin-bottom: 0px;
+      margin-bottom: 0px;
 
     }
 
   }
-  .article-header-text{
+  .article-header-text {
 
     font-size: 18px;
     font-weight: lighter;
-line-height: 165%;
+    line-height: 165%;
     text-align: justify;
   }
   img {
     max-width: 150px;
   }
 
-  .img-big{
-    max-width: 100%!important;
+  .img-big {
+    max-width: 100% !important;
   }
 
 }
+
+
 
