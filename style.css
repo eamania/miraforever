@@ -812,10 +812,6 @@ body ul li a {
 }
 .gallery figure,
 .gallery-group figure {
-  float: left;
-  margin: 8px 17px 8px 0;
-  border-radius: 2px;
-  overflow: hidden;
   -webkit-transition: transform 0.17s ease-in-out;
   /* Safari and Chrome */
   -moz-transition: transform 0.17s ease-in-out;
@@ -825,6 +821,10 @@ body ul li a {
   -o-transition: transform 0.17s ease-in-out;
   /* Opera */
   transition: transform 0.17s ease-in-out;
+  float: left;
+  margin: 8px 17px 8px 0;
+  border-radius: 2px;
+  overflow: hidden;
   border: 1px #e1e5cd solid;
 }
 .gallery figure:hover,

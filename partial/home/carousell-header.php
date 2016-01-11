@@ -46,9 +46,8 @@
 									<?php echo header_excerpt(); ?>
 								</div>
 
-								<div class="entry-meta">
+								<div class="entry-meta" style="margin-top: 20px; text-align: right;">
 									<?php miraforever_posted_on(); ?>
-									Leggi Tutto
 								</div><!-- .entry-meta -->
 							</div>
 
@@ -58,33 +57,6 @@
 					</div>
 
 				</div>
-
-
-
-
-
-
-
-				<!--			<?php //the_post_thumbnail('thumbnails_header_background' ,array('class' => "effect-img-slideshow "));?>
-<!--			<div class="container">-->
-				<!--				<div class="row ">-->
-				<!--					<div class="col-md-10 col-lg-8 carousel-caption">-->
-				<!--						<div class="col-md-3 col-lg-5 tierre ">-->
-				<!--							<div class="thumbnail-header table-cell ">--><?php //if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_header', array( 'class' => 'thumbnail img-responsive, img-header-shadow' ) ); }?><!--</div>-->
-				<!--						</div>-->
-				<!--						<div class="col-md-9 col-lg-7 tierre" >-->
-				<!--							<div class="centertext " >-->
-				<!--								<div class="title-header " >--><?php //the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?><!--</h4></div> -->
-				<!--								<div class="excerpt-header "><p>--><?php //echo header_excerpt();?><!--</p></div>-->
-				<!--								<div class="entry-meta">-->
-				<!--									--><?php //miraforever_posted_on(); ?>
-				<!--								</div><!-- .entry-meta -->-->
-				<!--							</div>-->
-				<!--						</div>-->
-				<!--					</div>-->
-				<!--				</div>-->
-				<!--			</div>-->
-
 
 
 			</div><!-- item -->
