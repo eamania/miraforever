@@ -58,7 +58,8 @@
         <!-- #post-## -->
     </main>
     <!-- #main -->
-    <?php the_post_navigation(); ?>
+    <?php
+    miraforever_custom_nav(); ?>
 
     <?php
     // If comments are open or we have at least one comment, load up the comment template

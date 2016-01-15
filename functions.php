@@ -609,8 +609,18 @@ add_action( 'init', 'attrazioni_taxonomy', 0 );
 add_action( 'init', 'spettacoli_taxonomy', 0 );
 
 
+function miraforever_custom_nav(){
+	$navigation = '';
+	$previous   = get_previous_post_link( '<div class="nav-previous">%link</div>', '%title', true );
+	$next       = get_next_post_link( '<div class="nav-next">%link</div>', '%title', true );
 
+	// Only add markup if there's somewhere to navigate to.
+	if ( $previous || $next ) {
+		$navigation = _navigation_markup( $previous . $next, 'post-navigation' );
+	}
 
+	echo $navigation;
+}
 
 
 

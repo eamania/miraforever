@@ -33,7 +33,7 @@ miraforever is based on Underscores http://underscores.me/, (C) 2012-2015 Automa
 .mega-menu-wrap {
   background-color: transparent!important;
   transition-property: background-color !important;
-  transition-duration: 0.17s !important;
+  transition-duration: 0.25s !important;
 }
 @media (max-width: 992px) {
   .mega-menu-wrap {
@@ -112,7 +112,7 @@ li.mega-menu-item .mega-menu-toggle-on {
 .mega-menu-social-div .mega-menu-social-link a i:hover {
   opacity: 1;
   transition-property: opacity!important;
-  transition-duration: 0.17s !important;
+  transition-duration: 0.25s !important;
 }
 .mega-sub-menu {
   -webkit-box-shadow: 0 10px 20px 0 #C2C2C2;
@@ -128,7 +128,7 @@ li.mega-menu-item .mega-menu-toggle-on {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4) !important;
   background-color: #ff6900 !important;
   transition-property: background-color !important;
-  transition-duration: 0.17s !important;
+  transition-duration: 0.25s !important;
 }
 html,
 body {
@@ -138,6 +138,9 @@ body {
   margin: 0;
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
+}
+body a {
+  color: #3d3d3d;
 }
 body a:hover {
   color: #fa6900;
@@ -447,15 +450,15 @@ body ul li a {
   color: #ffffff;
   padding: 8px;
   min-height: 144px;
-  -webkit-transition: all 0.17s ease;
-  -o-transition: all 0.17s ease;
-  transition: all 0.17s ease;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   font-weight: normal;
 }
 .boxes-news .box .mBox {
-  -webkit-transition: all 0.17s ease;
-  -o-transition: all 0.17s ease;
-  transition: all 0.17s ease;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -550,7 +553,7 @@ body ul li a {
   bottom: 8px;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 0.17s;
+  transition-duration: 0.25s;
   padding: 25px;
   padding-top: 30px;
   left: 8px;
@@ -776,6 +779,7 @@ body ul li a {
 .gallery,
 .gallery-group {
   float: left;
+  width: 100%;
 }
 .gallery .tiled-gallery-item,
 .gallery-group .tiled-gallery-item {
@@ -783,81 +787,73 @@ body ul li a {
   margin: 8px 17px 8px 0;
   border-radius: 2px;
   overflow: hidden;
-  -webkit-transition: transform 0.17s ease-in-out;
+  -webkit-transition: all 0.25s ease;
   /* Safari and Chrome */
-  -moz-transition: transform 0.17s ease-in-out;
+  -moz-transition: all 0.25s ease;
   /* Firefox */
-  -ms-transition: transform 0.17s ease-in-out;
+  -ms-transition: all 0.25s ease;
   /* IE 9 */
-  -o-transition: transform 0.17s ease-in-out;
+  -o-transition: all 0.25s ease;
   /* Opera */
-  transition: transform 0.17s ease-in-out;
+  transition: all 0.25s ease;
+  border: 1px  transparent solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .gallery .tiled-gallery-item:hover,
 .gallery-group .tiled-gallery-item:hover,
 .gallery .tiled-gallery-item:focus,
 .gallery-group .tiled-gallery-item:focus {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transform: scale(1.05);
-  /* Safari and Chrome */
-  -moz-transform: scale(1.05);
-  /* Firefox */
-  -ms-transform: scale(1.05);
-  /* IE 9 */
-  -o-transform: scale(1.05);
-  /* Opera */
-  transform: scale(1.05);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: 1px #3d3d3d solid;
 }
 .gallery figure,
 .gallery-group figure {
-  -webkit-transition: transform 0.17s ease-in-out;
-  /* Safari and Chrome */
-  -moz-transition: transform 0.17s ease-in-out;
-  /* Firefox */
-  -ms-transition: transform 0.17s ease-in-out;
-  /* IE 9 */
-  -o-transition: transform 0.17s ease-in-out;
-  /* Opera */
-  transition: transform 0.17s ease-in-out;
   float: left;
   margin: 8px 17px 8px 0;
   border-radius: 2px;
   overflow: hidden;
-  border: 1px #e1e5cd solid;
+  -webkit-transition: all 0.25s ease;
+  /* Safari and Chrome */
+  -moz-transition: all 0.25s ease;
+  /* Firefox */
+  -ms-transition: all 0.25s ease;
+  /* IE 9 */
+  -o-transition: all 0.25s ease;
+  /* Opera */
+  transition: all 0.25s ease;
+  border: 1px  transparent solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .gallery figure:hover,
 .gallery-group figure:hover,
 .gallery figure:focus,
 .gallery-group figure:focus {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transform: scale(1.05);
-  /* Safari and Chrome */
-  -moz-transform: scale(1.05);
-  /* Firefox */
-  -ms-transform: scale(1.05);
-  /* IE 9 */
-  -o-transform: scale(1.05);
-  /* Opera */
-  transform: scale(1.05);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: 1px #3d3d3d solid;
 }
-.gallery figure:hover,
-.gallery-group figure:hover,
-.gallery figure:focus,
-.gallery-group figure:focus {
-  border-color: #C2C2C2;
-  -webkit-transform: scale(1.02);
-  /* Safari and Chrome */
-  -moz-transform: scale(1.02);
-  /* Firefox */
-  -ms-transform: scale(1.02);
-  /* IE 9 */
-  -o-transform: scale(1.02);
-  /* Opera */
-  transform: scale(1.02);
+.embed-youtube {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.embed-youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%!important;
+  height: 100%!important;
 }
 .article-center-header {
   min-height: 100%;
@@ -900,4 +896,13 @@ body ul li a {
 }
 .article-center-header .img-big {
   max-width: 100% !important;
+}
+.mega-menu-horizontal {
+  background: black;
+}
+.mega-menu-horizontal li:nth-child(1) ul {
+  background-color: red!important;
+}
+.mega-menu-horizontal li:nth-child(2) ul {
+  background-color: blue!important;
 }
