@@ -12,7 +12,21 @@
                     <header class="entry-header">
                         <div id="content-article-header" class="article-content">
                             <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-                            <h4 style="font-weight: lighter; line-height: 150%">  <?php the_excerpt(); ?></h4>
+                            <h4 style="font-weight: 300; line-height: 150%">  <?php
+
+                                $val =  wpdocs_custom_taxonomies_terms_links();
+
+                                if (strpos($val, 'Temerari') !== false) {
+                                    echo "<span style='color: red;'>" . $val . "</span>";
+                                }
+                                elseif (strpos($val, 'Tutti') !== false) {
+                                    echo "<span style='color: orange;'>" . $val . "</span>";
+                                }
+                                elseif (strpos($val, 'Piccoli') !== false) {
+                                    echo "<span style='color: green;'>" . $val . "</span>";
+                                }
+                                ?>
+                            </h4>
 
                             <?php
                             $format = get_post_format();
@@ -40,7 +54,8 @@
 
 
                     <div class="entry-content">
-                        <?php the_content(); ?>
+                        <?php the_content('');
+                        ?>
                         <?php
                         wp_link_pages(array(
                             'before' => '<div class="page-links">' . __('Pages:', 'miraforever'),
@@ -51,20 +66,24 @@
                     <!-- .entry-content -->
 
                     <footer class="entry-footer">
-                        <?php //miraforever_entry_footer(); ?>
+                        <?php miraforever_entry_footer(); ?>
                     </footer>
                     <!-- .entry-footer -->
                 </article>
                 <!-- #post-## -->
             </main>
             <!-- #main -->
-            <?php
-            miraforever_custom_nav(); ?>
+
+
+       <?php get_template_part('partial/navigation','article');?>
+
+
+
             <?php
             // If comments are open or we have at least one comment, load up the comment template
-            if (comments_open() || get_comments_number()) :
-                comments_template();
-            endif;
+           // if (comments_open() || get_comments_number()) :
+            //    comments_template();
+            //endif;
             ?>
         </div>
         <!-- #primary -->
@@ -87,6 +106,9 @@
         }
         if ($anno_costruzione != NULL) {
             echo "<b>Anno di Costruzione: </b> " . $anno_costruzione . "</br>";
+        }
+        if ($anno_chiusura != NULL) {
+            echo "<span style='color: red!important;'> <b>Anno Chiusura: </b> " . $anno_chiusura . "</span></br>";
         }
         if ($altezza != NULL) {
             echo "<b>Altezza: </b> " . $altezza . "</br>";
@@ -121,7 +143,7 @@
 
         ?>
         </span>
-        <?php get_sidebar(); ?>
+        <?php get_sidebar('attrazioni'); ?>
     </div>
 </div>
 

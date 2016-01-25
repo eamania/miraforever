@@ -37,20 +37,42 @@
                              //get_template_part("partial/attrazioni/caratteristiche");
 
                              include(locate_template('partial/attrazioni/caratteristiche.php'));
-                             if ($nome_completo != NULL) {
-                                 echo "<b>Nome:</b> " . $nome_completo . "</br>";
+
+                             if ( 'attrazioni_rimosse' != get_post_type() ) {
+                                 if ($nome_completo != NULL) {
+                                     echo "<b>Nome:</b> " . $nome_completo . "</br>";
+                                 }
+                                 if ($anno_costruzione != NULL) {
+                                     echo "<b>Anno Apertura: </b> " . $anno_costruzione . "</br>";
+                                 }
+                                 if ($tipologia != NULL) {
+                                     echo "<b>Tipologia: </b> " . $tipologia . "</br>";
+                                 }
+                                 if ($velocita != NULL) {
+                                     echo "<b>Velocità:</b>  " . $velocita . "</br>";
+                                 }
+                                 if ($altezza != NULL) {
+                                     echo "<b>Altezza: </b> " . $altezza . "</br>";
+                                 }
+                                 if ($lunghezza != NULL) {
+                                     echo "<b>Lunghezza: </b> " . $lunghezza . "</br>";
+                                 }
                              }
-                             if ($tipologia != NULL) {
-                                 echo "<b>Tipologia: </b> " . $tipologia . "</br>";
-                             }
-                             if ($velocita != NULL) {
-                                 echo "<b>Velocità:</b>  " . $velocita . "</br>";
-                             }
-                             if ($altezza != NULL) {
-                                 echo "<b>Altezza: </b> " . $altezza . "</br>";
-                             }
-                             if ($lunghezza != NULL) {
-                                 echo "<b>Lunghezza: </b> " . $lunghezza . "</br>";
+                             else {
+
+                                 if ($nome_completo != NULL) {
+                                     echo "<b>Nome:</b> " . $nome_completo . "</br>";
+                                 }
+                                 if ($tipologia != NULL) {
+                                     echo "<b>Tipologia: </b> " . $tipologia . "</br>";
+                                 }
+                                 if ($anno_costruzione != NULL) {
+                                     echo "<b>Anno Apertura: </b> " . $anno_costruzione . "</br>";
+                                 }
+                                 if ($anno_chiusura != NULL) {
+                                     echo "<span style='color: red!important;'> <b>Anno Chiusura: </b> " . $anno_chiusura . "</span></br>";
+                                 }
+
                              }
                              ?>
 

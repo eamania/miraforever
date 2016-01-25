@@ -6,6 +6,7 @@
 <div class="col-wrap">
 <div class="site-content">
 <div id="primary" class="content-area col-md-9">
+
     <main id="main" class="site-main" role="main">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header class="entry-header">
@@ -58,8 +59,8 @@
         <!-- #post-## -->
     </main>
     <!-- #main -->
-    <?php
-    miraforever_custom_nav(); ?>
+    <?php get_template_part('partial/navigation','article');?>
+
 
     <?php
     // If comments are open or we have at least one comment, load up the comment template
@@ -73,4 +74,6 @@
 <div id="sidebar-article" class="col-md-3 sidebar-article col">
     <?php get_sidebar(); ?>
 </div>
+</div>
+
 </div>

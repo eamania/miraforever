@@ -21,7 +21,7 @@
 	<div class="carousel-inner" role="listbox">
 		<?php
 		$the_query = new WP_Query(array(
-			'posts_per_page' => 6,
+			'posts_per_page' => 1,
 			'category_name' => "featured" ,
 		));
 		while ( $the_query->have_posts() ) :
@@ -38,7 +38,12 @@
 					<div class="container b" style="background-color: rgba(0, 0, 0, 0.75); color: white; padding: 20px; ">
 						<div class="row article-center-header-trans">
 							<div class="col-lg-5 col-md-4" >
-								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnails_header', array( 'class' => 'thumbnail img-responsive, img-header-shadow img-big' ) ); }?>
+								<?php if ( has_post_thumbnail() ) {
+									
+									the_post_thumbnail('thumbnails_header', array( 'class' => 'thumbnail img-responsive, img-header-shadow img-big' ) );
+
+
+								}?>
 							</div>
 							<div class="col-lg-7 col-md-8" >
 								<div class="title-header"> <?php the_title( sprintf( '<h1 class="entry-title " style="margin-top: 0;"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?></div>

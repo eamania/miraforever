@@ -21,6 +21,14 @@
 
 </head>
 <body <?php body_class(); ?>>
+<script>
+
+	( function( $ ) {
+		$( document.body ).on( 'post-load', function () {
+			// New posts have been added to the page.
+		} );
+	} )( jQuery );
+</script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
@@ -50,6 +58,12 @@
 				get_template_part("partial/home/carousell" , "header" );
 			}
 			elseif ( 'attrazioni' == get_post_type() ) {
+
+				get_template_part("partial/attrazioni/header" );			}
+			elseif ( 'attrazioni_rimosse' == get_post_type() ) {
+
+				get_template_part("partial/attrazioni/header" );			}
+			elseif ( 'spettacoli' == get_post_type() ) {
 
 				get_template_part("partial/attrazioni/header" );			}
 

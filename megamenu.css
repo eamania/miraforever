@@ -55,13 +55,22 @@ li.mega-menu-item:hover  > a {
 }
 /* line 48, megamenu.less */
 .mega-menu-search {
-  background: none repeat scroll 0 0 #e0e4cc;
+  background: transparent;
   height: auto;
-  padding: 10px;
+  padding: 0;
   position: absolute;
-  top: 78px;
+  top: 0;
   width: 100%;
   display: none;
+}
+
+.mega-menu-search form{
+  height: 100%;
+}
+
+.mega-menu-search input{
+  height: 100%;
+  width: 100%;
 }
 /* line 58, megamenu.less */
 .mega-menu-social-div {

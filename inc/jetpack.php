@@ -39,3 +39,5 @@ function miraforever_infinite_scroll_render() {
 		endif;
 	}
 }
+
+

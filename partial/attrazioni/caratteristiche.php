@@ -23,6 +23,7 @@ $puntofoto = get_post_meta($post->ID, 'puntofoto', true);
 $tipologia = get_post_meta($post->ID, 'Tipologia', true);
 $vmf = get_post_meta($post->ID, 'Voto MiraForever', true);
 
+$anno_chiusura = get_post_meta($post->ID, 'Anno Chiusura', true);
 
 
 ?>

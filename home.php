@@ -58,10 +58,13 @@ get_header(); ?>
                             <script type="text/javascript" async
                                     src="http://www.ilmeteo.net/wid_loader/f7ad19157d640204fc5cb823a9336f6a"></script>
                         </div>
+                         <div class="openpark">
+
+                             <?php  get_template_part('partial/openpark'); ?>
+
+                         </div>
 					</span>
-                    <div style="position: relative; margin: auto; text-align: center;">
-                        <iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=eamania-21&o=29&p=12&l=ur1&category=it_videogames&banner=1ZNP3FFQSDW1KY634P82&f=ifr" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-</div>
+
                 </section>
                 </section>
 
